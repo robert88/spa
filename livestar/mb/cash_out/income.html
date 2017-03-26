@@ -1,0 +1,21 @@
+<article class="app-wrap co-wrap" id="incomeVue">
+    <div class="co-topBar">
+        <!-- <a class="btn btn-return" href="#"><i class="i-return"></i></a> -->
+        <p class="tit">Star Bucks</p>
+    </div>
+    <div class="co-container">
+        <div class="income-upper">
+            <figure>
+                <figcaption>You Have:</figcaption>
+                <p class="total-starBucks f-special" v-cloak><i class="i-starBucks-l"></i>{{{totalMoney | toMenoy}}}</p>
+            </figure>
+        </div>
+        <div class="income-bottom">
+            <a class="btn btn-primary btn-main " href="#/mb/cash_out/exchange">Exchange to Star Coins</a>
+            <a class="btn btn-borderPrimary btn-main J-cashout">Cash Out</a>
+        </div>
+    </div>
+    <div class="tipsHeader J-sys-Msg animate-ease" style="display:none;">
+        Invalid code
+    </div>
+</article>

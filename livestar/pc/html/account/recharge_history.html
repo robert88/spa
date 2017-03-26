@@ -1,0 +1,128 @@
+
+ <article class="ls-wrap">
+        <div class="ls-container" id="rechargeHistoryVue">
+            <div class="ls-content">
+                <div class="ls-autoBlock">
+                    <!--S:left bar-->
+                    <div class="ls-leftBar">
+                        <!--S:user information-->
+                        <div class="ls-userInfo ls-blockBg">
+                            <div class="userImg-circle upload-box J-upload">
+                                <img :src="uInfo.userimg | getDefImg">
+                                <div class="userImg-mask"></div>                                
+                                <!--<div class="select-area">
+                                    <a class="btn btn-upload J-upload-btn" >
+                                        <i class="i-font i-camera">N</i>
+                                    </a>
+                                    <input type="file">
+                                </div>-->
+                            </div>
+							 <p class="nick-name">
+                                <i :class="(uInfo.exp&&uInfo.exp.lvl) | getULevelClass"></i>
+                                <a class="name" v-cloak>{{{uInfo.name}}}</a>
+                            </p>
+                            
+                            <p class="money" v-cloak><i class="i-money-l"></i>{{uInfo.buck | formatNum}}</p>
+                            <p class="coins" v-cloak><i class="i-coin-l"></i>{{uInfo.coin | formatNum}}</p>
+                            <p class="LID" v-cloak>LID: {{uInfo.uid}}</p>
+                            <p class="location" v-cloak><i class="i-font i-location">K</i>{{uInfo.location}}</p>
+                            <p class="signs" v-cloak>{{{uInfo.signature}}}</p>
+                            <ul class="userInfo-option">
+                                <li>
+                                    <a>
+                                        <span class="option-value" v-cloak>{{uInfo.like|formatNum }}</span>
+                                        <span class="option-tit">Likes</span>
+                                    </a>
+                                </li>
+                                <li class="align-c">
+                                    <a>
+                                        <span class="option-value" v-cloak>{{uInfo.follower|formatNum }}</span>
+                                        <span class="option-tit">Followers</span>
+                                    </a>
+                                </li>
+                                <li class="align-c">
+                                    <a>
+                                        <span class="option-value" v-cloak>{{uInfo.favorites|formatNum }}</span>
+                                        <span class="option-tit">Following</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!--E:user information-->
+                        <!--S:navigation of user information-->
+                        <nav class="ls-sideNav ls-blockBg">
+                            <ul>
+                                <li ><a href="#/pc/html/account/profile" class="current"><i class="i-font i-profile">E</i><span>Edit Profile</span></a></li>
+                                <li class="current"><a href="#/pc/html/account/recharge"><i class="i-font i-coins">F</i><span>Recharge</span></a></li>
+                                <!--<li><a href="#/pc/html/account/profile"><i class="i-font i-bucks">G</i><span>Star Bucks</span></a></li>-->
+                            </ul>
+                        </nav>
+                        <!--E:navigation of user information-->
+                    </div>
+                    <!--E:left bar-->
+                    <div class="ls-main">
+                        <div class="ls-blockBg">
+                            <div class="ls-hd">
+                                <h2 class="ls-headTit"><b>Recharge History</b></h2>
+                            </div>
+                            <div class="ls-bd ls-amount">
+                                <div class="ls-subHd">
+                                    <h3 class="ls-subTit">Total amount:<span class="ls-f-white">{{uInfo.coin | formatNum}}</span><i class="i-coin-l"></i></h3>
+                                    <div class="ls-hdOptions">
+                                        <a class="btn btn-primary btn-sm J-check">Check</a>
+                                        <div class="select-dum J-select-birthday">
+                                            <div class="J-input-focus input-box input-box-append input-box-radius input-box-dark J-month J-select-item">
+                                                <input class="input-txt J-birthdayIpt" type="hidden" name="birthday" >
+                                                <input class="input-txt" type="text" name="month"  readonly="readonly">
+                                                <span class="add-on"><i class="i-font i-drop">C</i></span>
+
+                                                <ul class="drop-list drop-list-gray J-option" style="display:none;">
+                                                    <li class="current"><a >&nbsp;</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="J-input-focus input-box input-box-append input-box-radius input-box-dark  J-year J-select-item">
+                                                <input class="input-txt" type="text" name="year" readonly="readonly">
+                                                <span class="add-on J-drop-down"><i class="i-font i-drop">C</i></span>
+
+                                                <ul class="drop-list drop-list-gray J-option" style="display:none;">
+                                                    <li class="current"><a >&nbsp;</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <span>Date:</span>
+                                    </div>
+                                <div>
+                                <div class="ls-tb">
+                                    <table cellspacing="0" cellpadding="0">
+                                        <thead>
+                                            <tr>
+                                                <th>Time</th>
+                                                <th>BILL NO.</th>
+                                                <th>Star Coin</th>
+                                                <th>Amount $</th>
+                                                <th>Status</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr v-for="item in historyList" v-cloak>
+                                                <td>{{item.create_time | toDate }}</td>
+                                                <td>{{item.order_id}}</td>
+                                                <td>{{removeCoinsText(item.prodcut_title, item.product_sub_title) }}</td>
+                                                <td>{{item.price }}</td>
+                                                <td class="td-option">
+                                                    {{{isGoToPay(item.pay_url,item.status,item.channel,item.create_time)}}}
+
+                                                </td>
+                                            </tr> 
+                                        </tbody>
+                                    </table>
+                                    <div class="pages J-pageFooter"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+</body>

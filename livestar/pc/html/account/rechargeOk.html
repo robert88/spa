@@ -1,0 +1,96 @@
+
+ <article class="ls-wrap">
+        <div class="ls-container" id="rechargeOKVue">
+            <div class="ls-content">
+                <div class="ls-autoBlock">
+                    <!--S:left bar-->
+                    <div class="ls-leftBar">
+                        <!--S:user information-->
+                        <div class="ls-userInfo ls-blockBg">
+                            <div class="userImg-circle upload-box J-upload">
+                                <img :src="uInfo.userimg | getDefImg">
+                                <div class="userImg-mask"></div>                                
+                                <!--<div class="select-area">
+                                    <a class="btn btn-upload J-upload-btn" >
+                                        <i class="i-font i-camera">N</i>
+                                    </a>
+                                    <input type="file">
+                                </div>-->
+                            </div>
+							 <p class="nick-name">
+                                <i :class="(uInfo.exp&&uInfo.exp.lvl) | getULevelClass"></i>
+                                <a class="name" v-cloak>{{{uInfo.name}}}</a>
+                            </p>
+                            
+                            <p class="money" v-cloak><i class="i-money-l"></i>{{uInfo.buck|formatNum }}</p>
+                            <p class="coins" v-cloak><i class="i-coin-l"></i>{{uInfo.coin|formatNum }}</p>
+                            <p class="LID" v-cloak>LID: {{uInfo.uid}}</p>
+                            <p class="location" v-cloak><i class="i-font i-location">K</i>{{uInfo.location }}</p>
+                            <p class="signs" v-cloak>{{{uInfo.signature}}}</p>
+                            <ul class="userInfo-option">
+                                <li>
+                                    <a>
+                                        <span class="option-value" v-cloak>{{uInfo.like|formatNum }}</span>
+                                        <span class="option-tit">Likes</span>
+                                    </a>
+                                </li>
+                                <li class="align-c">
+                                    <a>
+                                        <span class="option-value" v-cloak>{{uInfo.follower|formatNum }}</span>
+                                        <span class="option-tit">Followers</span>
+                                    </a>
+                                </li>
+                                <li class="align-c">
+                                    <a>
+                                        <span class="option-value" v-cloak>{{uInfo.favorites|formatNum }}</span>
+                                        <span class="option-tit">Following</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!--E:user information-->
+                        <!--S:navigation of user information-->
+                        <nav class="ls-sideNav ls-blockBg">
+                            <ul>
+                                <li ><a href="#/pc/html/account/profile" class="current"><i class="i-font i-profile">E</i><span>Edit Profile</span></a></li>
+                                <li class="current"><a href="#/pc/html/account/recharge"><i class="i-font i-coins">F</i><span>Recharge</span></a></li>
+                                <!--<li><a href="#/pc/html/account/profile"><i class="i-font i-bucks">G</i><span>Star Bucks</span></a></li>-->
+                            </ul>
+                        </nav>
+                        <!--E:navigation of user information-->
+                    </div>
+                    <!--E:left bar-->
+                    <div class="ls-main">
+                        <div class="ls-blockBg">
+                           
+                        <!--S:recharge succeeded-->
+                        <div class="recharge-succeeded">
+                            <div class="upper-half">
+                                <div class="tips-txt tips-icon">
+                                    <div class="txt">
+                                        <i class="i-icon i-tip-l i-tip-ok"></i>
+                                        <p class="ls-f-succeed">Congrats!Recharge succeeded</p>
+                                        <p class="ls-f-white">Amount:$ <span v-cloak>{{input.price}}</span></p>
+                                        <p>Star Coins Balance:<i class="i-coins-s"></i><span class="ls-f-white"  v-cloak>{{input.coin}}</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bottom-half">
+                                <span>You may like to:</span><a href="#" class="btn btn-primary btn-s">Explore Streamer</a>
+                                <p class="align-c">
+                                    <a href="#/pc/html/account/recharge_history" class="btn btn-link">Check History</a>
+                                    <em>|</em>
+                                    <a href="#/pc/html/account/recharge" class="btn btn-link">Recharge More</a>
+                                </p>
+                            </div>
+                        </div>
+                        <!--E:recharge succeeded-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+</body>

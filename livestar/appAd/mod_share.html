@@ -1,0 +1,102 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title></title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="format-detection" content="telephone=no" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link type="text/css" rel="stylesheet" href="mod_sharingTools.css">
+<style type="text/css">
+html,body {}
+body,div,p,ul,li,table,tbody,tr,td,textarea,form,input,h1,h2,h3,h4,h5,dl,dt,dd,img,iframe,header,nav,section,article,footer,figure,figcaption,menu,button,a{margin:0;padding:0;list-style:none; color:#fff;}
+body{font-family:Arial,'Lucida Grande',verdana,\5FAE\8F6F\96C5\9ED1,Helvetica;-webkit-user-select:none;-webkit-text-size-adjust:none;line-height:1.8;font-size:16px; background:#ccc;}
+header,nav,section,article,footer,figure{display:block;}
+ol,ul{margin:0;padding:0;}
+fieldset{border:none;margin:0;padding:0;}
+a,li,ul,[onclick]{
+    -webkit-tap-highlight-color:none;
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
+    }
+a{ text-decoration:none; }
+</style>
+</head>
+<body>
+    <article>
+        <section>
+            <!--S:video-->
+            <div class="video-player"><object></object></div>
+            <!--E:video-->
+            <a class="h5-btn-sharing" href="#"><i class="i-sharing"></i></a>
+            <!--S:tool-->
+            <div class="sharing-tools">
+                <p class="sharing-tit">Share with friends</p>
+                <ul>
+                    <li>
+                        <a id="shareBtn">
+                            <i class="i-facebook"></i> 
+                            <p>Facebook</p>   
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript: void(window.open('http://twitter.com/home/?status='.concat(encodeURIComponent(document.title)) .concat(' ') .concat(encodeURIComponent(location.href))));">
+                            <i class="i-twitter"></i> 
+                            <p>Twitter</p>   
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!--E:tool-->
+        </section>
+    </article>
+</body>
+
+<script src="../../static/js/lib/facebook_sdk.js"></script>
+<script src="popup_box.js"></script>
+<!--<script src="http://platform.twitter.com/widgets.js"></script>-->
+<script>
+
+FB.init({
+	version:"v2.5",
+	xfbml:1,
+//	frictionlessRequests:false,//
+	appId: 1025937600807114
+});
+
+document.getElementById('shareBtn').onclick = function() {
+  FB.ui({
+    method: 'share',
+    display: 'popup',
+    href: window.location.href,
+  }, function(response){
+//	if (response && !response.error_message) {
+//		layer.open({
+//			content: "share success!",
+//			time:3
+//		});
+//  } else {
+//    layer.open({
+//			content: "Share Failed!",
+//			time:4
+//		});
+//  }
+  });
+}
+
+$(".h5-btn-sharing").click(function(){
+	$(".sharing-tools").toggleClass("slide-up");
+});
+//twttr.widgets.createShareButton(
+//'https://dev.twitter.com/',
+//document.getElementById('container'),
+//{
+//  text: 'Hello World'
+//}
+//).then( function( el ) {
+//	      layer.open({
+//			content: "Tweet button added",
+//			time:4
+//		});
+//});
+
+</script>

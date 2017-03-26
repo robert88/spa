@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+<html lang="zh-en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>popup box</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link type="text/css" rel="stylesheet" href="/pc/public/css/popup_box.css">
+<style type="text/css">
+.block {position:relative;}
+.block h2 {background:#999;color:000;font-size:24px;text-indent:300px;}
+.popup-box,
+.popup-sysBox {margin:20px auto;}
+</style>
+<!--[if IE]>
+<script type="text/javascript">
+   (function() {
+     if (! 
+     /*@cc_on!@*/
+     0) return;
+     var e = "abbr, article, aside, audio, canvas, datalist, details, dialog, eventsource, figure, footer, header, hgroup, mark, menu, meter, nav, output, progress, section, time, video".split(', ');
+     var i= e.length;
+     while (i--){
+         document.createElement(e[i])
+     } 
+})() 
+</script>
+<![endif]-->
+</head>
+<body>
+    <article>
+    <div class="block">
+        <h2>Log in and Sign</h2>
+
+        <!--S:login-->
+        <div class="popup-box popup-login">
+            <div class="hd">
+                <div class="ls-tab tab-underline tab-f-dark">
+                    <ul>
+                        <li><a href="#">SING UP</a></li>
+                        <li class="current"><a href="#">LOGIN</a></li>
+                    </ul>
+                </div>
+                <a href="#" class="close" title="close"><i class="i-font i-close">X</i></a>
+            </div>
+            <div class="tab-bd">
+                <div class="bd-con bd-login" style="display:block;">
+                    <div class="form" autocomplete="off">
+                        <form>
+                            <dl>
+                                <dd>
+                                    <div class="input-box input-box-prepend input-box-radius">
+                                        <input class="input-txt input-default" type="txt" placeholder="Email">
+                                        <span class="add-on"><i class="i-font i-account">P</i></span>
+                                        <!--<span class="input-placeholder">Email</span>-->
+                                    </div>         
+                                </dd>
+
+                                <dd>
+                                    <div class="input-box input-box-prepend input-box-radius input-box-focus">
+                                        <input class="input-txt input-default" type="txt">
+                                        <span class="input-placeholder">Password</span>
+                                        <span class="add-on"><i class="i-font i-pwd">Q</i></span>
+                                    </div>
+                                </dd>   
+
+                                <dd class="row-verification">
+                                    <div class="input-box input-box-radius">
+                                        <input class="input-txt" type="txt">
+                                        <span class="input-placeholder">Enter Code</span>
+                                    </div>
+                                    <img src="/pc/public/images/get.png">
+                                    <a class="btn btn-reflash"><i class="i-font i-reflash">L</i></a>
+                                </dd>
+
+                                <dd class="row-remember">
+                                    <div class="label-box checked J-label-box">
+                                        <div class="checkbox">
+                                            <input type="checkbox">
+                                            <i class="i-font i-check">O</i>
+                                        </div>
+                                        <label>Remember Me</label>
+                                    </div>
+                                    <a class="ls-f-link" href="#">Forgot Password?</a>
+                                </dd>  
+
+                                <dd><p class="ls-f-primary">We can't find an account with that email.</p></dd>
+
+                                <dd class="form-ft-btn">
+                                    <a class="btn btn-primary" href="#">LOGIN</a>
+                                </dd>  
+
+                                <dd class="form-ft-info">
+                                    <span class="ls-f-dark">By clicking LOG IN, you are agreeing to the </span> <a class="ls-f-link" href="#">Terms of Service</a> and <a class="ls-f-link" href="#">Privacy Policy</a> 
+                                </dd>                   
+                            </dl>
+                        </form>
+                    </div>
+                </div>
+                <div class="bd-con bd-sign" style="display:none;">
+                    <!--S:step 1-->
+                    <div class="form form-horizontal dt-align-r step01" style="display:block;">
+                        <form>
+                            <dl>
+                                <dt>Email<span class="ls-f-primary">*</span>:</dt>
+                                <dd>
+                                    <div class="input-box input-box-radius input-box-error">
+                                        <input class="input-txt input-default" type="txt">
+                                        <span class="input-placeholder">Email Address</span>
+                                        <i class="i-icon i-tip-s i-tip-error">error</i>
+                                    </div>    
+                                    <p class="under-tips ls-f-primary">XXXXXXXXXXXXXXXXXXXXXXXXXXXXX</p>     
+                                </dd>
+
+                                <dt>Password<span class="ls-f-primary">*</span>:</dt>
+                                <dd>
+                                    <div class="input-box  input-box-radius input-box-focus">
+                                        <input class="input-txt input-default" type="password">
+                                        <span class="input-placeholder">New Password</span>
+                                        <i class="i-icon i-tip-s i-tip-ok"></i>
+                                    </div>
+                                    <p class="under-tips ls-f-tip">8-16 characters and include at least one numeric digit</p>
+                                    <p class="under-tips ls-f-primary">XXXXXXXXXX</p>
+                                </dd>   
+
+                                <dt>User Name<span class="ls-f-primary">*</span>:</dt>
+                                <dd>
+                                    <div class="input-box input-box-radius">
+                                        <input class="input-txt input-default" type="text">
+                                        <span class="input-placeholder">New Username</span>
+                                    </div>
+                                    <p class="under-tips ls-f-tip">2-18 characters long with no special characters.</p>
+                                </dd>
+
+                                <dt class="row-verification">Verification<span class="ls-f-primary">*</span>:</dt>
+                                <dd class="row-verification">
+                                    <div class="input-box input-box-radius">
+                                        <input class="input-txt" type="txt">
+                                        <span class="input-placeholder">Enter Code</span>
+                                    </div>
+                                    <img src="/pc/public/images/get.png">
+                                    <a class="btn btn-reflash"><i class="i-font i-reflash">L</i></a>
+                                </dd>                      
+                            </dl>
+                            <div class="form-ft-btn">
+                                <a class="btn btn-primary" href="#">CONTINUE</a>
+                            </div>
+                        </form>
+                    </div>          
+                    <!--E:step 1-->
+                    <!--S:step 2-->
+                    <div class="form form-horizontal dt-align-r step02" style="display:none;">
+                        <form>
+                            <dl>
+                                <dt>Gender:</dt>
+                                <dd>
+                                    <ul class="icheck-list icheck-list-m">
+                                        <li class="label-box checked J-label-box">
+                                            <div class="checkbox">
+                                                <input type="checkbox">
+                                                <i class="i-font i-check">O</i>
+                                            </div>
+                                            <label>Male</label>
+                                        </li>
+                                        <li class="label-box J-label-box">
+                                            <div class="checkbox">
+                                                <input type="checkbox">
+                                                <i class="i-font i-check">O</i>
+                                            </div>
+                                            <label>Female</label>
+                                        </li>
+                                        <li class="label-box J-label-box">
+                                            <div class="checkbox">
+                                                <input type="checkbox">
+                                                <i class="i-font i-check">O</i>
+                                            </div>
+                                            <label>Secret</label>
+                                        </li>
+                                    </ul>
+                                </dd>
+
+                                <dt>Birthday:<span class="ls-f-primary">*</span></dt>
+                                <dd>
+                                    <div class="select-dum select-birthday">
+                                        <div class="input-box input-box-append input-box-radius">
+                                            <input class="input-txt" type="txt">
+                                            <span class="add-on"><i class="i-font i-drop">C</i></span>
+                                            <span class="input-placeholder">1989</span>
+
+                                            <div class="J-scroller drop-list drop-list-light" style="display:none;">
+                                                <div class="J-scroller-con">
+                                                    <ul>
+                                                        <li class="current"><a href="#">1</a></li>
+                                                        <li><a href="#">2</a></li>
+                                                        <li><a href="#">3</a></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="scroll-control">
+                                                    <a href="#" class="scroll-up"><i class="i-font i-regular-triangle">M</i></a>
+                                                    <a href="#" class="scroll-down"><i class="i-font i-inverted-triangle">C</i></a>
+                                                    <div class="scroll-bar"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="input-box input-box-append input-box-radius">
+                                            <input class="input-txt" type="txt">
+                                            <span class="add-on"><i class="i-font i-drop">C</i></span>
+                                            <span class="input-placeholder">06</span>
+
+                                            <div class="J-scroller drop-list drop-list-light" style="display:none;">
+                                                <div class="J-scroller-con">
+                                                    <ul>
+                                                        <li class="current"><a href="#">1</a></li>
+                                                        <li><a href="#">2</a></li>
+                                                        <li><a href="#">3</a></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="scroll-control">
+                                                    <a href="#" class="scroll-up"><i class="i-font i-regular-triangle">M</i></a>
+                                                    <a href="#" class="scroll-down"><i class="i-font i-inverted-triangle">C</i></a>
+                                                    <div class="scroll-bar"></div>
+                                                </div>
+                                            </div>
+                                        </div>  
+
+                                        <div class="input-box input-box-append input-box-radius input-box-selected">
+                                            <input class="input-txt  input-border-radius" type="txt">
+                                            <span class="add-on"><i class="i-font i-drop">C</i></span>
+                                            <span class="input-placeholder">15</span>
+
+                                            <div class="J-scroller drop-list drop-list-light" style="display:block;">
+                                                <div class="J-scroller-con">
+                                                    <ul>
+                                                        <li class="current"><a href="#">1</a></li>
+                                                        <li><a href="#">2</a></li>
+                                                        <li><a href="#">3</a></li>
+                                                        <li><a href="#">4</a></li>
+                                                        <li><a href="#">5</a></li>
+                                                        <li><a href="#">6</a></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="scroll-control">
+                                                    <a href="#" class="scroll-up"><i class="i-font i-regular-triangle">M</i></a>
+                                                    <a href="#" class="scroll-down"><i class="i-font i-inverted-triangle">C</i></a>
+                                                    <div class="scroll-bar"></div>
+                                                </div>
+                                            </div>
+                                        </div>           
+                                    </div>
+                                </dd>
+
+                                <dt>Profile Photo<span class="ls-f-primary">*</span></dt>
+                                <dd>
+                                    <div class="upload-box">
+                                        <div class="select-file">
+                                            <div class="select-area">
+                                                <a class="btn btn-upload" href="#">
+                                                    <i class="i-font i-camera">N</i>
+                                                    <span>Upload Photo</span>
+                                                </a>
+                                                <input type="file">
+                                            </div>
+                                            <a class="btn btn-delete" href="#">delete</a>
+                                            <div class="control-bar">
+                                                <a href="#" class="btn btn-reduce"><i class="i-font">h</i></a>
+                                                <a href="#" class="btn btn-zoom"><i class="i-font">i</i></a>
+                                            </div>
+                                        </div>
+                                        <div class="desc">
+                                            <p>Format: PNG or JPG (Min {%n} mb)</p>
+                                            <p class="ls-f-dark">Snap or choose an amazing photo of yourself.</p>
+                                        </div>
+                                    </div>
+                                </dd>
+                            </dl>
+                            <div class="form-ft-btn">
+                                <a class="btn btn-primary" href="#">SIGN UP</a>
+                            </div>
+                            <div class="form-ft-info">
+                                <span class="ls-f-dark">By clicking LOG IN, you are agreeing to the </span> <a class="ls-f-link" href="#">Terms of Service</a> and <a class="ls-f-link" href="#">Privacy Policy</a> 
+                            </div>
+                        </form>
+                    </div>
+                    <!--E:step 2-->
+                </div>
+            </div>
+        </div>
+        <!--S:login--> 
+
+        <!--S:the first step of sign box-->
+        <div class="popup-box popup-login">
+            <div class="hd">
+                <div class="ls-tab tab-underline tab-f-dark">
+                    <ul>
+                        <li class="current"><a href="#">SING UP</a></li>
+                        <li><a href="#">LOGIN</a></li>
+                    </ul>
+                </div>
+                <a href="#" class="close" title="close"><i class="i-font i-close">X</i></a>
+            </div>
+            <div class="tab-bd">
+                <div class="bd-con bd-login" style="display:none;">
+                    <div class="form" autocomplete="off">
+                        <form>
+                            <dl>
+                                <dd>
+                                    <div class="input-box input-box-prepend input-box-radius">
+                                        <input class="input-txt input-default" type="txt">
+                                        <span class="add-on"><i class="i-font i-account">P</i></span>
+                                        <span class="input-placeholder">Email</span>
+                                    </div>         
+                                </dd>
+
+                                <dd>
+                                    <div class="input-box input-box-prepend input-box-radius input-box-focus">
+                                        <input class="input-txt input-default" type="txt">
+                                        <span class="input-placeholder">Password</span>
+                                        <span class="add-on"><i class="i-font i-pwd">Q</i></span>
+                                    </div>
+                                </dd>   
+
+                                <dd class="row-verification">
+                                    <div class="input-box input-box-radius">
+                                        <input class="input-txt" type="txt">
+                                        <span class="input-placeholder">Enter Code</span>
+                                    </div>
+                                    <img src="/pc/public/images/get.png">
+                                    <a class="btn btn-reflash"><i class="i-font i-reflash">L</i></a>
+                                </dd>
+
+                                <dd class="row-remember">
+                                    <div class="label-box checked J-label-box">
+                                        <div class="checkbox">
+                                            <input type="checkbox">
+                                            <i class="i-font i-check">O</i>
+                                        </div>
+                                        <label>Remember Me</label>
+                                    </div>
+                                    <a class="ls-f-link" href="#">Forgot Password?</a>
+                                </dd>  
+
+                                <dd><p class="ls-f-primary">We can't find an account with that email.</p></dd>
+
+                                <dd class="form-ft-btn">
+                                    <a class="btn btn-primary" href="#">LOGIN</a>
+                                </dd>  
+
+                                <dd class="form-ft-info">
+                                    <span class="ls-f-dark">By clicking LOG IN, you are agreeing to the </span> <a class="ls-f-link" href="#">Terms of Service</a> and <a class="ls-f-link" href="#">Privacy Policy</a> 
+                                </dd>                   
+                            </dl>
+                        </form>
+                    </div>
+                </div>
+                <div class="bd-con bd-sign" style="display:block;">
+                    <!--S:step 1-->
+                    <div class="form form-horizontal dt-align-r step01" style="display:block;">
+                        <form>
+                            <dl>
+                                <dt>Email<span class="ls-f-primary">*</span>:</dt>
+                                <dd>
+                                    <div class="input-box input-box-radius input-box-error">
+                                        <input class="input-txt input-default" type="txt">
+                                        <span class="input-placeholder">Email Address</span>
+                                        <i class="i-icon i-tip-s i-tip-error">error</i>
+                                    </div>    
+                                    <p class="under-tips ls-f-primary">XXXXXXXXXXXXXXXXXXXXXXXXXXXXX</p>     
+                                </dd>
+
+                                <dt>Password<span class="ls-f-primary">*</span>:</dt>
+                                <dd>
+                                    <div class="input-box  input-box-radius input-box-focus">
+                                        <input class="input-txt input-default" type="password">
+                                        <span class="input-placeholder">New Password</span>
+                                        <i class="i-icon i-tip-s i-tip-ok"></i>
+                                    </div>
+                                    <p class="under-tips ls-f-tip">8-16 characters and include at least one numeric digit</p>
+                                    <p class="under-tips ls-f-primary">XXXXXXXXXX</p>
+                                </dd>   
+
+                                <dt>User Name<span class="ls-f-primary">*</span>:</dt>
+                                <dd>
+                                    <div class="input-box input-box-radius">
+                                        <input class="input-txt input-default" type="text">
+                                        <span class="input-placeholder">New Username</span>
+                                    </div>
+                                    <p class="under-tips ls-f-tip">2-18 characters long with no special characters.</p>
+                                </dd>
+
+                                <dt class="row-verification">Verification<span class="ls-f-primary">*</span>:</dt>
+                                <dd class="row-verification">
+                                    <div class="input-box input-box-radius">
+                                        <input class="input-txt" type="txt">
+                                        <span class="input-placeholder">Enter Code</span>
+                                    </div>
+                                    <img src="/pc/public/images/get.png">
+                                    <a class="btn btn-reflash"><i class="i-font i-reflash">L</i></a>
+                                </dd>                      
+                            </dl>
+                            <div class="form-ft-btn">
+                                <a class="btn btn-primary" href="#">CONTINUE</a>
+                            </div>
+                        </form>
+                    </div>          
+                    <!--E:step 1-->
+                    <!--S:step 2-->
+                    <div class="form form-horizontal dt-align-r step02" style="display:none;">
+                        <form>
+                            <dl>
+                                <dt>Gender:</dt>
+                                <dd>
+                                    <ul class="icheck-list icheck-list-m">
+                                        <li class="label-box checked J-label-box">
+                                            <div class="checkbox">
+                                                <input type="checkbox">
+                                                <i class="i-font i-check">O</i>
+                                            </div>
+                                            <label>Male</label>
+                                        </li>
+                                        <li class="label-box J-label-box">
+                                            <div class="checkbox">
+                                                <input type="checkbox">
+                                                <i class="i-font i-check">O</i>
+                                            </div>
+                                            <label>Female</label>
+                                        </li>
+                                        <li class="label-box J-label-box">
+                                            <div class="checkbox">
+                                                <input type="checkbox">
+                                                <i class="i-font i-check">O</i>
+                                            </div>
+                                            <label>Secret</label>
+                                        </li>
+                                    </ul>
+                                </dd>
+
+                                <dt>Birthday:<span class="ls-f-primary">*</span></dt>
+                                <dd>
+                                    <div class="select-dum select-birthday">
+                                        <div class="input-box input-box-append input-box-radius">
+                                            <input class="input-txt" type="txt">
+                                            <span class="add-on"><i class="i-font i-drop">C</i></span>
+                                            <span class="input-placeholder">1989</span>
+
+                                            <div class="J-scroller drop-list drop-list-light" style="display:none;">
+                                                <div class="J-scroller-con">
+                                                    <ul>
+                                                        <li class="current"><a href="#">1</a></li>
+                                                        <li><a href="#">2</a></li>
+                                                        <li><a href="#">3</a></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="scroll-control">
+                                                    <a href="#" class="scroll-up"><i class="i-font i-regular-triangle">M</i></a>
+                                                    <a href="#" class="scroll-down"><i class="i-font i-inverted-triangle">C</i></a>
+                                                    <div class="scroll-bar"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="input-box input-box-append input-box-radius">
+                                            <input class="input-txt" type="txt">
+                                            <span class="add-on"><i class="i-font i-drop">C</i></span>
+                                            <span class="input-placeholder">06</span>
+
+                                            <div class="J-scroller drop-list drop-list-light" style="display:none;">
+                                                <div class="J-scroller-con">
+                                                    <ul>
+                                                        <li class="current"><a href="#">1</a></li>
+                                                        <li><a href="#">2</a></li>
+                                                        <li><a href="#">3</a></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="scroll-control">
+                                                    <a href="#" class="scroll-up"><i class="i-font i-regular-triangle">M</i></a>
+                                                    <a href="#" class="scroll-down"><i class="i-font i-inverted-triangle">C</i></a>
+                                                    <div class="scroll-bar"></div>
+                                                </div>
+                                            </div>
+                                        </div>  
+
+                                        <div class="input-box input-box-append input-box-radius input-box-selected">
+                                            <input class="input-txt  input-border-radius" type="txt">
+                                            <span class="add-on"><i class="i-font i-drop">C</i></span>
+                                            <span class="input-placeholder">15</span>
+
+                                            <div class="J-scroller drop-list drop-list-light" style="display:block;">
+                                                <div class="J-scroller-con">
+                                                    <ul>
+                                                        <li class="current"><a href="#">1</a></li>
+                                                        <li><a href="#">2</a></li>
+                                                        <li><a href="#">3</a></li>
+                                                        <li><a href="#">4</a></li>
+                                                        <li><a href="#">5</a></li>
+                                                        <li><a href="#">6</a></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="scroll-control">
+                                                    <a href="#" class="scroll-up"><i class="i-font i-regular-triangle">M</i></a>
+                                                    <a href="#" class="scroll-down"><i class="i-font i-inverted-triangle">C</i></a>
+                                                    <div class="scroll-bar"></div>
+                                                </div>
+                                            </div>
+                                        </div>           
+                                    </div>
+                                </dd>
+
+                                <dt>Profile Photo<span class="ls-f-primary">*</span></dt>
+                                <dd>
+                                    <div class="upload-box">
+                                        <div class="select-file">
+                                            <div class="select-area">
+                                                <a class="btn btn-upload" href="#">
+                                                    <i class="i-font i-camera">N</i>
+                                                    <span>Upload Photo</span>
+                                                </a>
+                                                <input type="file">
+                                            </div>
+                                            <a class="btn btn-delete" href="#">delete</a>
+                                            <div class="control-bar">
+                                                <a href="#" class="btn btn-reduce"><i class="i-font">h</i></a>
+                                                <a href="#" class="btn btn-zoom"><i class="i-font">i</i></a>
+                                            </div>
+                                        </div>
+                                        <div class="desc">
+                                            <p>Format: PNG or JPG (Min {%n} mb)</p>
+                                            <p class="ls-f-dark">Snap or choose an amazing photo of yourself.</p>
+                                        </div>
+                                    </div>
+                                </dd>
+                            </dl>
+                            <div class="form-ft-btn">
+                                <a class="btn btn-primary" href="#">SIGN UP</a>
+                            </div>
+                            <div class="form-ft-info">
+                                <span class="ls-f-dark">By clicking LOG IN, you are agreeing to the </span> <a class="ls-f-link" href="#">Terms of Service</a> and <a class="ls-f-link" href="#">Privacy Policy</a> 
+                            </div>
+                        </form>
+                    </div>
+                    <!--E:step 2-->
+                </div>
+            </div>
+        </div>
+        <!--S:the first step of sign box--> 
+
+        <!--S:the second step of sign up-->
+        <div class="popup-box popup-login">
+            <div class="hd">
+                <div class="ls-tab tab-underline tab-f-dark">
+                    <ul>
+                        <li class="current"><a href="#">SING UP</a></li>
+                        <li><a href="#">LOGIN</a></li>
+                    </ul>
+                </div>
+                <a href="#" class="close" title="close"><i class="i-font i-close">X</i></a>
+            </div>
+            <div class="tab-bd">
+                <div class="bd-con bd-login" style="display:none;">
+                    <div class="form">
+                        <form>
+                            <dl>
+                                <dd>
+                                    <div class="input-box input-box-prepend input-box-raidus">
+                                        <input class="input-txt input-default" type="txt">
+                                        <span class="add-on"><i class="i-font i-account">P</i></span>
+                                        <span class="input-placeholder">Email</span>
+                                    </div>         
+                                </dd>
+
+                                <dd>
+                                    <div class="input-box input-box-prepend input-box-raidus input-box-focus">
+                                        <input class="input-txt input-default" type="txt">
+                                        <span class="input-placeholder">Password</span>
+                                        <span class="add-on"><i class="i-font i-pwd">Q</i></span>
+                                    </div>
+                                </dd>   
+
+                                <dd class="row-verification">
+                                    <div class="input-box input-box-raidus">
+                                        <input class="input-txt" type="txt">
+                                        <span class="input-placeholder">Enter Code</span>
+                                    </div>
+                                    <img src="images/get.png">
+                                    <a class="btn btn-reflash"><i class="i-font i-reflash">L</i></a>
+                                </dd>
+
+                                <dd class="row-remember">
+                                    <div class="label-box checked J-label-box">
+                                        <div class="checkbox">
+                                            <input type="checkbox">
+                                            <i class="i-font i-check">O</i>
+                                        </div>
+                                        <label>Remember Me</label>
+                                    </div>
+                                    <a class="ls-f-link" href="#">Forgot Password?</a>
+                                </dd>  
+
+                                <dd><p class="ls-f-primary">We can't find an account with that email.</p></dd>
+
+                                <dd class="form-ft-btn">
+                                    <a class="btn btn-primary" href="#">LOGIN</a>
+                                </dd>  
+
+                                <dd class="form-ft-info">
+                                    <span class="ls-f-dark">By clicking LOG IN, you are agreeing to the </span> <a class="ls-f-link" href="#">Terms of Service</a> and <a class="ls-f-link" href="#">Privacy Policy</a> 
+                                </dd>                   
+                            </dl>
+                        </form>
+                    </div>
+                </div>
+                <div class="bd-con bd-sign" style="display:block;">
+                    <!--S:step 1-->
+                    <div class="form form-horizontal dt-align-r step01" style="display:none;">
+                        <form>
+                            <dl>
+                                <dt>Email<span class="ls-f-primary">*</span>:</dt>
+                                <dd>
+                                    <div class="input-box input-box-error">
+                                        <input class="input-txt input-default" type="txt">
+                                        <span class="input-placeholder">Email Address</span>
+                                        <i class="i-icon i-tip-s i-tip-error">error</i>
+                                    </div>    
+                                    <p class="under-tips ls-f-primary">XXXXXXXXXXXXXXXXXXXXXXXXXXXXX</p>     
+                                </dd>
+
+                                <dt>Password<span class="ls-f-primary">*</span>:</dt>
+                                <dd>
+                                    <div class="input-box input-box-focus">
+                                        <input class="input-txt input-default" type="password">
+                                        <span class="input-placeholder">New Password</span>
+                                        <i class="i-icon i-tip-s i-tip-ok"></i>
+                                    </div>
+                                    <p class="under-tips ls-f-tip">8-16 characters and include at least one numeric digit</p>
+                                    <p class="under-tips ls-f-primary">XXXXXXXXXX</p>
+                                </dd>   
+
+                                <dt>User Name<span class="ls-f-primary">*</span>:</dt>
+                                <dd>
+                                    <div class="input-box">
+                                        <input class="input-txt input-default" type="text">
+                                        <span class="input-placeholder">New Username</span>
+                                    </div>
+                                    <p class="under-tips ls-f-tip">2-18 characters long with no special characters.</p>
+                                </dd>
+
+                                <dt class="row-verification">Verification<span class="ls-f-primary">*</span>:</dt>
+                                <dd class="row-verification">
+                                    <div class="input-box">
+                                        <input class="input-txt" type="txt">
+                                        <span class="input-placeholder">Enter Code</span>
+                                    </div>
+                                    <img src="/pc/public/images/get.png">
+                                    <a class="btn btn-reflash"><i class="i-font i-reflash">L</i></a>
+                                </dd>                      
+                            </dl>
+                            <div class="form-ft-btn">
+                                <a class="btn btn-primary" href="#">CONTINUE</a>
+                            </div>
+                        </form>
+                    </div>          
+                    <!--E:step 1-->
+                    <!--S:step 2-->
+                    <div class="form form-horizontal dt-align-r step02" style="display:block;">
+                        <form>
+                            <dl>
+                                <dt>Gender:</dt>
+                                <dd>
+                                    <ul class="icheck-list icheck-list-m">
+                                        <li class="label-box checked J-label-box">
+                                            <div class="checkbox">
+                                                <input type="checkbox">
+                                                <i class="i-font i-check">O</i>
+                                            </div>
+                                            <label>Male</label>
+                                        </li>
+                                        <li class="label-box J-label-box">
+                                            <div class="checkbox">
+                                                <input type="checkbox">
+                                                <i class="i-font i-check">O</i>
+                                            </div>
+                                            <label>Female</label>
+                                        </li>
+                                        <li class="label-box J-label-box">
+                                            <div class="checkbox">
+                                                <input type="checkbox">
+                                                <i class="i-font i-check">O</i>
+                                            </div>
+                                            <label>Secret</label>
+                                        </li>
+                                    </ul>
+                                </dd>
+
+                                <dt>Birthday:<span class="ls-f-primary">*</span></dt>
+                                <dd>
+                                    <div class="select-dum select-birthday">
+                                        <div class="input-box input-box-append input-box-radius">
+                                            <input class="input-txt" type="txt">
+                                            <span class="add-on"><i class="i-font i-drop">C</i></span>
+                                            <span class="input-placeholder">1989</span>
+
+                                            <div class="drop-list drop-list-light" style="display:none;">
+                                                <ul>
+                                                    <li class="current"><a href="#">1</a></li>
+                                                    <li><a href="#">2</a></li>
+                                                    <li><a href="#">3</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                        <div class="input-box input-box-append input-box-radius">
+                                            <input class="input-txt" type="txt">
+                                            <span class="add-on"><i class="i-font i-drop">C</i></span>
+                                            <span class="input-placeholder">06</span>
+
+                                            <div class="drop-list drop-list-light" style="display:none;">
+                                                <ul>
+                                                    <li class="current"><a href="#">1</a></li>
+                                                    <li><a href="#">2</a></li>
+                                                    <li><a href="#">3</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>  
+
+                                        <div class="input-box input-box-append input-box-radius input-box-selected">
+                                            <input class="input-txt" type="txt">
+                                            <span class="add-on"><i class="i-font i-drop">C</i></span>
+                                            <span class="input-placeholder">15</span>
+
+                                            <div class="drop-list drop-list-light" style="display:block;">
+                                                <ul>
+                                                    <li class="current"><a href="#">1</a></li>
+                                                    <li><a href="#">2</a></li>
+                                                    <li><a href="#">3</a></li>
+                                                    <li><a href="#">4</a></li>
+                                                    <li><a href="#">5</a></li>
+                                                    <li><a href="#">6</a></li>
+                                                    <li><a href="#">2</a></li>
+                                                    <li><a href="#">3</a></li>
+                                                    <li><a href="#">4</a></li>
+                                                    <li><a href="#">5</a></li>
+                                                    <li><a href="#">6</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>           
+                                    </div>
+                                </dd>
+
+                                <dt>Profile Photo<span class="ls-f-primary">*</span></dt>
+                                <dd>
+                                    <div class="upload-box">
+                                        <div class="select-file">
+                                            <div class="select-area">
+                                                <a class="btn btn-upload" href="#">
+                                                    <i class="i-font i-camera">N</i>
+                                                    <span>Upload Photo</span>
+                                                </a>
+                                                <input type="file">
+                                            </div>
+                                            <a class="btn btn-delete" href="#">delete</a>
+                                            <div class="control-bar">
+                                                <a href="#" class="btn btn-reduce"><i class="i-font">h</i></a>
+                                                <a href="#" class="btn btn-zoom"><i class="i-font">i</i></a>
+                                            </div>
+                                        </div>
+                                        <div class="desc">
+                                            <p>Format: PNG or JPG (Min {%n} mb)</p>
+                                            <p class="ls-f-dark">Snap or choose an amazing photo of yourself.</p>
+                                        </div>
+                                    </div>
+                                </dd>
+                            </dl>
+                            <div class="form-ft-btn">
+                                <a class="btn btn-primary" href="#">SIGN UP</a>
+                            </div>
+                            <div class="form-ft-info">
+                                <span class="ls-f-dark">By clicking LOG IN, you are agreeing to the </span> <a class="ls-f-link" href="#">Terms of Service</a> and <a class="ls-f-link" href="#">Privacy Policy</a> 
+                            </div>
+                        </form>
+                    </div>
+                    <!--E:step 2-->
+                </div>
+            </div>
+        </div>
+        <!--S:the second step of sign up-->  
+    </div>
+
+    <div class="block">
+        <h2>upload user's image</h2>
+        <!--S:upload user's image-->
+        <div class="popup-box popup-upload" style="top:80px;">
+            <div class="hd">
+                <h3 class="hd-tit"><b>Your Profile Photo</b></h3>
+                <a href="#" class="close" title="close"><i class="i-font i-close">X</i></a>
+            </div>
+            <div class="bd">
+                <div class="upload-box">
+                    <div class="select-file">
+                        <div class="select-area">
+                            <a class="btn btn-upload" href="#">
+                                <i class="i-font i-camera">N</i>
+                                <span>Upload Photo</span>
+                            </a>
+                            <input type="file">
+                        </div>
+                        <a class="btn btn-delete" href="#">delete</a>
+                        <div class="control-bar">
+                            <a href="#" class="btn btn-reduce"><i class="i-font">h</i></a>
+                            <a href="#" class="btn btn-zoom"><i class="i-font">i</i></a>
+                        </div>
+                        <div class="desc">
+                            <p>Format: PNG or JPG (Min {%n} mb)</p>
+                            <p class="ls-f-dark">Snap or choose an amazing photo of yourself.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <p>
+                    <a class="btn btn-m btn-primary" href="#">Save</a>
+                    <a class="btn btn-m btn-cancel" href="#">Cancel</a>
+                </p>
+            </div>
+        </div>
+        <!--E:upload user's image-->
+    </div>
+
+    <div class="block">
+        <h2>system popbox</h2>
+        <!--S:successful-->
+        <div class="popup-box popup-sys">
+            <div class="bd">
+                <div class="tips-txt align-c">
+                    <i class="i-icon i-tip-l i-tip-ok"></i>
+                    <div class="txt">
+                        <p>Sign Up Succeed</p>
+                    </div>
+                </div>
+            </div>
+            <div class="ft-btn align-c">
+                <a href="#" class="btn btn-primary btn-m">OK</a>
+            </div>
+        </div>
+        <!--S:successful-->
+
+        <!--S:warning-->
+        <div class="popup-box popup-sys">
+            <div class="bd">
+                <div class="tips-txt align-c">
+                    <i class="i-icon i-tip-l i-tip-warning"></i>
+                    <div class="txt">
+                        <p>warned</p>
+                    </div>
+                </div>
+            </div>
+            <div class="ft-btn align-c">
+                <a href="#" class="btn btn-primary btn-m">OK</a>
+            </div>
+        </div>
+        <!--S:warning-->
+
+        <!--S:normal system popup box-->
+        <div class="popup-box popup-sys">
+            <div class="hd">
+                <div class="hd-tit">Notification</div>
+                <a href="#" class="close" title="close"><i class="i-font i-close">X</i></a>
+            </div>
+            <div class="bd">
+                <div class="tips-txt align-c">
+                    <div class="txt">
+                        <p>Saving failed.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="ft-btn align-c">
+                <a href="#" class="btn btn-primary btn-m">OK</a>
+            </div>
+        </div>
+        <!--S:normal system popup box-->
+    </div>
+
+    <div class="block">
+        <h2>payment popup box</h2>
+        <div class="popup-box popup-achievePayment">
+            <div class="hd">
+                <h3 class="hd-tit">Note</h3>
+                <a href="#" class="close" title="close"><i class="i-font i-close">X</i></a>
+            </div> 
+            <div class="bd">
+                <div class="tips-txt tips-icon">
+                    <div class="txt">
+                        <i class="i-font i-bulb">l</i>
+                        <p>Please achieve payment in the new open page.</p>
+                    </div>
+                    <p>Before payment complete please do not close this window.</p>
+                </div>
+            </div>
+            <div class="ft-btn align-c">
+                <a href="#" class="btn btn-primary btn-m">Yes</a>
+                <a href="#" class="btn btn-primaryLink btn-m">Payment issue</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="block">
+        <h2>room popup box</h2>
+        <!--S:report-->
+        <div class="popup-box popup-sys">
+            <div class="hd">
+                <div class="hd-tit">Tips</div>
+                <a href="#" class="close" title="close"><i class="i-font i-close">X</i></a>
+            </div>
+            <div class="bd">
+                <div class="align-c">
+                    <p>Are you sure you want to report the stremer?</p>
+                </div>
+            </div>
+            <div class="ft-btn align-c">
+                <a href="#" class="btn btn-primary btn-m">Cancel</a>
+                <a href="#" class="btn btn-normalLink btn-m">Sure</a>
+            </div>
+        </div>
+        <!--S:report-->
+    </div>
+    </article>
+</body>

@@ -1,0 +1,40 @@
+<article class="app-wrap co-wrap" id="confirmationVue">
+    <div class="co-topBar">
+        <a class="btn btn-return" href="#/mb/cash_out/set_paypal"><i class="i-return"></i></a>
+        <p class="tit">Cash Out</p>
+    </div>
+    <div class="co-container confirmation">
+        <div class="cashOut-upper">
+            <figure>
+                <figcaption>You Have:</figcaption>
+                <p class="total-starBucks f-special" v-cloak><i class="i-starBucks-l"></i>{{{totalMoney | toMenoy}}}</p>
+            </figure>
+        </div>
+        <div class="cashOut-bottom">
+            <div class="bill">
+                <div class="tit">Confirmation</div>
+                <dl>
+                    <dt>PayPal Account:</dt>
+                    <dd v-cloak>{{paypal}}</dd>
+                    <dt>Cash Out Amount:</dt>
+                    <dd><span class="f-primary"><em>$</em><span v-cloak>{{selectDollar}}</span></span></dd>
+                </dl>
+            </div>
+            <div class="form-ft-btn"><a class="btn btn-primary btn-main J-continue">Submit</a></div>
+        </div>
+    </div>
+    <div class="tipsHeader J-sys-Msg animate-ease" style="display:none;">
+        Invalid code
+    </div>
+    <div class="J-dialog" style="display: none;">
+        <div class="popup-box popup-boxSys">
+            <div class="bd">
+                <div class="main-txt">Your request has been accepted. Thank you!</div>
+            </div>
+            <div class="ft-btn">
+                <a class="btn btn-text btn-m J-ok-btn">OK</a>
+            </div>
+        </div>
+    </div>
+
+</article>

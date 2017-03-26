@@ -1,0 +1,31 @@
+{
+    "code": 200,
+    "state": true,
+    "message": "OK",
+    "data": {
+        "refresh": true,
+        "array": [
+            {
+                "id": 1,
+                "name": "Heart",             // 名称
+                "price": 1,                  // 价格
+                "exp": 10,                   // 获得的经验
+                "type": 1,                   // 礼物类型
+                "icon": "xxx.png",           // 礼物图标（礼物列表显示）
+                "msg_icon": "xxx.png",       // 礼物小图标（礼物消息显示）
+                "image": ""                  // 特效图片（动态礼物）
+            },
+            {
+                "id": 2,
+                "name": "Thumbs Up",
+                "price": 1,
+                "exp": 10,
+                "type": 1,
+                "icon": "http://lscdn.livestar.com/uploads/1606/301742292050.png",
+                "msg_icon": null,
+                "image": null
+            }
+        ],
+        "version": "28.20.05370.en"
+    }
+}

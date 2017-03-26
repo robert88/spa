@@ -1,0 +1,14 @@
+.cashOut-upper .logo-paypal {
+    width:200px;
+    height:51px;
+    margin:35px auto 10px auto;
+    background:url(/mb/public/images/cash_out/paypal_logo.png?v=1) no-repeat;
+    overflow:hidden;
+    text-indent:-999px;
+}
+.set-paypal .cashOut-bottom {
+    width:86%;
+}
+.set-paypal .btn-main {
+    width:87%;
+}

@@ -1,0 +1,52 @@
+/*html,body,article {
+    height:100%;
+}*/
+.introduction {
+    margin-left:10%;
+    margin-right:10%;
+    font-size:14px;
+}
+.introduction .terms {
+    padding-top:25px;
+    padding-bottom:85px;
+    color:#fff;
+}
+.introduction .terms p {
+    margin-bottom:20px;
+}
+.label-checkbox span {
+    color:#e32064;
+}
+.ft-options {
+    position:fixed;
+    left:0;
+    bottom:0;
+    width:80%;
+    padding-top:20px;
+    padding-left:10%;
+    padding-right:10%;
+    padding-bottom:15px;
+    background:#252525;
+}
+.ft-options .btn {
+    width:96%;
+    margin-left:auto;
+    margin-right:auto;
+}
+.part {
+    margin-bottom:35px;
+}
+.terms h1 {
+    margin-bottom:30px;
+    font-size:16px;
+    text-align:center;
+}
+.terms {
+    font-size:12px;
+}
+.terms li {
+    margin-bottom:5px;
+}
+.link-txt {
+    color:#e32064;
+}

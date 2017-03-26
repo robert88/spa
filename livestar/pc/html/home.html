@@ -1,0 +1,55 @@
+
+        <div class="ls-container" id="featureVue">
+            <div class="ls-content">
+                <div class="ls-hm-live">
+                    <ul class="mod-live-list top-live">
+                        <li v-for="feature in topFeatures" v-show="topFeatures.length>0" v-cloak>
+                            <a :href="feature.url | parseUrl">
+                                <img :src="feature.userimg | getHomeDef">
+                                <div class="info-bg short-bg">
+                                    <p class="live-tit" >{{{feature.uname}}}</p>
+                                    <p class="live-intro">
+                                        {{{feature.broadcast|parseBroadcast}}}
+                                    </p>
+                               </div> 
+                                <div class="info-bg whole-bg">
+                                    <p class="live-fav"><i class="i-font i-fav">I</i>{{feature.fans|formatNum}}</p>
+                                    <p class="live-viewers"><i class="i-font i-viewers">J</i>{{feature.online_num|formatNum}}</p>
+                                </div>
+                                <p class="mark-live" v-show="feature.live_status==1">LIVE</p>
+                                <p class="mark-record" v-show="feature.live_status!=1">REPLAY</p>
+                                <p class="live-location" v-show="feature.city && feature.city!='unknown'"><i class="i-font i-location">K</i>{{feature.city}}</p>
+                                <p class="tips-txt tips-icon tips-loading">
+                                    <span class="txt"><i class="i-font i-loading">r</i>Loading...</span>
+                                </p>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <ul class="mod-live-list">
+                        <li v-for="feature in bottomFeatures" v-show="bottomFeatures.length>0" v-cloak>
+                            <a :href="feature.url | parseUrl">
+                                <img :src="feature.userimg | getHomeDef">
+                                <div class="info-bg short-bg">
+                                    <p class="live-tit">{{{feature.uname}}}</p>
+
+                                    <p class="live-intro">
+                                        {{{feature.broadcast|parseBroadcast}}}
+                                    </p>
+                                </div> 
+                                <div class="info-bg whole-bg">
+                                    <p class="live-fav"><i class="i-font i-fav">I</i>{{feature.fans|formatNum}}</p>
+                                    <p class="live-viewers"><i class="i-font i-viewers">J</i>{{feature.online_num|formatNum}}</p>
+                                </div>
+                                <p class="mark-live" v-show="feature.live_status==1">LIVE</p>
+                                <p class="mark-record" v-show="feature.live_status!=1">REPLAY</p>
+                            </a>
+                        </li>
+                     </ul>
+                    <a class="pages-more">
+                        <i class="i-font i-rank-s">B</i>
+                        <p>Load more</p>
+                    </a>
+                </div>
+            </div>
+        </div>

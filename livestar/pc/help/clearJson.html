@@ -1,0 +1,73 @@
+<div id="text" >
+
+<textarea>
+	{{message}}
+</textarea>
+
+</div>
+<script>
+
+$(function() {
+//	var b = new Vue({
+//		el: '#text',
+//		methods: {
+//			stringify: function() {
+//				this.message = JSON.stringify(this.message)
+//			}
+//		}
+//	});
+	var b = new Vue({el: '#text',data:{message:""}});
+
+
+
+var a = {
+   "code": 200, 
+   "state": true, 
+   "data": {
+       "info": [
+           {
+           "id": "36",   //主播房间ID
+           "imRoomid": "93963",  //云信房间ID 云信的房间id 如果为0,延迟一会在来获取
+           "imRoomAdmin": "admin_93963",  //云信IM的管理员
+           "uid": "370",  //主播UID
+           "uname": "U370U405990T333432",  //主播昵称
+           "sex": "1",  //1：男 2：女
+           "picture": "http://cdn.livestar.com/uploads/1604/191633176341.jpg",  //LiveStar使用的封面图，RadarTV为空
+           "tag": "1",  //LiveStar使用的，标识用户类型
+           "tags": null,  //LiveStar使用的，标识用户类型
+           "last_live_time": "1464563008",  //上次直播时间
+           "next_live_time": "1461118086",  //下次直播时间
+           "cycle_time": null,  //循环直播时间，暂未使用
+           "cycle": null,  //暂未使用
+           "title": "Welcome to my live",  //聊天室名称，Livestar使用
+           "broadcast": "Welcome to my live",   //在radarTV中，本字段表示话题，LiveStar表示公告
+           "reg_time": "1462348031",  //主播注册时间
+           "country": "",  //主播所在国家
+           "state": "",      //主播所在州
+           "city": "",        //主播所在城市
+           "live_status": "1",  //1在播，2下播 
+           "push_url": "rtmp://live.live3721.com/mytv/370",  //推流地址
+           "pull_url": "rtmp://play.live3721.com/mytv/370",  //拉流地址
+           "status": "1",  //主播的封禁状态，1为正常，2为封禁
+           "fans": "24",  //粉丝数
+           "userimg": "",  //主播头像
+           "signature": "", //个性签名
+           "name": "U370U405990T333432",  //UDB昵称，昵称请使用上面的uname
+           "online_num": 1,  //在线数
+           "url": "/live/?roomid=36",  //WEB使用的跳转到直播间地址 
+           "level": "4", //主播等级
+           "live_date": "26小时47分钟前开播",  //如果在播，则表示直播时长，如果下播，则表示上次开播时间点
+           "follow":0 //未关注，1 关注了
+        }
+       ], 
+       "total": 2,                            //总数（该搜索结果总数）
+       "limit": 20,                           //分页基数
+       "ret": 1,                              
+       "page": 1,                            //当前页码
+       "totalpage": 1                        //总共多少页
+   }
+}
+b.message = JSON.stringify(a)
+})
+
+</script>

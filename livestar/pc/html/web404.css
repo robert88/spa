@@ -1,0 +1,17 @@
+@import url(/pc/public/css/module/mod_btn.css);
+@import url(/pc/public/css/module/mod_popup_box.css);
+@import url(/pc/public/css/skin/main_color.css);
+.page404 {
+    height:713px;
+    background:url(/pc/public/images/page404_bg.jpg) no-repeat center #333333;
+}
+.page404-txt {
+    padding-top:380px;
+    padding-left:48%;
+    padding-right:200px;
+    font-size:23px;
+}
+.page404-txt .btn {
+    width:160px;
+    margin-top:20px;
+}

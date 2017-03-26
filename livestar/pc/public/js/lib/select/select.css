@@ -1,0 +1,7 @@
+.selectwarp{position: relative;display: inline-block;vertical-align: middle;}
+.select{width: 160px;height: 30px;border:1px red solid;line-height: 30px;font-size: 14px;}
+.select input[type=text]{width: 130px;height: 30px;float: left;overflow: hidden;border: none;}
+.selectbtn{cursor:pointer;width: 30px;height: 30px;background-color: #e00e0e;color: white;float: left;text-align: center;}
+.option{width: 160px;border: 1px red solid;border-top: none;position: absolute;top: 26px;display: none; }
+.option p{height: 30px;line-height: 30px;font-size: 14px;background: #fff; padding-left: 10px;}
+.option p:hover{background: #f00;color: #fff;}

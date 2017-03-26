@@ -1,0 +1,23 @@
+//头像上传编辑
+//
+//方式：模拟表单POST 秘钥：jv4GFGCP
+//
+//POST URL：http://tools.livestar.com/upload/
+//
+//FILE 文件名称：fileData
+//
+//其他参数：
+//
+//fileExt：文件扩展名称（jpg,png等）
+//
+//time：时间戳（1235485475）
+//
+//flag：md5(秘钥).time（例如 md5("jv4GFGCP123456685")）
+//
+//post_params: {
+//  "hello" : "Here I Am",
+//  "name" : "张三",
+//  "ff" : document.getElementById("tf").value
+// },
+//use_query_string : true,
+{}

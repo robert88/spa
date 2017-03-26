@@ -1,0 +1,77 @@
+
+    <article class="ls-wrap" id="forgetField">
+        <div class="ls-container">
+            <div class="ls-content">
+                <div class="ls-blockBg ls-setAccount">
+                    <!--S:have sent Email-->
+                    <div class="has-sentEmail" style="display:none;">
+                        <div class="ls-hd">
+                            <h2 class="ls-headTit"><b>Forgot Password</b></h2>
+                        </div>
+                        <div class="ls-bd">
+                            <div class="tips-txt align-c">
+                                <i class="i-icon i-tip-l i-tip-ok J-tip-msg"></i>
+                                <div class="txt">
+                                    <p class="ls-f-white">A link to reset your password has been sent to your email.</p>
+                                    <p class="ls-f-white">Please follow the instructions to reset the password within <span class="ls-f-primary">the next 24 hours</span>.</p>
+                                </div>
+                            </div>
+                            <div class="tips-txt tips-icon align-c">
+                                <span class="txt txt-xs">
+                                    <i class="i-icon i-tip-xs i-tip-warning"></i>if you can't find the email,please check your spam box.
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <!--E:have sent Email-->
+
+                    <!--S:forgot pwd-->
+                    <div class="forgot-pwd">
+                        <div class="ls-hd">
+                            <h2 class="ls-headTit"><b>Forgot Password</b></h2>
+                        </div>
+                        <div class="ls-bd">
+                            <div class="form">
+                                <form autocomplete="off" id="forgotPWDForm">
+                                    <dl>
+                                        <dt>Please enter your email address</dt>
+                                        <dd>
+                                            <div class="input-box input-box-dark input-box-radius J-input-focus">
+                                                <input class="input-txt" type="txt" placeholder="Email"
+	                                        	check-type="required,email" 
+	                                        	name="login_id"
+	                                        	data-focus="true" 
+	                                        	data-blur-action = "/api/?ct=api&ac=web&platform=livestar&method=checkEmail&login_id={0}"
+	                                        	data-blur="true"
+                                        		>
+                                            </div>
+                                            <p class="float-under-tips ls-f-primary J-tip-msg J-tip-error">xxxxxx</p>
+                                        </dd>
+
+                                        <dt>Please enter the verification code</dt>
+                                        <dd class="row-verification">
+                                            <div class="input-box input-box-dark input-box-radius J-input-focus">
+                                                <input class="input-txt J-code" type="txt" placeholder="Enter Code"
+                                                check-type="required" 
+	                                        	name="code"
+	                                        	data-focus="true"
+                                                data-error-clear="true"
+	                                        	data-blur="true" >
+                                            </div>
+                                             <img class="captcha" src="/api/?ct=api&ac=web&method=captcha&platform=livestar&type=safety"
+                                             data-src="/api/?ct=api&ac=web&method=captcha&platform=livestar&type=safety">
+                                            <a class="btn btn-reflash J-captcha-reflash"><i class="i-font i-reflash">L</i></a>
+                                            <p class="float-under-tips ls-f-primary J-tip-msg">xxxxxx</p>
+                                        </dd>
+
+                                        <dd class="form-ft-btn"><a class="btn btn-primary btn-mainSubmit J-submitBtn">Continue</a></dd>
+                                    </dl>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <!--E:forgot pwd-->
+                </div>
+            </div>
+        </div>
+    </article>

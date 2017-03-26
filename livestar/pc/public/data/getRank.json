@@ -1,0 +1,39 @@
+{
+    "state": true,
+    "message": "OK",
+    "data": [
+        {
+            "uid": "469",
+            "score": "25700",
+            "name": "live22",
+            "userimg": "http://cdn.livestar.com/uploads/1604/291524585158.png",
+            "anchor_level": "1",
+            "consume_level": "3",
+            "sex": "0",
+            "is_follow": 1,
+            "is_live": 0
+        },
+        {
+            "uid": "146",
+            "score": "15000",
+            "name": "window",
+            "userimg": "http://cdn.livestar.com/uploads/1605/191115594331.jpg",
+            "anchor_level": "1",
+            "consume_level": "6",
+            "sex": "0",
+            "is_follow": 1,
+            "is_live": 1
+        },
+        {
+            "uid": "479",
+            "score": "10500",
+            "name": "live32",
+            "userimg": "http://cdn.livestar.com/uploads/1604/291524585158.png",
+            "anchor_level": "1",
+            "consume_level": "2",
+            "sex": "0",
+            "is_follow": 1,
+            "is_live": 0
+        }
+    ]
+}

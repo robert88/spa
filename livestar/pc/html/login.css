@@ -1,0 +1,44 @@
+@import url(/pc/public/css/module/mod_tab.css);
+.select-birthday select {
+    width: 100px;
+    border: 1px solid #dbdbdb;
+    height: 38px;
+    color: #333;
+     font-size: 16px;
+}
+.select-birthday option {
+	border: 1px solid #dbdbdb;
+	font-size: 14px;
+}
+#loginField .loginCode{
+	display: none;
+}
+
+/*error״̬*/
+.input-box-error .i-tip-error,.input-box-error .J-tip-msg{
+	display: inherit;
+}
+.input-box-error .ls-f-tip{
+	display: none;
+}
+/*success״̬*/
+.input-box-success .i-tip-ok{
+	display: inherit;
+}
+.input-check{
+	border: 1px solid transparent;
+}
+.input-box-error.input-check,.input-box-error .input-check{
+	    border: 1px solid #FB5470;
+}
+.input-box-error select[check-type]{
+	border-color:#FB5470;
+}
+#loginField .input-box-append{
+    float: left;
+    z-index: 2;
+    margin-right: 10px;
+    }
+.J-input-password-show{
+    display: none;
+}

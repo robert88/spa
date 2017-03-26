@@ -1,0 +1,134 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors Your Name (you@example.org)
+ * @date    2015-01-14 16:57:32
+ * @version $Id$
+ */
+ @import url(/pc/public/css/module/mod_popup_box.css);
+/*btn*/
+.btn {
+    display:inline-block; 
+    font-size:14px;
+    line-height:1.8;
+    text-align:center;
+    white-space:nowrap;
+    vertical-align:middle;
+    touch-action:manipulation;
+    cursor:hand;
+    cursor:pointer;
+    -webkite-border-radius:4px;
+        -moz-border-radius:4px;
+             border-radius:4px;
+}
+.btn:hover {text-decoration:none;}
+.btn-square {
+    -webkite-border-radius:0;
+        -moz-border-radius:0;
+             border-radius:0;
+}
+
+
+.btn-xs {
+    padding:2px 8px;
+    font-size:12px;
+    -webkite-border-radius:3px;
+        -moz-border-radius:3px;
+             border-radius:3px;
+}
+.btn-sm {
+    padding:5px 10px;
+    font-size:12px;
+    line-height:1.5;
+    -webkite-border-radius:3px;
+        -moz-border-radius:3px;
+             border-radius:3px;
+}
+.btn-s {
+    height:42px;
+    padding:0 10px;
+    line-height:42px;
+    font-size:1.1428571428571428em;
+}
+.btn-m {
+    height:42px;
+    line-height:42px;
+    font-size:18px;
+}
+.btn-m-l {
+    padding-left:20px;
+    padding-right:20px;
+    font-size:20px;
+}
+.form-ft-btn .btn {
+    width:74px;
+}
+.btn-default {
+    background:#2e6da4;
+    color:#fff;
+}
+.btn-default:hover {
+    background:#3c86c6;
+}
+.btn-cancel {
+    background:#ccc;
+    color:#fff;
+}
+.btn-disable {
+    background:#454545;
+    color:#fff;
+    cursor:default!important;
+}
+.room-wrap .btn-disable {
+    background:#313131;
+}
+.btn-primary {
+    background:#e32064;
+    color:#fff;
+}
+.btn-primary:hover {
+    background:#fe005a;
+}
+.btn-primaryLink {
+    color:#e32064;
+}
+.btn-primaryLink:hover {
+    color:#fe005a;
+}
+.btn-normalLink,
+.btn-normalLink:hover {
+    color:#141416;
+}
+.btn-success {
+    background:#5cb85c;
+    color:#fff;
+}
+.btn-info {
+    background:#1b95e0;
+    color:#fff;
+}
+.btn-info:hover {
+    background:#40b3f9;
+}
+.btn-warning {
+    background:#f0ad4e;
+    color:#fff;
+}
+.btn-link {
+    color:#1b95e0;
+}
+.btn-underline:hover {
+    text-decoration:underline;
+}
+.btn-border {
+    border:1px solid #dbdbdb;
+}
+.btn-mainSubmit {
+    width:217px!important;
+    line-height:51px;
+    margin-top:8px;
+    font-size:1.1428571428571428em;
+}
+.ls-ft-btn {
+    text-align:center;
+}

@@ -1,0 +1,50 @@
+//用户信息相关编辑
+//
+//查询用户信息接口编辑
+//
+//接口描述: 根据玩家login_id 或 uid 获取玩家信息（udb）
+//
+//POST传入数据：
+//
+//字段	类型	必须	值	说明
+//method	string	是	getUserInfo	接口类型(不参与加密)
+//id	int	是		玩家邮箱或uid
+//sign	string	是		请求加密串
+//返回数据json
+
+{
+"code": 200,
+"state": true,
+"data": {
+"uid": "149",                // 用户uid
+"name": "U149",              // 昵称
+"birthday": "2016-01-01 05:00:00",    // 生日 有可能为0 为0代表没有设置生日
+"country": "",               // 国家
+"state": "",                 // 0-未激活  1-已激活，暂时没用
+"city": "",                  // 城市
+"sex": "0",                  // 性别 1-男 2-女  0保密
+"userimg": "http://cdn.livestar.com/uploads/1604/291524585158.png",  //头像地址
+"reg_time": "1460518464",    // 注册时间
+"reg_ip": "3232239463",      // 注册ip
+"bind_time": "1460518464"  , // 第三方绑定时间
+"platform": "live",
+"phone": "",
+"question_id": "0",
+"answer": "",
+"adid": "0",
+"signature": "",              // 签名
+"exp": {
+"lvl": "1",               // 等级
+"exp": "0",               // 当前经验
+"level_exp": "0",         // 当前等级升级需要的总经验数目
+
+},
+"user_tag":""// '{"g":{"u":"371","n":"\u65fa\u4ed4\u5c0f\u732b\u54aa","l":"7"},"r":""}/, // 用户标签
+"like": 0,                    // 获得的总点赞数目
+"favorites": "0",             // 我关注的主播数目
+"follower": "2"               // 我的粉丝数目
+"is_follow": 0,  //是不是关注了 0未关注 ，1：关注了
+"buck": 47375,    //星票
+"location": "Shenzhen",       //上次开播定位，无开播为空字符串
+}
+}

@@ -1,0 +1,39 @@
+{
+    "code": 200,
+    "state": true,
+    "data": {
+        "uid": "149",
+        "base_name": "完美😈😕😔😏乖乖",
+        "base_signature":"hello world",
+        "name": "U149",
+        "birthday": "20020904",
+        "country": "",
+        "state": "",
+        "city": "shenzhen",
+        "sex": "0",
+        "userimg": "http://cdn.livestar.com/uploads/1604/291524585158.png",
+        "reg_time": "1460518464",
+        "reg_ip": "3232239463",
+        "bind_time": "1460518464"  ,
+        "platform": "live",
+        "phone": "",
+        "question_id": "0",
+        "answer": "",
+        "adid": "0",
+        "signature": "hello world",
+        "exp": {
+            "lvl": "27",
+            "exp": "0",
+            "level_exp": "0"
+
+        },
+        "user_tag": "",
+        "like": 100000,
+        "coin":"1200",
+        "favorites": "0",
+        "follower": "2",
+        "is_follow": 0,
+        "buck": 47375,
+        "location": "Shenzhen"
+    }
+}

@@ -1,0 +1,17 @@
+//邮箱检测（注册）编辑
+//
+//接口描述: 用户通过email和密码进行注册，判断该邮箱能不能用
+//
+//POST传入数据：
+//
+//字段	类型	必须	值	说明
+//method	string	是	checkEmail	接口类型(不参与加密)
+//login_id	string	是		用户登录邮箱
+//sign	string	是		请求加密串
+//返回数据json，当前用户的基本信息
+
+{
+   "code": 200, //或者500（缺少参数） 或者 301（格式错误），302（已经被占用）
+   "state": true,//code 为200是true,其他为false
+   "login_id": "传入的login_id"
+}

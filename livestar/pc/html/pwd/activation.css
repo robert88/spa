@@ -1,0 +1,46 @@
+@import url(/pc/public/css/module/mod_btn.css);
+@import url(/pc/public/css/module/mod_form.css);
+@import url(/pc/public/css/module/mod_popup_box.css);
+@import url(/pc/public/css/skin/main_color.css);
+.ls-setAccount {
+    min-height:715px;
+    padding:24px 22px;
+    background-image:url(/pc/public/images/pwd_bg.png);
+    background-repeat:no-repeat;
+    background-position:center 230px;
+}
+.ls-setAccount .ls-bd {
+    padding-top:60px;
+    font-size:1.1428571428571428em;
+}
+
+.ls-setAccount .btn-mainSubmit {
+    width:307px!important;
+}
+.ls-setAccount .ls-ft-btn {
+    margin-top:80px;
+}
+.ls-setAccount .forgot-pwd .form {
+    width:408px;
+}
+.ls-setAccount .forgot-pwd .input-txt {
+    width:388px;
+}
+.ls-setAccount .forgot-pwd .row-verification .input-txt {
+    width:148px;
+}
+.ls-setAccount .row-verification .btn-primary {
+    width:74px;
+    margin-left:10px;
+}
+.ls-setAccount .row-verification .btn-reflash {
+    color:#696969;
+}
+@media screen and (max-width:1150px) {
+    .ls-setAccount {
+        min-height:510px;
+        -moz-background-size:600px auto;
+        -webkit-background-size:600px auto;
+        background-size:600px auto;
+    }
+}

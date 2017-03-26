@@ -1,0 +1,500 @@
+
+        <!--E:header-->
+        <article class="room-wrap" id="J_room_vertical">
+        <div class="room-container">
+            <div class="room-content J-room-contain" style="margin-top:60px;width:1084px;height:738px;">
+                <div class="room-autoBlock J-room-contain-padding" style="overflow: hidden">
+                    <!--S:left bar-->
+                    <div class="room-leftBar" id="leftRoomInfoVue">
+                        <!--S:info-->
+                        <div class="room-userInfo room-blockBg J-resize-left-top">
+                            <div class="userImg-circle">
+                                <a href="javascript:void(0);"><img :src="getThumb(uInfo.uid)"></a>
+                                <p class="userImg-mask"></p>
+                                <i :class="uInfo.sex==2 ? 'i-sex i-female' : 'i-sex i-male'" v-show="uInfo.sex!='0'"></i>
+                                
+                            </div>
+                            <p class="nick-name">
+                                <i :class="(uInfo.exp&&uInfo.exp.lvl) | getULevelClass"></i>
+                                <span class="name" v-cloak>{{{uInfo.name|forkXSS}}}</span>
+                            </p>
+                            <p class="money" v-cloak><i class="i-money"></i>{{uInfo.buck}}</p>
+                            <p class="LID" v-cloak>LID: {{uInfo.uid}}</p>
+                            <p class="location" v-cloak v-show="uInfo.location"><i class="i-font i-loaction">K</i>{{uInfo.location}}</p>
+                            <p class="signs" v-cloak>{{{uInfo.signature|forkXSS}}}</p>
+                            <ul class="userInfo-option">
+                                <li>
+                                    
+                                        <span class="option-value" v-cloak>{{uInfo.like|formatK}}</span>
+                                        <span class="option-tit">Likes</span>
+                                    
+                                </li>
+                                <li class="align-c">
+                                    
+                                        <span class="option-value" v-cloak>{{uInfo.follower|formatK}}</span>
+                                        <span class="option-tit">Followers</span>
+                                    
+                                </li>
+                                <li class="align-c">
+                                    
+                                        <span class="option-value" v-cloak>{{uInfo.favorites|formatK}}</span>
+                                        <span class="option-tit">Following</span>
+                                    
+                                </li>
+                            </ul>
+                            <p class="ft-btn">
+                                <a class="btn btn-primary btn-xs btn-follow J-btn-follow" v-show="!(uInfo.is_follow*1)"><i class="i-font">I</i>Follow</a>
+                                <a class="btn btn-primary btn-xs btn-followed J-btn-follow"  v-show="uInfo.is_follow*1"><i class="i-font">p</i>Following</a>
+                            </p>
+                        </div>
+                        <!--E:info-->
+
+                        <!--S:gifting-->
+                        <div class="room-gifting room-blockBg ">
+                            <div class="hd J-resize-left-bottom1">
+                                <span class="hd-l coins" v-cloak><i class="i-coin"></i>{{vInfo.coin|formatNum}}</span>
+                                <a class="hd-r ls-f-primary J-go-Recharge" href="#/pc/html/account/recharge" target="_blank">Recharge<i class="i-font i-open">c</i></a>
+                            </div>
+                            <!---S:gifts list-->
+                            <div class="J-scroller J-resize-gift J-resize-left-bottom" style="height:286px;">
+                                <div class="J-scroller-con" >
+                                    <div class="room-giftsCon" >
+                                        <!--<a class="btn btn-prev" href="#" title="prev"><i class="i-font i-prev"></i></a>
+                                        <a class="btn btn-next" href="#" title="next"><i class="i-font i-next"></i></a>-->
+                                        <div class="room-giftsWindow J-room-giftsWindow">
+                                            <ul class="room-giftsList">
+                                                <li v-for="gift in giftList.items" data-id="{{gift.id}}" data-exp="{{gift.exp}}" data-value="{{gift.price}}" data-type="{{gift.type}}">
+                                                    <a ><img :src="gift.icon?(gift.icon+'?ver='+giftList.ver):''" vertical-align="middle"></a>
+                                                </li>
+                                            </ul>
+                                            <!--S:value explain in the top left-->
+                                                <div class="tipsPop tips-primary " id="giftTipVue">
+                                                    <div class="tips-con room-giftValue">
+                                                        <p class="exp">+{{giftList.exp}}EXP</p>
+                                                        <p class="value">{{giftList.value}}<i class="i-coins-s"></i></p>
+                                                    </div>
+                                                    <i class="i-font i-direction">C</i>
+                                                </div>
+                                            <!--S:value explain in the top left-->
+                                        </div>
+                                    </div>
+                                    <!--E:gifts list-->
+                                </div>
+                                <div class="scroll-control"><div class="scroll-bar"><span class="scroll-bar-bg"></span></div></div>
+                            </div>
+                            <!---E:gifts list-->
+                            <!--S:choose qty-->
+                            <div class="gift-qty J-chooseGiftContent J-resize-left-bottom2">
+                                <div class="input-box input-box-append select-input J-input-focus">
+                                    <img src="http://static.youku.com/ddshow/img/lfgift/colorrose1_80_80.png">
+                                    <input class="input-txt input-nobg J-chooseGiftIpt" type="text" value="1">
+                                    <span class="add-on"><i class="i-font i-invertedArrow J-slide-up">S</i></span>
+                                    <ul class="drop-list J-chooseGift" style="display:none;">
+                                        <li data-value="143"><a >X143</a></li>
+                                        <li data-value="99"><a >X99</a></li>                                         
+                                        <li data-value="50"><a >X50</a></li>
+                                        <li data-value="33"><a >X33</a></li>                                         
+                                        <li data-value="21"><a >X21</a></li>
+                                        <li data-value="12"><a >X12</a></li>                                         
+                                        <li data-value="7"><a >X7</a></li>                                      
+                                        <li data-value="1"><a >X1</a></li>
+                                    </ul>
+                                </div>
+                                <!--btn-primary-->
+                                <div class="btn btn-disable btn-square J-btn-sendGift" >Gift</div>
+                                    <!--S:tips in the top right -->
+                                    <div class="tipsPop tips-topLeft tips-defaultDark J-btn-sendGift-tips">
+                                        <div class="tips-con">
+                                            <p class="J-btn-sendGift-msg">Please choose a gift</p>
+                                        </div>
+                                        <i class="i-font i-direction">C</i>
+                                    </div>
+                                    <!--S:tips in the top right-->
+
+
+                            </div>
+                            <!--E:choose qty-->
+                        </div>
+                        <!--E:gifting-->
+                    </div>
+                    <!--E:left bar-->
+
+                    <!--S:video-->
+                    <div class="room-videoArea J-room-player" id="videoVue" style="width:424px;height:719px;">
+                        <div class="room-player room-blockBg J-room-video" >
+
+                            <div class="room-video J-room-video-player" v-show="canplay=='ok'" style="display:none;overflow: hidden;position: relative;">
+                                <!--this is video-->
+                                <div id="player1"></div>
+                                <div class="player-controlBar J-video-controlBar" style="display: none;">
+                                    <div class="live-viewers" style="margin-left:50px;"><i class="i-font i-viewers">J</i>{{online_num}}</div>
+                                    <div class="live-sound">
+                                        <i class="i-font i-speaker J-sound">U</i>
+                                        <i class="i-font i-mute J-sound-mute" style="display:none">q</i>
+                                        <p class="slider-bar">
+                                            <span class="selected-bar J-slider-move-bg" style="width:50%;"><i class="i-sliderBlock J-slider-move"></i></span>
+                                        </p>
+                                    </div>
+                                    <div class="live-options" style="margin-right: 4px;">
+                                        <!--<a class="option-fullScreen J-fullScreen"><i class="i-font i-fullScreen">R</i></a>-->
+                                        <a class="option-report J-report" ><i class="i-font i-">W</i></a>
+                                        <div class="option-sharing J-share">
+                                            <i class="i-font i-sharing">V</i>
+                                            <p class="tipsPop tips-defaultDark">
+                                                <a class="J-share-fb" target="_blank"><i class="i-font i-facebook">Y</i></a>
+                                                <a class="J-share-tw" target="_blank"><i class="i-font i-twitter">Z</i></a>
+                                                <a  href="https://www.instagram.com/LiveStarHQ/" target="_blank"><i class="i-font i-instagram">a</i></a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--S:stream tips-->
+                            <div class="room-videoPopArea" v-show="canplay!='ok'"  style="display:none;">
+                                <div class="room-userCover"><img :src="userimg"><div class="cover-mask"></div></div>
+                                <!--S:this streamer is offiline-->
+                                <div class="room-videoTips room-commendList" v-show="canplay=='noStream'||canplay=='pushStream'">
+                                    <h3>
+                                        <p>This streamer is offline. </p>
+                                        <p>Discover other Livestar streamers live right now!</p>
+                                    </h3>
+                                    <ul>
+                                        <li v-for="item in streamerList">
+                                            <a :href="parseUrl(item.uid,item.id)" style="display: block" >
+                                                <p class="live-img"><img :src="getThumb(item.uid)"></p>
+                                                <p class="nick-name">
+                                                    <i :class="item.level | getULevelClass"></i>
+                                                    <span class="name" >{{{item.uname|forkXSS}}}</span>
+                                                </p>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!--E:this streamer is offiline-->
+                                <!--S:paused-->
+                                <div class="room-videoTips room-streamPaused" v-show="canplay=='waitingStream'"  v-cloak>
+                                    <h3 >
+                                        <p>My stream has paused for a moment...</p>
+                                        <p>I'll be back soon!</p>
+                                    </h3>
+                                </div>
+                                <!--E:paused-->
+                                <!--S:video is loading-->
+                                <div class="room-videoTips room-streamLoading" v-show="canplay=='blockStream'" v-cloak>
+                                    <img src="/pc/public/images/stream_loading.png">
+                                </div>
+                                <!--E:video is loading-->
+                                <!--S:video has ended-->
+                                <div class="room-videoTips room-streamEnded"  v-show="canplay=='streamEnded' || canplay=='streamStop'" v-cloak>
+                                    <ul>
+                                        <li><i class="i-font i-user">d</i>{{views|formatNum}}</li>
+                                        <li><i class="i-font i-star">e</i>{{like|formatNum}}</li>
+                                        <li><i class="i-font i-bucks">G</i>{{coins|formatNum}}</li>
+                                        <li><i class="i-font i-clock">f</i>{{stream_time|formatStreamTime}}</li>
+                                    </ul>
+                                    <h3>The stream has ended.</h3>
+                                    <a class="btn btn-primary J-trigger-canplay2">OK</a>
+                                    <a class="btn btn-noBg btn-replay J-trigger-replay" v-show="canplay=='streamEnded'"><i class="i-font i-replay">g</i></a>
+                                </div>
+                                <!--E:video has ended-->
+                            </div>
+
+                            <!--E:stream tips-->
+
+                            <!--S:pop gifts-->
+                            <!--<div class="pop-gifts" style="top:45%;left:10px;">-->
+                                <!--<div class="userImg-circle">-->
+                                    <!--<img src="/pc/public/images/user_square.png">-->
+                                    <!--<p class="userImg-mask"></p>-->
+                                <!--</div>-->
+                                <!--<div class="nick-name">-->
+                                    <!--<p class="name">Evenlin550~</p>-->
+                                    <!--<p class="ls-f-primary">Sent</p>-->
+                                <!--</div>-->
+                                <!--<div class="gift">-->
+                                    <!--<img src="/pc/public/images/gift_items/gift_heart.png"><span class="amount">X<em>188</em></span>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                            <!--E:pop gifts-->
+                            <!--S:Barrage-->
+                            <!--<div class="barrage" style="top:65%;left:10px;display: none">-->
+                                <!--<div class="userImg-circle">-->
+                                    <!--<img src="/pc/public/images/user_square.png">-->
+                                    <!--<p class="userImg-mask"></p>-->
+                                <!--</div>-->
+                                <!--<div class="name">Ever~</div>-->
+                                <!--<div class="barrage-mes">I love you!</div>-->
+                            <!--</div>-->
+                            <!--E:Barrage-->
+                        </div>
+                    </div>
+                    <!--E:video-->
+
+
+                    <!--S:展开左侧-->
+                    <a class="btn-openRightBar J-openRight" ><i class="i-font i-circle">o</i><i class="i-font i-openRightBar">m</i></a>
+                        <!--E:展开左侧-->
+                    <!--S:right bar-->
+                    <div class="room-rightBar room-blockBg J-tab J-resize-rightBar" id="rightRoomInfoVue">
+                        <!--S:关闭左侧-->
+                        <a class="btn-closeRightBar J-closeRight"><i class="i-font i-closeRightBar">n</i></a>
+                        <!--E:关闭左侧-->
+                        <div class="J-resize-right-top">
+                            <div class="ls-tab room-tab J-tab-title">
+                                <ul>
+                                    <li class="current" data-tab=".J-tab-giftMsg"><a>GIFT</a></li>
+                                    <li data-tab=".J-tab-viewer"><a>VIEWERS</a></li>
+                                    <li data-tab=".J-tab-contribution" class="J-contribution-tabTitle"><a>CONTRIBUTION</a></li>
+                                </ul>
+                            </div>
+                            <!--S:gift sending-->
+
+                            <div class="bd-con J-scroller room-msgGiftsList J-tab-giftMsg J-tab-body-item " style="display:block;height:245px;">
+                                <div class="J-scroller-con">
+                                    <ul>
+                                     <li  v-for="item in sendList" v-cloak>
+                                              <i :class="(item.level) | getULevelClass"></i>
+                                                <a target="_blank" class="name">{{{item.uname|forkXSS}}}</a>
+                                                <span class="ls-f-primary">{{item.message}}</span>
+                                                <img :src="item.src">
+                                                <b>X{{item.quantity}}</b>
+                                     </li>
+                                    </ul>
+                                </div>
+                                <div class="scroll-control"><div class="scroll-bar"><span class="scroll-bar-bg"></span></div></div>
+                            </div>
+
+                            <!--E:gift sending-->
+                            <!--S:viewers-->
+                            <div class="bd-con J-scroller room-viewersList J-tab-viewer J-tab-body-item" style="display:none;height:245px;">
+                                <div class="J-scroller-con">
+                                    <ul>
+                                        <!--[Vue warn]: Duplicate value found( ADD track-by="$index")-->
+                                        <li v-for="item in viewList" track-by="$index">
+                                            <div class="userImg-circle">
+                                                <a :href="parseUrl(item.uid,item.roomid)"  target="_blank" ><img :src="getThumb(item.uid)"></a>
+                                                <div class="userImg-mask"></div>
+                                            </div>
+                                            <div class="nick-name">
+                                                <i :class="(item.level&&item.level.lvl) | getULevelClass"></i>
+                                                <a :href="parseUrl(item.uid,item.roomid)" class="name" target="_blank" >{{{item.name|forkXSS}}}</a>
+                                                <i :class="item.sex==2 ? 'i-sex i-female' : 'i-sex i-male'"  v-show="item.sex!='0'"></i>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="scroll-control"><div class="scroll-bar"><span class="scroll-bar-bg"></span></div></div>
+                            </div>
+                            <!--E:viewers-->
+                            <!--S:contribution-->
+                            <div class="bd-con J-scroller room-contribution J-tab-contribution J-tab-body-item" style="display:none;height:245px;">
+                                <div class="J-scroller-con">
+                                    <div class="contributionTop">
+                                        <ul>
+                                            <li class="no2">
+                                                <div class="userImg-circle">
+                                                    <a :href="parseUrl(contribution2.uid,contribution2.roomid)"  target="_blank"  v-show="contribution2.userimg"><img :src="getThumb(contribution2.uid)"></a>
+                                                    <div class="userImg-mask"></div>
+                                                    <i :class="contribution2.sex==2 ? 'i-sex i-female' : 'i-sex i-male'" v-show="contribution2.sex&&contribution2.sex!='0'"></i>
+                                                </div>
+                                                <p class="name" ><a :href="parseUrl(contribution2.uid,contribution2.roomid)"  target="_blank"  v-show="contribution2.name">{{{contribution2.name|forkXSS}}}</a></p>
+                                                <p class="money"  ><i class="i-money" v-show="contribution2.score*1"></i>{{contribution2.score|formatNum}}</p>
+                                                <p class="ranking">NO.2</p>
+                                            </li>
+                                            <li class="no1">
+                                                <div class="userImg-circle">
+                                                    <a :href="parseUrl(contribution1.uid,contribution1.roomid)" target="_blank"  v-show="contribution1.userimg"><img :src="getThumb(contribution1.uid)"></a>
+                                                    <div class="userImg-mask"></div>
+                                                    <i :class="contribution1.sex==2 ? 'i-sex i-female' : 'i-sex i-male'" v-show="contribution1.sex&&contribution1.sex!='0'"></i>
+                                                </div>
+                                                <p class="name" > <a :href="parseUrl(contribution1.uid,contribution1.roomid)" target="_blank"  v-show="contribution1.name">{{{contribution1.name|forkXSS}}}</a></p>
+                                                <p class="money" ><i class="i-money" v-show="contribution1.score*1"></i>{{contribution1.score|formatNum}}</p>
+                                                <p class="ranking"><i class="i-font i-crown">b</i>NO.1</p>
+                                            </li>
+                                            <li class="no3">
+                                                <div class="userImg-circle">
+                                                    <a :href="parseUrl(contribution3.uid,contribution3.roomid)" target="_blank" v-show="contribution3.userimg"><img :src="getThumb(contribution3.uid)"></a>
+                                                    <div class="userImg-mask"></div>
+                                                    <i :class="contribution3.sex==2 ? 'i-sex i-female' : 'i-sex i-male'" v-show="contribution3.sex&&contribution3.sex!='0'"></i>
+                                                </div>
+                                                <p class="name"> <a :href="parseUrl(contribution3.uid,contribution3.roomid)" target="_blank"  v-show="contribution3.name">{{{contribution3.name|forkXSS}}}</a></p>
+                                                <p class="money"><i class="i-money" v-show="contribution3.score*1"></i>{{contribution3.score|formatNum}}</p>
+                                                <p class="ranking">NO.3</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <ul class="contribution-list">
+                                        <li v-for="item in conList">
+                                          <b class="serial-number">{{$index+4}}.</b>
+                                            <div class="userImg-circle">
+                                                <a :href="parseUrl(item.uid,item.roomid)" target="_blank" ><img :src="getThumb(item.uid)"></a>
+                                                <div class="userImg-mask"></div>
+                                            </div>
+                                            <div class="nick-name">
+                                                <i class="i-userLevel i-userLevel{{item.consume_level | getULevelClass}}"></i>
+                                                <a :href="parseUrl(item.uid,item.roomid)" class="name" target="_blank" >{{{item.name|forkXSS}}}</a>
+                                                <i :class="item.sex==2 ? 'i-sex i-female' : 'i-sex i-male'" v-show="item.sex!='0'"></i>
+                                            </div>
+                                            <div class="money"><i class="i-money"></i>{{item.score|formatNum}}</div>
+
+                                        </li>
+
+                                    </ul>
+                                </div>
+                                <div class="scroll-control"><div class="scroll-bar"><span class="scroll-bar-bg"></span></div></div>
+                            </div>
+                            <!--E:contribution-->
+                        </div>
+                        <!--S:control bar-->
+                        <div class="msg-controlBar">
+                            <i class="i-control"></i>
+                        </div>
+                        <!--E:control bar-->
+                        <!--Please do not send the same message repeatedly.-->
+                        <!--S:msg list-->
+                        <div class="room-msgArea">
+                            <!--S:messages remind-->
+                            <a class="btn-mes-remind J-msg-remind" v-show="remindCount>0" v-cloak>{{remindCount}} messages<i class="i-font i-drop-nobg"></i></a>
+                            <!--E:messages remind-->
+
+                            <div class="J-scroller room-msgList J-resize-msg J-resize-right-bottom" style="height:305px;">
+                                <div class="J-scroller-con">
+                                    <ul>
+                                        <li  v-for="item in roomMsgList" :class="item.type==1?'type-sys':''" v-cloak track-by="$index">
+                                            <span v-show="item.type!=1&&item.type!=2&&item.type!=3">
+                                                <i class="i-userLevel i-userLevel{{item.ulevel | getULevelClass}}"></i>
+                                                <a :href="parseUrl(item.uid,item.roomid)" class="name" target="_blank" >{{{item.uname|forkXSS}}}:</a>{{item.text}}
+                                            </span>
+                                            <span  v-show="item.type==1">
+                                                Welcome {{{item.uname}}}!
+                                            </span>
+                                            <span  v-show="item.type==2">
+                                                <a :href="parseUrl(item.uid,item.roomid)" class="name" target="_blank" >{{{item.uname|forkXSS}}}</a> is now following the streamer
+                                            </span>
+                                            <span  v-show="item.type==3">
+                                                <a class="name" >System message</a> {{item.text}}
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="scroll-control">
+                                    <div class="scroll-bar"><span class="scroll-bar-bg"></span></div>
+                                </div>
+                            </div>
+                            <div class="enter-msg J-send-msg">
+                                <a class="bnt btn-speaker  J-barrange"><i class="i-font i-speaker">T</i></a>
+                                <div class="input-box J-input-focus">
+                                    <input class="input-txt J-send-msg-input" type="text" placeholder="Say something...">
+                                    <p class="input-placehoder J-login-require" style="display:none;"><a class="ls-f-primary" href="javascript:void(0);">Log in</a> to say something...</p>
+                                </div>
+                                <a class="btn btn-disable btn-square J-send-msg-btn">Send</a>
+                                <div class="tipsPop tips-topLeft tips-defaultDark J-sameMsg-tips" style="display:none;">
+                                    <div class="tips-con">
+                                        <p class="ls-f-primary">Please don't send the same message repeatedly</p>
+                                    </div>
+                                    <i class="i-font i-direction">C</i>
+                                </div>
+                                <div class="tipsPop tips-topLeft tips-defaultDark J-muteMsg-tips" style="display:none;">
+                                    <div class="tips-con">
+                                        <p class="ls-f-primary">You have been muted.</p>
+                                    </div>
+                                    <i class="i-font i-direction">C</i>
+                                </div>
+                            </div>
+                        </div>
+                        <!--E:msg list-->
+                    </div>
+                    <!--E:right bar-->
+                </div>
+            </div>
+        </div>
+</article>
+
+        <!--S:normal system popup box-->
+        <div id="sysDialog" style="display: none;">
+            <div class="popup-box popup-sys">
+                <div class="hd" style="top:40px">
+                    <div class="hd-tit">You were blocked by streamer,
+                        and are not allowed to watch this stream.
+                    </div>
+                    <a class="close dl-close" title="close" style="top:-20px"><i class="i-font i-close" >X</i></a>
+                </div>
+                <div class="bd" style="height:60px;padding-top:130px;">
+                    <div class="tips-txt align-c">
+                        <div class="txt">
+                            <p>5s...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="ft-btn align-c">
+                    <a class="btn btn-primary btn-m dl-close">Ok</a>
+                </div>
+            </div>
+        </div>
+        <!--S:normal system popup box-->
+        <!--S:normal system popup box-->
+        <div id="reportDialog" style="display: none;">
+            <!--S:report-->
+            <div class="popup-box popup-sys">
+                <div class="hd">
+                    <div class="hd-tit">Tips</div>
+                    <a  class="close  dl-close" title="close"><i class="i-font i-close">X</i></a>
+                </div>
+                <div class="bd">
+                    <div class="align-c">
+                        <p>Are you sure you want to report the stremer?</p>
+                    </div>
+                </div>
+                <div class="ft-btn align-c">
+                    <a class="btn btn-primary btn-m dl-close">Cancel</a>
+                    <a  class="btn btn-normalLink btn-m J-btn-ok">Sure</a>
+                </div>
+            </div>
+            <!--S:report-->
+        </div>
+        <!--S:normal system popup box-->
+        <!--S:normal system popup box-->
+        <div id="rechargeGiftDialog" style="display: none;">
+            <!--S:report-->
+            <div class="popup-box popup-sys">
+                <div class="hd">
+                    <div class="hd-tit">Tips</div>
+                    <a  class="close  dl-close" title="close"><i class="i-font i-close">X</i></a>
+                </div>
+                <div class="bd">
+                    <div class="align-c">
+                        <p>Your star coin balance is insufficient.
+                            Recharge to send more gifts？</p>
+                    </div>
+                </div>
+                <div class="ft-btn align-c">
+                    <a class="btn btn-primary btn-m dl-close">Cancel</a>
+                    <a  class="btn btn-normalLink btn-m J-btn-ok" href="#/pc/html/account/recharge" target="_blank">Recharge</a>
+                </div>
+            </div>
+            <!--S:report-->
+        </div>
+        <!--S:normal system popup box-->
+        <!--S:normal system popup box-->
+        <div id="rechargeImDialog" style="display: none;">
+            <!--S:report-->
+            <div class="popup-box popup-sys">
+                <div class="hd">
+                    <div class="hd-tit">Tips</div>
+                    <a  class="close  dl-close" title="close"><i class="i-font i-close">X</i></a>
+                </div>
+                <div class="bd">
+                    <div class="align-c">
+                        <p>Your star coin balance is insufficient.
+                            Recharge to send more bullhorns？</p>
+                    </div>
+                </div>
+                <div class="ft-btn align-c">
+                    <a class="btn btn-primary btn-m dl-close">Cancel</a>
+                    <a  class="btn btn-normalLink btn-m J-btn-ok" href="#/pc/html/account/recharge" target="_blank">Recharge</a>
+                </div>
+            </div>
+            <!--S:report-->
+        </div>
+        <!--S:normal system popup box-->

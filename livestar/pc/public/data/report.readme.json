@@ -1,0 +1,12 @@
+//
+//字段	类型	必须	值	说明
+//method	string	是	report	接口类型(不参与加密)
+//ruid	int	是		被举报人uid
+//sign	string	是		请求加密串
+//返回数据JSON：
+
+{
+"code": 200,
+"ret": 2,  // 0正常，1:5分钟内已经举报了一次了，2：参数不完整
+"state": true
+}

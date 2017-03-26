@@ -1,0 +1,30 @@
+{  
+    "code": "payout.miss_params",
+    "state": true,
+    "message": "ok",
+    "data": {
+        "active_score":"74",
+        "allow_watch" :"1",
+        "buck":"30305",
+        "gift":[],
+        "is_new":"",
+        "like":"99",
+        "rid": "742",
+        "spotlike":"0",
+        "status":"1",
+        "broadcast": [
+            {
+                "title": "System Message",  
+                "title_color": "#e9ad1d",  
+                "content": "Support your streamers by sending them a gift from the Gift Shop below!", 
+                "content_color": "#ae31f1"  
+            },
+            {
+                "title": "Suggestion",
+                "title_color": "#e9ad1d",
+                "content": "Please remember to be respectful to your streamers and viewers.",
+                "content_color": "#10bf62"
+            }
+        ]
+    }
+}

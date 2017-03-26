@@ -1,0 +1,56 @@
+.income-upper,
+.income-bottom {
+    position:relative;
+    background:#313131;
+    margin:0 24px;
+    padding-left:22px;
+    padding-right:22px;
+}
+.income-upper {
+    z-index:2;
+    margin-top:60px;
+    padding-top:30px;
+    padding-bottom:22px;
+    text-align:center;
+    border-bottom:1px dashed #434343;
+    -webkite-border-radius:14px 14px 0 0;
+        -moz-border-radius:14px 14px 0 0;
+             border-radius:14px 14px 0 0;
+            font-size:14px;
+            color:#fff;
+}
+.income-upper:before,
+.income-upper:after {
+    display:block;
+    content:"";
+    position:absolute;
+    bottom:-6px;
+    width:6px;
+    height:12px;
+    background:#292929;
+    font-size:0;
+    line-height:0;
+}
+.income-upper:before {
+    left:0;
+    -webkite-border-radius:0 12px 12px 0;
+        -moz-border-radius:0 12px 12px 0;
+             border-radius:0 12px 12px 0;
+
+}
+.income-upper:after {
+    right:0;
+    -webkite-border-radius:0 50px 50px 0;
+        -moz-border-radius:50px;
+             border-radius:12px 0 0 12px;
+}
+.income-bottom {
+    padding-top:63px;
+    padding-bottom:50px;
+    -webkite-border-radius:0 0 14px 14px;
+        -moz-border-radius:0 0 14px 14px;
+             border-radius:0 0 14px 14px;
+}
+.income-bottom .btn-borderPrimary {
+    margin-top:25px;
+}

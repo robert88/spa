@@ -1,0 +1,60 @@
+@import url(/pc/public/css/module/mod_btn.css);
+@import url(/pc/public/css/module/mod_level.css);
+@import url(/pc/public/css/module/mod_profile.css);
+@import url(/pc/public/css/module/mod_popup_box.css);
+@import url(/pc/public/css/skin/main_color.css);
+.ls-formDefault {
+    padding-top:32px;
+}
+.ls-formDefault dt {
+    color:#a2a2a2;
+}
+.ls-formDefault dd {
+    margin-bottom:33px;
+}
+.ls-formDefault .input-default {
+    width:296px;
+}
+.ls-formDefault .select-birthday .input-txt {
+    width:112px;
+}
+.ls-formDefault .textarea-box textarea {
+    width:460px;
+    height:160px;
+}
+.ls-formDefault .form-ft-btn {
+    padding-top:54px;
+}
+.ls-formDefault .row-gender {
+    margin-top:-24px;
+    margin-bottom:11px;
+}
+@media screen and (max-width:1150px) {
+    /*form*/
+    .ls-formDefault .textarea-box textarea {
+        width:380px;
+    }
+    .ls-formDefault .select-birthday .input-txt {
+        width:87px;
+    }
+}
+/*error״̬*/
+.input-box-error .i-tip-error,.input-box-error .J-tip-msg{
+    display: inherit;
+}
+.input-box-error .ls-f-tip{
+    display: none;
+}
+/*success״̬*/
+.input-box-success .i-tip-ok{
+    display: inherit;
+}
+.input-check{
+    border: 1px solid transparent;
+}
+.input-box-error.input-check,.input-box-error .input-check{
+    border: 1px solid #FB5470;
+}
+.input-box-error select[check-type]{
+    border-color:#FB5470;
+}

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Livestar - Stream the World - Live Streaming - The Premier Live Streaming Video App - broadcast  - livechat</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=IE8">
+		<meta property="og:type" content="website">
+		<meta property="og:title" content="It's happening on Livestar now!">
+		<meta property="og:description" content="Live streaming made easy. Get Livestar today!">
+		<meta property="og:image" content="http://m.livestar.com/static/images/mobile/fb480.jpg">
+		<meta property="og:image:width" content="480">
+		<meta property="og:image:height" content="253">
+		<meta name="twitter:title" content="It's happening on Livestar now!">
+		<meta name="twitter:description" content="Get @LivestarHQ right now and never miss a thing! Check who is #live #streaming now!">
+		<meta name="twitter:image" content="http://m.livestar.com/static/images/mobile/tw880.jpg">
+		<meta name="apple-mobile-web-app-capable" content="no">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+		<meta content="telephone=no" name="format-detection">
+		<!-- UC默认竖屏 ，UC强制全屏 -->
+		<meta name="full-screen" content="yes">
+		<meta name="browsermode" content="application">
+		<!-- QQ强制竖屏 QQ强制全屏 -->
+		<meta name="x5-orientation" content="portrait">
+		<meta name="x5-fullscreen" content="true">
+		<meta name="x5-page-mode" content="app">
+
+		<!--[if lte IE 8]>
+			<script type="text/javascript" src="/pc/public/js/lib/IEPlugin/lteIE8ChromePlugin.js"></script>
+		<![endif]-->
+
+		<!--start mergeCss:main.font.min-->
+        <link rel="stylesheet" type="text/css" href="/pc/public/css/common/common.css"/>
+        <!--end mergeCss-->
+
+		<!--start mergeCss:main.pc.min-->
+		<link rel="stylesheet" type="text/css" href="/pc/public/css/common/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="/pc/public/css/common/header.css"/>
+		<link rel="stylesheet" type="text/css" href="/pc/public/css/emoj/emoji.css"/>
+		<link rel="stylesheet" type="text/css" href="/pc/public/css/common/dialog.css"/>
+        <link rel="stylesheet" type="text/css" href="/pc/public/css/common/animate.css"/>
+        <link rel="stylesheet" type="text/css" href="/pc/public/css/module/mod_scroller.css"/>
+        <link rel="stylesheet" type="text/css" href="/pc/public/css/module/mod_form.css"/>
+		<!--end mergeCss-->
+        <style>
+            /*刷新 flash 白色问题*/
+            object{opacity: 0}
+            html,body{position:relative}
+        </style>
+		<!--start mergeJs:lib.pc.min-->
+		<script src="/pc/public/js/lib/vue.js"></script>
+		<!--end mergeJs-->
+
+		<!--start mergeJs:SDK.pc.min-->
+		<script src="/pc/public/js/im/Web_SDK_Base_v3.1.0.js"></script>
+		<script src="/pc/public/js/im/Web_SDK_NIM_v3.1.0.js"></script>
+		<script src="/pc/public/js/im/Web_SDK_Chatroom_v3.1.0.js"></script>
+		<!--end mergeJs-->
+		
+		<script type="text/javascript">
+		;(function() {
+            window.PAGE = {};
+            window.PAGE.HOME = "#/pc/html/home";
+			window.PAGE.ERROR404 = "#/pc/html/web404";
+            window.PAGE.destroy = [];
+            window.PAGE.loading = null;
+            window.PAGE.closeLoading = null;
+            window.PAGE.load = null;//相对于widow.onload
+            window.PAGE.STATICDEBUG = true;//JSdebug
+            window.PAGE.DEBUG = true;//ajax debug
+            window.PAGE.language = {en:{}};
+            window.PAGE.languagePath = "/pc/lang_";
+            window.PAGE.curLanguage = "en";
+            window.PAGE.reload = null;
+            window.PAGE.data = {};
+        })()
+		</script>
+
+        <!--start mergeJs:base.pc.min-->
+        <script src="/pc/public/js/common/config.js"></script>
+        <script src="/pc/public/js/common/page.base.js"></script>
+        <script src="/pc/public/js/common/prototype.js"></script>
+        <script src="/pc/public/js/lib/zepto.dialog.js"></script>
+        <script src="/pc/public/js/common/valiForm.js"></script>
+        <script src="/pc/public/js/common/ajax.js"></script>
+        <script src="/pc/public/js/common/base.js"></script>
+        <!--end mergeJs-->
+
+	</head>
+	
+	<body>
+		<article class="ls-wrap">
+        <!--S:header-->
+        <header class="ls-header J-header-wrap" >
+            <section>
+                <a class="ls-logo" href="#/pc/html/home"></a>
+                <div class="ls-sharing">
+                    <a class="fa-facebook" href="https://www.facebook.com/LiveStarHQ/" target="_blank">facebook</a>
+                    <a class="fa-twitter" href="https://twitter.com/livestarhq" target="_blank">twitter</a>
+                    <a class="fa-instagram" href="https://www.instagram.com/LiveStarHQ/" target="_blank">instagram</a>
+                </div>
+
+                <div class="ls-search-box"  id="Jsearch">
+                    <div class="J-input-focus input-box input-box-dark input-box-prepend input-search input-box-radius" id="JsearchIptWrap">
+                        <input class="input-txt" type="txt" placeholder="Search" id="homeSearch" >
+                        <span class="add-on"><i class="i-font i-search">A</i></span>
+                        <div class="J-scroller drop-list" id="searchVue">
+                            <div class="J-scroller-con animate-ease">
+                                <ul >
+                                	<li v-for="info in searchInfo" v-show="searchInfo.length>0" v-cloak>
+                                        <a :href="info.url | parseUrl">
+                                            <img  :src="getThumb(info.uid)">
+                                            <p class="name">{{{info.uname}}}</p>
+                                            <p class="followers">{{info.fans | followFormat}} followers</p>
+                                            <span v-show="info.live_status==1"><i class="i-font i-rank-s">B</i></span>
+                                        </a>
+                                    </li>
+                                    <li v-show="searchInfo.length==0 & searchStatus=='loaded'" v-cloak>
+                                     	<p class="tips-txt tips-icon">
+                                            <span class="txt"><i class="i-font i-sorry"></i>No Result Found</span>
+                                        </p>
+                                    </li>
+                                    <li v-show="searchStatus=='loadding'" v-cloak>
+                                     	<p class="tips-txt tips-icon tips-loading">
+                                            <span class="txt"><i class="i-font i-loading">r</i>Loading...</span>
+                                        </p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="scroll-control">
+                            	<div class="scroll-bar">
+                            		<span class="scroll-bar-bg"></span>
+                            	</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                				
+				<div id="loginVue" style="float: right;">
+					<a class="btn btn-primary btn-logIn" v-show="loginStatus=='unlogin'" v-cloak>SIGN UP/LOG IN</a>
+	               <div class="ls-logged-wrap" v-show="loginStatus=='logined'" v-cloak>
+	               <div class="ls-logged"  >
+	                	 
+	                    <a class="userImg-top"><img :src="getThumb(userInfo.uid)"></a>
+	                    <a class="name" v-cloak>{{{userInfo.name}}}<i class="i-font i-drop">C</i></a>
+	                    <ul class="drop-list animate-ease">
+	                        <li><a href="#/pc/html/account/profile"><i class="i-font i-profile">E</i>Edit Profile</a></li>
+	                        <li><a href="#/pc/html/account/recharge"><i class="i-font i-coins">F</i>Star Coins</a></li>
+	                        <!--<li><a href="#"><i class="i-font i-bucks">G</i>Star Bucks</a></li>-->
+	                        <li><a id="loginOut"><i class="i-font i-exit">H</i>Log Out</a></li>
+	                    </ul>
+	                </div>
+	                </div>
+				</div>
+
+                <a class="btn btn-primary btn-get-app" href="http://about.livestar.com" target="_blank"><i class="i-font i-phone">D</i><span>GET APP</span></a>
+
+				
+            </section>
+        </header>
+        <!--E:header-->
+
+		<div id="pageCss"></div>
+		<div id="page"></div>
+		<div id="pageJs"></div>
+
+    </article>
+
+    <div id="pageLoad">
+        <div class="loader">
+            <div class="loader-inner line-scale-pulse-out">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="ls-footer">
+        <ul class="friend-links">
+            <li><a target="_blank" href="https://www.facebook.com/LiveStarHQ/"><i class="i-font i-facebook">Y</i></a></li>
+            <li><a target="_blank" href="https://twitter.com/livestarhq"><i class="i-font i-twitter">Z</i></a></li>
+            <li><a target="_blank" href="https://www.instagram.com/LiveStarHQ/"><i class="i-font i-instagram">a</i></a></li>
+            <li><a target="_blank" href="https://plus.google.com/u/0/+LivestarHQ"><i class="i-font i-google">l</i></a></li>
+        </ul>
+        <ul class="ls-links">
+            <li><a href="http://about.livestar.com/company-info--.html#company" target="_blank">COMPANY INFO</a></li>
+            <li><a class="btn-logIn" target="_blank">SIGN UP</a></li>
+            <li><a href="http://about.livestar.com/partnerships--.html#partnerships" target="_blank">PARTNERS</a></li>
+            <li><a href="http://www.livestar.com/mobile/terms_of_service.html" target="_blank">TERMS & SERVICE</a></li>
+            <li><a href="https://livestar.zendesk.com/hc/en-us" target="_blank">FAQ</a></li>
+        </ul>
+        <p class="align-c">© Copyright 2016 - Livestar - All Rights Reserved.</p>
+    </div>
+	</body>
+		
+
+    <!--start mergeJs:main.pc.min-->
+    <script src="/pc/public/js/common/scroll.js"></script>
+    <script src="/pc/public/js/common/search.js"></script>
+    <script src="/pc/public/js/common/btnTriggeLogin.js"></script>
+    <script src="/pc/public/js/common/main.js"></script>
+    <!--end mergeJs-->
+    <!--Google Analytics-->
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-86749105-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+    <!--Google Analytics-->
+    <!-- Facebook Pixel Code -->
+    <script>
+        !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+                n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+            n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+            t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+                document,'script','https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '726557680829387');
+        fbq('track', 'PageView');
+    </script>
+    <noscript>
+        <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=726557680829387&ev=PageView&noscript=1"/>
+    </noscript>
+    <!-- DO NOT MODIFY -->
+    <!-- End Facebook Pixel Code -->
+</html>

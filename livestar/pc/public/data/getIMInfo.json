@@ -1,0 +1,55 @@
+{
+    "code": "200",
+    "state": "true",
+    "message": "succ",
+    "data": {
+        "live_url": "http://yfrtmp.livestar.com/live/410224",
+        "live_end_time": "",
+        "review_url":"" ,
+        "im_roomid": "3671689",
+        "roomid": "586",
+        "im_appkey": "9944927d5da7b3eef1c5615dcb97aeed",
+        "uname": "ggggg",
+        "userimg": "http://lscdn.livestar.com/uploads/1607/221612055338.jpg",
+        "im_token": "d5cf34283ff474d85db3aa2f06f541cd",
+        "im_accid": "1towbn5-itvuk5r2-sra",
+        "gift_list": {
+            "1": {
+                "id": "1",
+                "msg_icon": "http://lscdn.livestar.com/uploads/1607/111751573750.png"
+            },
+            "2": {
+                "id": "2",
+                "msg_icon": "http://lscdn.livestar.com/uploads/1607/111752374160.png"
+            },
+            "3": {
+                "id": "3",
+                "msg_icon": "http://lscdn.livestar.com/uploads/1607/111752568071.png"
+            },
+            "4": {
+                "id": "4",
+                "msg_icon": "http://lscdn.livestar.com/uploads/1607/111753085505.png"
+            },
+            "5": {
+                "id": "5",
+                "msg_icon": "http://lscdn.livestar.com/uploads/1607/111753209419.png"
+            },
+            "6": {
+                "id": "6",
+                "msg_icon": "http://lscdn.livestar.com/uploads/1607/111753329243.png"
+            },
+            "7": {
+                "id": "7",
+                "msg_icon": "http://lscdn.livestar.com/uploads/1607/111753557779.png"
+            },
+            "8": {
+                "id": "8",
+                "msg_icon": "http://lscdn.livestar.com/uploads/1607/111754262260.png"
+            },
+            "9": {
+                "id": "9",
+                "msg_icon": "http://lscdn.livestar.com/uploads/1607/111754345349.png"
+            }
+        }
+    }
+}

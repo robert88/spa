@@ -1,0 +1,40 @@
+
+//onst ORDER_STATUS_INCOMPLETE           = 1;        // 未完成
+//const ORDER_STATUS_COMPLETE             = 2;        // 支付完成
+//const ORDER_STATUS_CANCEL               = 3;        // 撤款
+//const ORDER_STATUS_PENDING              = 4;        // 待处理
+//const ORDER_STATUS_ADMIN_CANCEL         = 8;        // 主动撤款
+//const ORDER_STATUS_CANCEL_CHARGEBACK    = 9;        // 取消撤款/回款
+//const ORDER_STATUS_DENIED               = 10;       // 渠道方拒绝支付
+//const ORDER_STATUS_HIGH_RISK            = 11;       // 黑名单
+
+//
+//字段	类型	必须	值	说明
+//method	string	是	orderList	接口类型(不参与加密)
+//begin_timestamp	int	否		开始时间，时间戳
+//end_timestamp	int	否		结束时间，时间戳
+//page	int	是
+//当前页数，从1开始算
+//sign	string	是		请求加密串
+{
+    "code": 200,
+    "state": true,
+    "message": "Success",
+    "data": {
+        "limit": 10,
+        "now_page": 1,
+        "total_page": 5,
+        "total_num": 1,
+        "list": [
+            {
+                "order_id": "201607120837129412_sc",
+                "product_id": "livestar_coin_1",
+                "prodcut_title": "250 coins",
+                "product_sub_title": "",
+                "status": "1",
+                "create_time": "1468312632",
+                "pay_time": null
+            }
+        ]
+    }
+}

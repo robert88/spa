@@ -1,0 +1,96 @@
+@import url(/pc/public/css/module/mod_btn.css);
+@import url(/pc/public/css/module/mod_level.css);
+@import url(/pc/public/css/module/mod_profile.css);
+@import url(/pc/public/css/module/mod_popup_box.css);
+@import url(/pc/public/css/skin/main_color.css);
+.ls-setAccount {
+    min-height:715px;
+    padding:24px 22px;
+    background-image:url(/pc/public/images/pwd_bg.png);
+    background-repeat:no-repeat;
+    background-position:center 230px;
+}
+.ls-setAccount .ls-bd {
+    padding-top:60px;
+    font-size:1.1428571428571428em;
+}
+.ls-setAccount .form {
+    margin:0 auto;
+}
+.ls-setAccount .has-sentEmail .tips-txt.tips-icon {
+    margin-top:100px;
+}
+.ls-setAccount .reset-pwd .ls-bd {
+    width:415px;
+    margin:0 auto;    
+}
+.ls-setAccount .reset-pwd h3 {
+    margin-bottom:36px;
+    color:#fff;
+}
+.ls-setAccount .reset-pwd .ls-f-info {
+    margin-left:3px;
+}
+.ls-setAccount dt {
+    margin-bottom:5px;
+    color:#a2a2a2;
+}
+.ls-setAccount dd {
+    margin-bottom:36px;
+}
+.ls-setAccount .input-box {
+    margin-bottom:5px;
+}
+.ls-setAccount .reset-pwd .input-txt {
+    width:395px;
+}
+.ls-setAccount .btn-mainSubmit {
+    width:307px!important;
+}
+.ls-setAccount .ls-ft-btn {
+    margin-top:80px;
+}
+.ls-setAccount .forgot-pwd .form {
+    width:408px;
+}
+.ls-setAccount .forgot-pwd .input-txt {
+    width:388px;
+}
+.ls-setAccount .forgot-pwd .row-verification .input-txt {
+    width:148px;
+}
+.ls-setAccount .row-verification .btn-primary {
+    width:74px;
+    margin-left:10px;
+}
+.ls-setAccount .row-verification .btn-reflash {
+    color:#696969;
+}
+@media screen and (max-width:1150px) {
+    .ls-setAccount {
+        min-height:510px;
+        -moz-background-size:600px auto;
+        -webkit-background-size:600px auto;
+        background-size:600px auto;
+    }
+}
+/*error״̬*/
+.input-box-error .i-tip-error,.input-box-error .J-tip-msg{
+    display: inherit;
+}
+.input-box-error .ls-f-tip{
+    display: none;
+}
+/*success״̬*/
+.input-box-success .i-tip-ok{
+    display: inherit;
+}
+.input-check{
+    border: 1px solid transparent;
+}
+.input-box-error.input-check,.input-box-error .input-check{
+    border: 1px solid #FB5470;
+}
+.input-box-error select[check-type]{
+    border-color:#FB5470;
+}

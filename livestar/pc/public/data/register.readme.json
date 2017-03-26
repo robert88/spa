@@ -1,0 +1,44 @@
+{
+   "code": 200,
+   "state": true,
+   "message": "succ",
+   "data": {
+       "uid": 56,
+       "name": "livestar",
+       "doBind": true,///false,//是不是绑定
+       "user_img": "user_img",//用户头像URL，没有时为空
+       "email": "123@qq.com",//用户的邮箱
+       "token": "6613ed1141377a01875c4f18f7a2ea79",
+       "sign": "176b969b43b394998994d3c4b0ce5a3b",
+       "level": 1
+   }
+}
+
+//method	string	是	register	接口类型
+//nickname	string	是		用户昵称
+//login_id	string	是		用户登录邮箱
+//login_pwd	string	是		用户密码（至少8个字符）
+//birthday	string	是		生日（20160626）
+//code	string	是		验证码
+
+//修改用户信息接口编辑
+//
+//接口描述: 根据uid修改玩家信息（可以单独修改某一字段）
+//
+//POST传入数据：
+//
+//字段	类型	必须	值	说明
+//method	string	是	editUser	接口类型(不参与加密)
+//name	string	否		玩家昵称
+//birthday	string	否		玩家生日 例如20160626
+//phone	string	否		手机/电话号码
+//sex	int	否		性别，0保密 1男 2女
+//userimg	string	否		用户头像
+//signature	string	否		用户签名
+//sign	string	是		请求加密串
+//返回数据json
+
+//{
+// "code": 200, 如果修改的数据包含昵称，而且他的昵称是包含敏感词的，将会返回 312 并且state 为false
+// "state": true
+//}

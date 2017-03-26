@@ -1,0 +1,36 @@
+{
+    "state": true,
+    "code":200,
+    "message": "OK",
+    "data": {
+        "text": "dfd",
+        "custom": {
+            "imMessageType":4,
+            "giftMessages":[
+                {
+                    "quantity":1,
+                    "gift_id":1
+                },
+                {
+                    "quantity":2,
+                    "gift_id":1
+                },
+                {
+                    "quantity":1,
+                    "gift_id":2
+                },
+                {
+                    "quantity":2,
+                    "gift_id":3
+                }
+
+            ],
+            "userTagInfo": {
+                "uid":1111,
+                "uname":77656,
+                "ulevel":767886,
+                "userimg":"http://cdn.livestar.com/uploads/1604/291524585158.png"
+            }
+        }
+    }
+}

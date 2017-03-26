@@ -1,0 +1,199 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Follow @LivestarHQ!</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="format-detection" content="telephone=no" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+<meta property="og:type" content="website"> 
+<meta property="og:title" content="Follow @LivestarHQ!">
+<meta property="og:description" content="Let’s Get Social – Make sure you’re following Livestar so you don’t miss out on upcoming news events, or contests!">
+<meta property="og:image" content="http://www.livestar.com/mobile/images/1.jpg">
+<meta property="og:image:width" content="225">
+<meta property="og:image:height" content="400">
+<meta name="twitter:title" content="Follow @LivestarHQ!" />
+<meta name="twitter:description" content="Let’s Get Social – Make sure you’re following Livestar so you don’t miss out on upcoming news events, or contests!" />
+<meta name="twitter:image" content="http://www.livestar.com/mobile/images/1.jpg" />
+<script src="/static/js/lib/zepto.min.js"></script>
+<link type="text/css" rel="stylesheet" href="mod_sharingTools.css">
+<style type="text/css">
+html,body {height:100%;}
+body,div,p,ul,li,table,tbody,tr,td,textarea,form,input,h1,h2,h3,h4,h5,dl,dt,dd,img,iframe,header,nav,section,article,footer,figure,figcaption,menu,button,a{margin:0;padding:0;list-style:none; color:#fff;}
+body{font-family:Arial,'Lucida Grande',verdana,\5FAE\8F6F\96C5\9ED1,Helvetica;-webkit-user-select:none;-webkit-text-size-adjust:none;line-height:1.5;font-size:15px; background:#272727;}
+header,nav,section,article,footer,figure{display:block;}
+ol,ul{margin:0;padding:0;}
+fieldset{border:none;margin:0;padding:0;}
+a,li,ul,[onclick]{
+    -webkit-tap-highlight-color:none;
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
+    }
+a{ text-decoration:none; }
+article {
+    height:100%;
+}
+h1 {font-size:27px;}
+h1,
+.tit {margin:0 20px;}
+.wrap {
+    height:74%;
+    background:#e31f64;
+}
+.wrap .container {
+    max-width:414px;
+    margin:0 auto;
+}
+.option-link {
+    position:relative;
+    margin-top:10px;
+}
+.option-link img {
+    width:100%;
+}
+.option-link a {
+    position:absolute;
+    display:block;
+    width:24%;
+    height:20.5%;
+    overflow:hidden;
+    zoom:1;
+    text-indent:-999px;
+    -webkite-border-radius:50%;
+        -moz-border-radius:50%;
+             border-radius:50%;
+}
+.option-link .btn-facebook {
+    top:26%;
+    left:36%;
+}
+.option-link .btn-twitter {
+    top:46%;
+    left:13.8%;
+}
+.option-link .btn-instagram {
+    top:46%;
+    right:15.8%;
+}
+.animate-ease{
+	-webkit-transition-delay: .1s;
+	-o-transition-delay: .1s;
+	transition-delay: .1s;
+	-moz-transition: all .2s ease-in-out;
+	-o-transition: all .2s ease-in-out;
+	-webkit-transition: all .2s ease-in-out;
+	transition: all .2s ease-in-out;
+}
+</style>
+</head>
+<body>
+    <article>
+        <section class="wrap">
+            <div class="container">
+                <h1>Follow @LivestarHQ!</h1>
+                <p class="tit">Let’s Get Social – Make sure you’re
+    following Livestar so you don’t miss out 
+    on upcoming news events, or contests!</p>
+                <div class="option-link">
+                    <img src="images/follow_icon.png">
+                    <a href="http://twitter.com/livestarhq" class="btn-facebook">facebook</a>
+                    <a href="http://facebook.com/livestarhq" class="btn-twitter">twitter</a>
+                    <a href="http://instagram.com/livestarhq" class="btn-instagram">instagram</a>
+                </div>
+                
+            </div>
+        </section>
+        
+
+            <a class="h5-btn-sharing" href="#"><i class="i-sharing"></i></a>
+            <!--S:tool-->
+            <div class="sharing-tools">
+                <p class="sharing-tit">Share with friends</p>
+                <ul>
+                    <li>
+                        <a id="shareBtn">
+                            <i class="i-facebook"></i> 
+                            <p>Facebook</p>   
+                        </a>
+                    </li>
+                    <li>
+                        <a id="twitterBtn" >
+                            <i class="i-twitter"></i> 
+                            <p>Twitter</p>   
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!--E:tool-->
+    </article>
+</body>
+<script src="../../static/js/lib/facebook_sdk.js"></script>
+<script src="popup_box.js"></script>
+<!--<script src="http://platform.twitter.com/widgets.js"></script>-->
+<script>
+
+FB.init({
+	version:"v2.5",
+	xfbml:1,
+//	frictionlessRequests:false,//
+	appId: 1025937600807114
+});
+
+document.getElementById('shareBtn').onclick = function() {
+  FB.ui({
+    method: 'share',
+    display: 'popup',
+    href: window.location.href,
+  }, function(response){
+//	if (response && !response.error_message) {
+//		layer.open({
+//			content: "share success!",
+//			time:3
+//		});
+//  } else {
+//    layer.open({
+//			content: "Share Failed!",
+//			time:4
+//		});
+//  }
+  });
+}
+
+$(".h5-btn-sharing").click(function(){
+	$(".sharing-tools").toggleClass("slide-up");
+});
+var text = encodeURIComponent(document.title+" "+location.href);
+
+$("#twitterBtn").attr("href","https://twitter.com/intent/tweet?text="+text+"&source=webclient");
+//twttr.widgets.createShareButton(
+//'https://dev.twitter.com/',
+//document.getElementById('container'),
+//{
+//  text: 'Hello World'
+//}
+//).then( function( el ) {
+//	      layer.open({
+//			content: "Tweet button added",
+//			time:4
+//		});
+//});
+
+</script>
+<!--
+<script>window.twttr = (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0],
+    t = window.twttr || {};
+  if (d.getElementById(id)) return t;
+  js = d.createElement(s);
+  js.id = id;
+  js.src = "https://platform.twitter.com/widgets.js";
+  fjs.parentNode.insertBefore(js, fjs);
+ 
+  t._e = [];
+  t.ready = function(f) {
+    t._e.push(f);
+  };
+ 
+  return t;
+}(document, "script", "twitter-wjs"));</script>-->
+</html>

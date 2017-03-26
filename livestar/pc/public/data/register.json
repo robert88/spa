@@ -1,0 +1,13 @@
+{
+   "code": 200,
+   "state": true,
+   "message": "email error!",
+   "data": {
+       "uid": 56,
+       "name": "livestar",
+       "user_img": "/pc/public/images/user_square.png",
+       "email": "123@qq.com",
+       "level": 1,
+       "showCode": "1"
+   }
+}

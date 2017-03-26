@@ -1,0 +1,317 @@
+
+    <style type="text/css">
+
+    .h5-btn-sharing,
+.sharing-tools i {background:url(http://lscdn.livestar.com/res/ad/images/sharing_tools.png) no-repeat;-webkit-background-size:40px auto;-moz-background-size:40px auto;background-size:40px auto;}
+.sharing-tools{position:fixed;bottom:0;padding:10px 0;background:#1b1b1b;width:100%;-moz-background:rgba(17,17,17,0.8);-webkit-background:rgba(17,17,17,0.8);background:rgba(17,17,17,0.8);text-align:center;font-size:13px;line-height:1.8;color:#fff;}
+.sharing-tools .sharing-tit {margin-bottom:15px;font-size:15px;}
+.sharing-tools li {display:inline-block;margin:0 4.6%;}
+.sharing-tools li a {color:#fff;}
+.sharing-tools i {display:inline-block;width:40px;height:40px;}
+.sharing-tools .i-facebook {background-position:0 0;}
+.sharing-tools .i-twitter {background-position:0 -40px;}
+.sharing-tools .i-copyLink {background-position:0 -80px;}
+.h5-btn-sharing {z-index:999;display:block;position:fixed;right:20px;bottom:156px;width:38px;height:38px;background-position:0 -82px;}
+.sharing-tools{
+        -webkit-transition-delay: .1s;
+    -o-transition-delay: .1s;
+    transition-delay: .1s;
+    -moz-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+    bottom: -132px;
+}
+.slide-up{
+    bottom: 0px;
+    z-index: 999;
+}
+.layermbox {
+    position: relative;
+    z-index: 19891014
+}
+
+.layermmain,
+.laymshade {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%
+}
+
+.layermbtn span,
+.layermchild {
+    display: inline-block;
+    position: relative
+}
+
+.laymshade {
+    background-color: rgba(0, 0, 0, .5);
+    pointer-events: auto
+}
+
+.layermmain {
+    display: table;
+    font-family: Helvetica, arial, sans-serif;
+    pointer-events: none
+}
+
+.layermmain .section {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center
+}
+
+.layermchild {
+    text-align: left;
+    background-color: rgba(0,0,0,.5);
+    color:#fff;
+    font-size: 14px;
+    border-radius: 3px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, .1);
+    pointer-events: auto;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-duration: .18s;
+    animation-duration: .18s
+}
+
+.layermborder {
+    border: 1px solid #999
+}
+
+@-webkit-keyframes bounceIn {
+    0% {
+        opacity: 0;
+        -webkit-transform: scale(.5);
+        transform: scale(.5)
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: scale(1);
+        transform: scale(1)
+    }
+}
+
+.layermanim {
+    animation-name: bounceIn;
+    -webkit-animation-name: bounceIn
+}
+
+.layermbox0 .layermchild {
+    max-width: 90%;
+    /*min-width: 150px*/
+}
+
+.layermbox1 .layermchild {
+    border: none;
+    border-radius: 0
+}
+
+.layermbox2 .layermchild {
+    width: auto;
+    /*max-width: 260px;*/
+    min-width: 40px;
+    border: none;
+    background: 0 0;
+    box-shadow: none;
+    color: #fff
+}
+
+.layermchild h3 {
+    padding: 0 45px 0 10px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 16px;
+    font-weight: 400;
+    border-radius: 3px 3px 0 0;
+    border-bottom: 1px solid #EBEBEB
+}
+
+.layermbtn span,
+.layermchild h3 {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap
+}
+
+.layermcont {
+    padding: 20px 15px;
+    line-height: 22px;
+    text-align: center
+}
+
+.layermbox1 .layermcont {
+    padding: 0;
+    text-align: left
+}
+
+.layermbox2 .layermcont {
+    text-align: center;
+    padding: 0;
+    line-height: 0
+}
+
+.layermbox2 .layermcont i {
+    width: 25px;
+    height: 25px;
+    margin-left: 8px;
+    display: inline-block;
+    background-color: #fff;
+    border-radius: 100%;
+    -webkit-animation: bouncedelay 1.4s infinite ease-in-out;
+    animation: bouncedelay 1.4s infinite ease-in-out;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both
+}
+
+@-webkit-keyframes bouncedelay {
+    0%,
+    100%,
+    80% {
+        transform: scale(0);
+        -webkit-transform: scale(0)
+    }
+    40% {
+        transform: scale(1);
+        -webkit-transform: scale(1)
+    }
+}
+
+@keyframes bouncedelay {
+    0%,
+    100%,
+    80% {
+        transform: scale(0);
+        -webkit-transform: scale(0)
+    }
+    40% {
+        transform: scale(1);
+        -webkit-transform: scale(1)
+    }
+}
+
+.layermbox2 .layermcont i:first-child {
+    margin-left: 0;
+    -webkit-animation-delay: -.32s;
+    animation-delay: -.32s
+}
+
+.layermbox2 .layermcont i.laymloadtwo {
+    -webkit-animation-delay: -.16s;
+    animation-delay: -.16s
+}
+
+.layermbox2 .layermcont>div {
+    line-height: 22px;
+    padding-top: 7px;
+    margin-bottom: 20px;
+    font-size: 14px
+}
+
+.layermbtn {
+    position: relative;
+    height: 40px;
+    line-height: 40px;
+    font-size: 0;
+    text-align: center;
+    border-top: 1px solid #e32064;
+}
+
+.layermbtn span {
+    width: 90%;
+    text-align: center;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 0 3px 0 0
+}
+
+.layermbtn span:first-child {
+    height: 39px;
+    /*background-color: #fff;*/
+    border-radius: 0 0 0 3px
+}
+
+
+
+.layermend {
+    position: absolute;
+    right: 7px;
+    top: 10px;
+    width: 30px;
+    height: 30px;
+    border: 0;
+    font-weight: 400;
+    background: 0 0;
+    cursor: pointer;
+    -webkit-appearance: none;
+    font-size: 30px
+}
+
+.layermend::after,
+.layermend::before {
+    position: absolute;
+    left: 5px;
+    top: 15px;
+    content: '';
+    width: 18px;
+    height: 1px;
+    background-color: #999;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    border-radius: 3px
+}
+
+.layermend::after {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg)
+}
+        .animate-ease{
+            -webkit-transition-delay: .1s;
+            -o-transition-delay: .1s;
+            transition-delay: .1s;
+            -moz-transition: all .2s ease-in-out;
+            -o-transition: all .2s ease-in-out;
+            -webkit-transition: all .2s ease-in-out;
+            transition: all .2s ease-in-out;
+        }
+    </style>
+
+
+    <a class="h5-btn-sharing" href="javascript:;"><i class="i-sharing"></i></a>
+    <!--S:tool-->
+    <div class="sharing-tools">
+        <p class="sharing-tit">Share with friends</p>
+        <ul>
+            <li>
+                <a id="facebookBtn" target="_blank">
+                    <i class="i-facebook"></i>
+                    <p>Facebook</p>
+                </a>
+            </li>
+            <li>
+                <a id="twitterBtn" target="_blank">
+                    <i class="i-twitter"></i>
+                    <p>Twitter</p>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+</body>
+
+<script>
+window.onload = function(){
+
+    $(".h5-btn-sharing").click(function(){
+        $(".sharing-tools").toggleClass("slide-up");
+    });
+
+    var text = encodeURIComponent(document.title+" "+location.href);
+
+    $("#facebookBtn").attr("href","http://www.facebook.com/sharer.php?u="+encodeURIComponent(location.href)+"&t="+encodeURIComponent(document.title));
+    $("#twitterBtn").attr("href","https://twitter.com/intent/tweet?text="+text+"&source=webclient");
+
+}
+</script>

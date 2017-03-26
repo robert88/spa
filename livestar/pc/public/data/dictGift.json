@@ -1,0 +1,98 @@
+{
+    "code": 200,
+    "state": true,
+    "message": "OK",
+    "data": {
+        "refresh": true,
+        "array": [
+            {
+                "id": 1,
+                "name": "Heart",
+                "price": 13000,
+                "exp": 10,
+                "type": 1,
+                "icon": "xxx.png",
+                "msg_icon": "http://lscdn.livestar.com/uploads/1607/111751573750.png",
+                "image": ""
+            },
+            {
+                "id": 2,
+                "name": "Thumbs Up",
+                "price": 1,
+                "exp": 10,
+                "type": 2,
+                "icon": "http://lscdn.livestar.com/uploads/1607/111752568071.png",
+                "msg_icon": "http://lscdn.livestar.com/uploads/1607/111752568071.png",
+                "image": null
+            },
+
+            {
+                "id": 3,
+                "name": "Thumbs Up",
+                "price": 1,
+                "exp": 10,
+                "type": 1,
+                "icon": "http://lscdn.livestar.com/uploads/1607/111753085505.png",
+                "msg_icon": "http://lscdn.livestar.com/uploads/1607/111752568071.png",
+                "image": null
+            },
+
+            {
+                "id": 4,
+                "name": "Thumbs Up",
+                "price": 1,
+                "exp": 10,
+                "type": 1,
+                "icon": "http://lscdn.livestar.com/uploads/1607/111753557779.png",
+                "msg_icon": "http://lscdn.livestar.com/uploads/1607/111752568071.png",
+                "image": null
+            },
+
+            {
+                "id": 5,
+                "name": "Thumbs Up",
+                "price": 1,
+                "exp": 10,
+                "type": 1,
+                "icon": "http://lscdn.livestar.com/uploads/1607/111753329243.png",
+                "msg_icon": "http://lscdn.livestar.com/uploads/1607/111752568071.png",
+                "image": null
+            },
+
+            {
+                "id": 6,
+                "name": "Thumbs Up",
+                "price": 1,
+                "exp": 10,
+                "type": 1,
+                "icon": "http://lscdn.livestar.com/uploads/1607/111754262260.png",
+                "msg_icon": "http://lscdn.livestar.com/uploads/1607/111752568071.png",
+                "image": null
+            },
+
+            {
+                "id": 7,
+                "name": "Thumbs Up",
+                "price": 1,
+                "exp": 10,
+                "type": 1,
+                "icon": "http://lscdn.livestar.com/uploads/1607/111754345349.png",
+                "msg_icon": "http://lscdn.livestar.com/uploads/1607/111752568071.png",
+                "image": null
+            },
+
+            {
+                "id": 8,
+                "name": "Thumbs Up",
+                "price": 1,
+                "exp": 10,
+                "type": 1,
+                "icon": "http://lscdn.livestar.com/uploads/1607/111755109349.png",
+                "msg_icon": "http://lscdn.livestar.com/uploads/1607/111752568071.png",
+                "image": null
+            }
+        ],
+        "version": "28.20.05370.en"
+    }
+}
+

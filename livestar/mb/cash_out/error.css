@@ -1,0 +1,16 @@
+
+.error-wrap {
+    height:100%;
+}
+.error404 {
+    width:275px;
+    margin:0 auto;
+    font-size:15px;
+    line-height:1.5;
+    text-align:center;
+}
+.error404 img {
+    width:192.5px;
+    margin-top:15%;
+    margin-bottom:10px;
+}

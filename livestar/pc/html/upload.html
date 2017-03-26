@@ -1,0 +1,39 @@
+<div class="block" id="J-upload-wrap">
+        <h2>upload user's image</h2>
+        <!--S:upload user's image-->
+        <div class="popup-box popup-upload" style="top:80px;">
+            <div class="hd">
+                <h3 class="hd-tit"><b>Your Profile Photo</b></h3>
+                <a class="close dl-close" title="close"><i class="i-font i-close">X</i></a>
+            </div>
+            <div class="bd">
+                <div class="upload-box">
+                    <div class="select-file">
+                        <div class="select-area J-select-area">
+                            <a class="btn btn-upload J-btn-upload" >
+                                <i class="i-font i-camera">N</i>
+                                <span>Upload Photo</span>
+                            </a>
+                            <label style="display: block;position:absolute;width: 100%;height: 100%;left: 0px;top: 0px"><input type="file" class="J-input-file"></label>
+                        <input type="hidden" class="J-upload-file-path">
+                        <input id="loginPicField" type="hidden" name="userimg" check-type="required">
+                    </div>
+                        <a class="btn btn-delete J-btn-delete" style="display: none;">delete</a>
+                        <div class="control-bar">
+                            <a class="btn btn-reduce J-reduce" style="display: none"><i class="i-font">h</i></a>
+                            <a class="btn btn-zoom J-zoom" style="display: none"><i class="i-font">i</i></a>
+                </div>
+                        <div class="desc">
+                            <p>Format: PNG or JPG (Min 5 mb)</p>
+                            <p class="ls-f-dark">Snap or choose an amazing photo of yourself.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <p>
+                    <a class="btn btn-m btn-primary J-upload-submit" >Save</a>
+                    <a class="btn btn-m btn-cancel dl-close">Cancel</a>
+                </p>
+        </div>
+        <!--E:upload user's image-->
+    </div>

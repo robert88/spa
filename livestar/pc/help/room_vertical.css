@@ -1,0 +1,191 @@
+@import url(/pc/public/css/module/mod_btn.css);
+@import url(/pc/public/css/module/mod_tab.css);
+@import url(/pc/public/css/module/mod_level.css);
+@import url(/pc/public/css/module/mod_room.css);
+@import url(/pc/public/css/module/mod_popup_box.css);
+@import url(/pc/public/css/skin/room_default.css);
+/*profile info*/
+.room-userInfo {
+    height:304px;
+    margin-bottom:15px;
+    padding:15px 30px;
+}
+.room-userInfo .userImg-circle {
+    margin-left:auto;
+    margin-right:auto;
+    margin-bottom:10px;
+}
+.room-userInfo .i-userLevel {
+    margin-top:-2px;
+}
+.room-userInfo .nick-name {
+    text-align:center;
+}
+.room-userInfo .LID {
+    float:left;
+}
+.room-userInfo .location {
+    float:right;
+}
+.room-userInfo .i-loaction {
+    margin-right:5px;
+}
+.room-userInfo .money {
+    margin-top:8px;
+    margin-bottom:8px;
+    color:#fff;
+    text-align:center;
+}
+.room-userInfo .signs {
+    clear:both;
+    padding:8px 0;
+}
+.userInfo-option {
+    overflow:hidden;
+    zoom:1;
+}
+.userInfo-option li {
+    float:left;
+    width:33%;
+}
+.userInfo-option li a:hover {
+    text-decoration:none;
+}
+.userInfo-option span {
+    display:block;
+    height:18px;
+    overflow:hidden;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+}
+.userInfo-option .option-tit {
+    margin-top:5px;
+    color:#737373;
+}
+.room-userInfo .ft-btn {
+    margin-top:16px;
+    text-align:center;
+}
+.btn-follow i {
+    margin-right:5px;
+}
+.room-userInfo .LID,
+.room-userInfo .location,
+.room-userInfo .signs,
+.userInfo-option .option-tit {
+    font-size:12px;
+}
+/*gifting*/
+.room-vertical .room-gifting {
+    padding:0 0 0 10px;
+}
+.room-vertical .room-gifting .hd {
+    padding-right:25px;
+    line-height:40px;
+}
+.room-vertical .room-gifting .hd-r i {
+    margin-left:5px;
+}
+.room-vertical .room-giftsList {
+    margin-left:-6px;
+}
+.room-vertical .room-giftsList li {
+    margin-left:8px;
+}
+.room-vertical .gift-qty .input-txt {
+    width:107px;
+}
+.room-vertical .room-giftsCon .btn {
+    display:none;
+}
+.pop-gifts {
+    position:absolute;
+    height:54px;
+    background-image:url(images/room/popGifts_bg.png);
+    background-position: -30px 0;
+    background-repeat: no-repeat;
+}
+.pop-gifts .userImg-circle {
+    float:left;
+    width:48px;
+    height:48px;
+    margin-top:3px;
+    margin-left:10px;
+    margin-right:6px;
+}
+.pop-gifts .nick-name {
+    float:left;
+    margin-top:6px;
+}
+.pop-gifts .name {
+    color:#233600;
+    width:78px;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+}
+.pop-gifts .gift {
+    float:left;
+    height:100%;
+    line-height:54px;
+}
+.pop-gifts .gift img {
+    width:50px;
+    height:50px;
+    margin-top:2px;
+    margin-right:2px;
+    vertical-align:top;
+}
+.pop-gifts .amount {
+    font-size:21px;
+    color:#fb7000;
+    font-weight:bolder;
+    text-shadow: 2px 0 0 #ffffff, 0 2px 0 #ffffff, 
+    0 -2px 0 #ffffff, -2px 0 0 #ffffff, 
+    2px 0 2px #ffffff, 0 2px 2px #ffffff, 
+    0 -2px 2px #ffffff, -2px 0 2px #ffffff;  
+    *filter: Glow(Color=#ffffff, Strength=1);  
+}
+.pop-gifts .amount em {
+    font-size:40px;
+}
+.barrage {
+    position:absolute;
+}
+.barrage .userImg-circle {
+    float:left;
+    width:48px;
+    height:48px;
+}
+.barrage .name {
+    float:left;
+    color:#e9ad1d;
+    margin-top:-10px;
+    margin-left:5px;
+    text-shadow:1px 1px 2px #000000;
+}
+.barrage .barrage-mes {
+    float:left;
+    min-width:111px;
+    max-width:300px;
+    height:35px;
+    line-height:35px;
+    padding-left:50px;
+    margin-top:13px;
+    margin-left:-81px;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    color:#fff;
+    -webkite-border-radius:50%;
+        -moz-border-radius:50%;
+             border-radius:20px;
+    -webkit-background:rgba(0,0,0,.6);
+       -moz-background:rgba(0,0,0,.6);
+            background:rgba(0,0,0,.6);
+}
+@media screen and (min-width:1921px){
+    .room-content {
+        width:75%;
+    }
+}

@@ -1,0 +1,203 @@
+@import url(/pc/public/css/module/mod_btn.css);
+@import url(/pc/public/css/module/mod_level.css);
+@import url(/pc/public/css/module/mod_profile.css);
+@import url(/pc/public/css/module/mod_popup_box.css);
+@import url(/pc/public/css/skin/main_color.css);
+.ls-headTit .hd-r {
+    margin-top:5px;
+}
+.choose-recharge {
+    margin-top:15px;
+    margin-left:1%;
+}
+.choose-list.choose-recharge li {
+    width:30%;
+    margin-left:2.4%;
+    margin-bottom:2.4%;
+}
+.choose-recharge .coins-img {
+    position:absolute;
+    left:50%;
+    bottom:50px;
+    background:url(/pc/public/images/recharge.png) no-repeat;
+}
+.choose-recharge .coins-qty {
+    margin-top:5px;
+    color:#999999;
+    font-size:1.2142857142857142em;
+}
+.choose-recharge .coins-qty .i-coin {
+    margin-left:10px;
+    vertical-align:-3px;
+}
+.choose-recharge .coins-value {
+    position:absolute;
+    bottom:0;
+    width:99%;
+    background:#404040;
+    line-height:33px;
+    color:#999999;
+    font-size:22px;
+    text-align:center;
+}
+.choose-recharge .coins-value span {
+    font-size:2.5rem;
+}
+.choose-recharge .choose-list .current .coins-value {
+    color:#e31f64;
+}
+.choose-recharge .el01 .coins-img {
+    width:75px;
+    height:47px;
+    margin-left:-37.5px;
+    background-position:0 0;
+}
+.choose-recharge .el02 .coins-img {
+    width:76px;
+    height:75px;
+    margin-left:-37.5px;
+    background-position:0 -47px;
+}
+.choose-recharge .el03 .coins-img {
+    width:81px;
+    height:83px;
+    bottom:40px;
+    margin-left:-40.5px;
+    background-position:0 -122px;
+}
+.choose-recharge .el04 .coins-img {
+    width:79px;
+    height:74px;
+    bottom:45px;
+    margin-left:-39.5px;
+    background-position:0 -204px;
+}
+.choose-recharge .el05 .coins-img {
+    width:85px;
+    height:86px;
+    bottom:45px;
+    margin-left:-42.5px;
+    background-position:0 -278px;
+}
+.choose-recharge .el06 .coins-img {
+    width:94px;
+    height:86px;
+    bottom:45px;
+    margin-left:-47.5px;
+    background-position:0 -364px;
+}
+.payment-options {
+    margin-top:30px;
+    margin-bottom:15px;
+    overflow:hidden;
+    zoom:1;
+}
+.payment-options .field {
+    float:left;
+    margin-right:20px;
+    font-size:1.4285714285714286em;
+    line-height:63px;
+}
+.payment-options .choose-list {
+    float:left;
+}
+.payment-options .choose-list li {
+    width:101px;
+    height:63px;
+}
+.payment-options .choose-list li a {
+    background:url(/pc/public/images/recharge.png) no-repeat;
+}
+.payment-options .choose-list .el01 a {
+    background-position:0 -452px;
+}
+.payment-options .choose-list .el02 a {
+    background-position:0 -518px;
+}
+.payment-options .choose-list li .li-inner {
+    border-width:2px;
+}
+.payment-total span {
+    margin-right:5px;
+    font-size:2.5em;
+}
+.payment-total em {
+    margin-left:10px;
+    font-size:1.2142857142857142em;
+}
+.payment-total .i-coins-s {
+    margin-left:5px;
+    margin-right:0;
+}
+.ls-amount .ls-ft-btn {
+    margin-top:100px;
+}
+/*recharge succeeded*/
+.recharge-succeeded {
+    width:486px;
+    margin:0 auto;
+}
+.recharge-succeeded .upper-half {
+    position:relative;
+    padding-top:20px;
+    padding-left:80px;
+    padding-bottom:10px;
+    background:#3b3b3b;
+    border-bottom:1px dashed #494949;
+    -webkite-border-radius:5px;
+        -moz-border-radius:5px;
+             border-radius:5px;
+}
+.recharge-succeeded .upper-half:before,
+.recharge-succeeded .upper-half:after {
+    content:"";
+    display:block;
+    position:absolute;
+    bottom:-10px;
+    width:20px;
+    height:20px;
+    background:#333333;
+    -webkite-border-radius:50%;
+        -moz-border-radius:50%;
+             border-radius:50%;
+}
+.recharge-succeeded .upper-half:before {
+    left:-10px;
+}
+.recharge-succeeded .upper-half:after {
+    right:-10px;
+}
+.recharge-succeeded .upper-half .txt {
+    padding-left:60px;
+}
+.recharge-succeeded .upper-half .i-icon {
+    margin-top:4px;
+}
+.recharge-succeeded .upper-half .ls-f-succeed {
+    font-size:18px;
+}
+.recharge-succeeded p.ls-f-white {
+    margin-bottom:10px;
+    font-size:20px;
+}
+.recharge-succeeded .bottom-half {
+    height:225px;
+    padding-top:38px;
+    padding-left:80px;
+    padding-bottom:10px;
+    background:#3b3b3b;
+    -webkite-border-radius:5px;
+        -moz-border-radius:5px;
+             border-radius:5px;
+}
+.recharge-succeeded .bottom-half .btn-s {
+    margin-left:10px;
+}
+.recharge-succeeded .bottom-half .btn-link {
+    margin-left:10px;
+    margin-right:10px;
+}
+.recharge-succeeded .bottom-half p {
+    margin-left:20px;
+    margin-top:40px;
+}

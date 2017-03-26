@@ -1,0 +1,44 @@
+<article class="app-wrap co-wrap" id="verifyEmailVue">
+    <div class="co-topBar">
+        <a class="btn btn-return" href="#/mb/cash_out/cashoutExchange"><i class="i-return"></i></a>
+        <p class="tit">Cash Out</p>
+    </div>
+    <div class="co-container verify-email">
+        <div class="cashOut-upper">
+            <figure>
+                <i class="i-message-l"></i>
+                <figcaption>Email Code Verification</figcaption>
+            </figure>
+        </div>
+        <div class="cashOut-bottom">
+            <div class="verify-description">
+                <p>A verification code will be sent to your registered email account. Please check your email box and get the code to verify within 60 mins.</p>
+            </div>
+            <div class="form">
+                <form>
+                    <dl>
+                        <dd class="row-getCode"><input :class="!email?'input-txt J-email-ipt':'input-txt input-disable J-email-ipt'" readonly="isReadOnly" type="text" v-bind:value="email"  placeholder="Enter Email">
+                            <a class="btn btn-primary btn-m J-send-code btn-disable" v-show="countdownTime>0&&countdownTime<=120">{{countdownTime}}s</a>
+                            <!--<a class="btn btn-primary btn-m J-send-code btn-disable" v-show="countdownTime>120">1 hour</a>-->
+                            <a class="btn btn-primary btn-m J-send-code" v-show="(!countdownTime||countdownTime<=0)&&sendEmailTime<10">Get Code</a>
+                            <a class="btn btn-primary btn-m J-send-code btn-disable" v-show="(!countdownTime||countdownTime<=0)&&(sendEmailTime>=10)">Get Code</a>
+                        </dd>
+                        <!--disable-->
+                        <!-- <dd  class="row-getCode"  v-show="email"><input class="input-txt input-disable" v-bind:value="email"><a class="btn btn-disable btn-m">Get Code</a></dd> -->
+
+                        <dd>
+                            <input class="input-txt J-email-code-ipt" type="text" placeholder="Enter Code">
+                            <p class="popTips tips-error J-data-Msg" style="display:none;">Sorry, you have reached the verification limit. Please try again tomorrow.</p>
+                        </dd>
+
+                        <dd class="form-ft-btn"><a class="btn btn-primary btn-main J-continue btn-disable">Continue</a></dd>
+                    </dl>
+                </form>
+            </div>
+        </div>
+        <div class="verify-contact">For any account issues, please contact <a class="link" href="mailto:accounts@livestar.com">accounts@livestar.com</a></div>
+    </div>
+    <div class="tipsHeader J-sys-Msg animate-ease" style="display:none;">
+        Invalid code
+    </div>
+</article>

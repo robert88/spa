@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="zh-en">
+	<head>
+		<meta charset="utf-8">
+		<title>livestar home </title>
+		 <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=IE8">
+		<meta property="og:type" content="website">
+		<meta property="og:title" content="It's happening on Livestar now!">
+		<meta property="og:description" content="Live streaming made easy. Get Livestar today!">
+		<meta property="og:image" content="http://m.livestar.com/static/images/mobile/fb480.jpg">
+		<meta property="og:image:width" content="480">
+		<meta property="og:image:height" content="253">
+		<meta name="twitter:title" content="It's happening on Livestar now!">
+		<meta name="twitter:description" content="Get @LivestarHQ right now and never miss a thing! Check who is #live #streaming now!">
+		<meta name="twitter:image" content="http://m.livestar.com/static/images/mobile/tw880.jpg">
+		<meta name="apple-mobile-web-app-capable" content="no">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+		<meta content="telephone=no" name="format-detection">
+
+        <!--start mergeCss:mod.m.min-->
+        <link rel="stylesheet" type="text/css" href="/mb/public/css/module/mod_h5_level.css"/>
+        <!--end mergeCss-->
+
+		<!--start mergeCss:main.m.min-->
+		<link rel="stylesheet" type="text/css" href="/mb/public/css/cash_out/cash_out.css"/>
+		<link rel="stylesheet" type="text/css" href="/pc/public/css/common/dialog.css"/>
+		<link rel="stylesheet" type="text/css" href="/pc/public/css/common/animate.css"/>
+		<!--end mergeCss-->
+
+		<!--start mergeJs:lib.m.min-->
+        <script src="/pc/public/js/lib/jquery-1.12.3.js"></script>
+        <script src="/pc/public/js/lib/zepto.cookie.js"></script>
+		<script src="/pc/public/js/lib/vue.js"></script>
+		<!--end mergeJs-->
+
+		<script type="text/javascript">
+		;(function(){
+
+            var trim = function(str) {
+                str = "" + str;
+                return str.replace(/^\s+|\s+$/, "");
+            }
+            var toInt = function(str,def){
+                def = def||0;
+                str = trim(str);
+                return isNaN(str*1)?def:(str*1);
+            }
+            window.PAGE = {};
+            window.PAGE.HOME = "#/mb/cash_out/income";
+			window.PAGE.ERROR404 = "#/mb/cash_out/error";
+            window.PAGE.destroy = [];
+            window.PAGE.loading = null;
+            window.PAGE.closeLoading = null;
+			window.PAGE.load = null;//相对于widow.onload
+            window.PAGE.STATICDEBUG = true;//JSdebug
+            window.PAGE.DEBUG = true;//ajax debug
+			window.PAGE.language = {en:{
+                "payout.phone_num_exists":"This mobile number is already verified with another account. Please provide another mobile number.",
+                "payout.processing":"The last request is in process. We are trying to complete the request asap. Thank you for your patient. ",
+                "payout.paypal_exists":"This PayPal account is already verified with another account. Please provide another PayPal account.",
+                "payout.login_fail":"Login Fail",
+                "payout.miss_params":"Error! The request parameter is missing.",
+                "payout.email_not_verified":"Please verify your email.",
+                "payout.sms_not_verified":"Please verify your mobile number.",
+                'payout.paypal_nolegal':"The account information provided is incorrect. Please revise.",
+                "payout.lack_balance":"Insufficient available balance",
+                "payout.submit_timeout":"Your request has timed out. Please try again.",
+                "payout.send_limit":"Sorry you have reached today’s upper limited. Please try again tomorrow",
+                "payout.send_fail":"Failed to send the code.",//还没确认
+                "payout.unknown_error":"Unknow error.",
+                "payout.request_busy":"Sorry, request is too frequent. Please try again later.",
+                "payout.verification_failed":"Invalid code",//"Your request has failed. Please try again."
+                'i18n.sys.ajax.limit':"Operation Frequent!",
+                'i18n.sys.ajax.no.action':"Can not find action!",
+                'payout.month.limit': "Dear valued streamer you have reached the monthly limit of cashing out {0} times. Please try again when your limit has reset. Thank you for understanding."
+			}};
+            window.PAGE.languagePath = "/pc/lang_"
+			window.PAGE.curLanguage = "en";
+            window.PAGE.reload = null;
+			window.PAGE.data = {
+				totalMoney : toInt('<{$totalMoney}>',0),//总共金钱
+				cashoutMoney :  toInt('<{$cashoutMoney}>',0),//可提取金额
+                exchangeMoney :  toInt('<{$exchangeMoney}>',0),//可转换的金额
+				email: trim('<{$email}>'),//用户邮箱
+				mobile:trim('<{$mobile}>'),//手机号码
+//				countryCode:trim('<{$countryCode}>'),//当前选中的号码归属地
+//				countryName:trim('<{$countryName}>'),//当前选中的号码归属国家
+				countrySName:trim('<{$countrySName}>'),//当前选中的号码归属国家简称
+				cashoutTime:toInt('<{$cashoutTime}>',0),//每月不超过3次提现次数
+				sendEmailTime:toInt('<{$sendEmailTime}>',0),//每天发送邮箱验证码次数
+				// emailVeried:"",//邮箱认证
+				sendmobileTime:toInt('<{$sendmobileTime}>',0),//每天发送手机验证码次数
+				// mobileVeried:"",//手机认证
+				// countryMobileList:[{USA:1,China:86}]//手机归属地号码对应表list
+				countryMobileMap:'<{$countryMobileMap|@json_encode nofilter}>',//手机归属地号码对应表map
+				paypal:trim('<{$payPal}>'),//paypal账号
+                proList:'<{$proList|@json_encode nofilter}>'//兑换配置信息
+				// paypalVeried:""
+                //cashoutDollar:""//兑换的美元
+                //cashoutStarBuck:""//兑换的星票
+			};
+
+            /*开发调试代码*/
+            if(window.PAGE.DEBUG){
+                window.PAGE.data = {
+                    totalMoney : 18205800,//总共金钱
+                    cashoutMoney :  20000,//可提取金额
+                    exchangeMoney :  10000,//可转换的金额
+                    email:"841.3541.62@qq.com",//用户邮箱
+                    mobile:"",//手机号码
+                    // countryCode:86,//当前选中的号码归属地
+                    countryName:"China",//当前选中的号码归属国家
+                    cashoutTime:1,//每月不超过3次提现次数
+                    sendEmailTime:1,//每天发送邮箱验证码次数
+                    // emailVeried:"",//邮箱认证
+                    sendmobileTime:1,//每天发送手机验证码次数
+                    // mobileVeried:"",//手机认证
+                    // countryMobileList:[{USA:1,China:86}]//手机归属地号码对应表list
+                    countryMobileMap:{A: [{ name: "Afghanistan", sname: "AF", code: 93},{name: "Albania", sname: "AL",code: 355}],B: [{name: "B1",sname: "AF",code: 93},{name: "B2", sname: "AL",code: 355}]},//手机归属地号码对应表map
+                    paypal:"",//paypal账号
+                    // paypalVeried:""//1表示体现，2表示星币
+                    proList:{"1": {"3125": 25, "6250": 50,"12500": 100,"25000": 200,"50000": 400},"2": {"100": 40,"500": 200,"1200": 400,"3000": 1200,"8000": 2000,"32000": 8000}}
+//                    proListMap:""
+                }
+            }
+
+			var data = window.PAGE.data;
+			var mobile = data.mobile;
+			var email = data.email;
+			var sname = data.countrySName;
+            var paypal = data.paypal;
+
+            function pushByOrder(arr,temp){
+                var newArr = [];
+                var insert = false;
+                for(var i=0;i<arr.length;i++){
+                    if(arr[i]!=null){
+                        var tempStarBuck = arr[i].starBuck;
+                        //掺入到数组里
+                        if(temp.starBuck<tempStarBuck && !insert){
+                            newArr.push(temp,arr[i]);
+                            insert = true;
+                        }else{
+                            newArr.push(arr[i]);
+                        }
+                    }
+                }
+
+                if(!insert){
+                    newArr.push(temp)
+                }
+                return newArr;
+            }
+
+            function parseProListCashout(proListCashout){
+                var arr = [];
+                for(var starBuck in proListCashout){
+                    var dollar = proListCashout[starBuck];
+                    var temp = {dollar:toInt(dollar,0),starBuck:toInt(starBuck,0)};
+                    arr = pushByOrder(arr,temp)
+
+                }
+                return arr;
+            }
+
+            function parseProListExchange(proListExchange){
+                var arr = [];
+                for(var starBuck in proListExchange){
+                    var coins = proListExchange[starBuck];
+                    var temp = {coins:toInt(coins,0),starBuck:toInt(starBuck,0)};
+                    arr = pushByOrder(arr,temp)
+                }
+                return arr;
+            }
+            function parseProListCovert(proList){
+                var proListCashout = proList["1"]||proList[1];
+                var proListExchange =proList["2"]||proList[2];
+                data.proListMap.cashout = parseProListCashout(proListCashout);
+                data.proListMap.exchange = parseProListExchange(proListExchange);
+            }
+            function parseProList(){
+                var  proList = data.proList;
+                data.proListMap = {cashout:[],exchange:[]};
+                if(typeof proList !="object"){
+                    try{
+                        proList = JSON.parse(proList);
+                        parseProListCovert(proList)
+                    }catch (e){
+                        console.error("proList,parseError",e);
+                    }
+                }else{
+                    parseProListCovert(proList)
+                }
+            }
+            parseProList();
+
+            //首个字符不在缩写里面
+            //AE-阿联酋(UNITED EMIRATES)
+            //DE-德 国(GERMANY)
+            //DZ-阿尔及利亚(ALGERIA)
+            //ES-西班牙(SPAIN)
+            //GB-英国(UNITED KINGDOM)
+            //KR-韩国(REPUBLIC OF KOREA)
+            //KT-科特迪瓦共和国(COTE O’IVOIRE)
+            //LC-圣卢西亚(SAINT LUEIA)
+            //LK-斯里兰卡(SRI LANKA)
+            //MM-缅甸(BURMA(MYANMAR))
+            //TD-乍得(CHAD)
+            //VC-圣文森特岛(SAINT VINCENT)
+            //ZA-南非(SOUTH AFRICA)
+            //如果是字符串转化为对象
+            function parseCountryMobileMap(){
+                if(typeof data.countryMobileMap!="object"){
+                    try{
+                        data.countryMobileMap = JSON.parse(data.countryMobileMap);
+                    }catch (e){
+                        console.error("countryMobileMap,parseError",e);
+                    }
+                }
+                var firstLetterMap = {AE:"U",DE:"G",DZ:"A",ES:"S",GB:"U",KR:"R",KT:"C",LC:"S",LK:"S",MM:"B",TD:"C",VC:"S",ZA:"S"};
+                if(sname&& typeof data.countryMobileMap=="object"){
+                    var firstLetter = firstLetterMap[sname.toUpperCase()]  || sname[0].toUpperCase();
+                    var arr = data.countryMobileMap[firstLetter];
+                    for(var i=0;i<arr.length;i++ ) {
+                        if(arr[i] && arr[i].sname.toUpperCase()==sname.toUpperCase() ){
+                            data.countryName = arr[i].name;
+                            data.countryCode = arr[i].code;
+                            break;
+                        }
+                    }
+                }
+                if(!data.countryName|| !data.countryCode){
+                    data.countryName = "USA";
+                    data.countryCode = 1;
+                    data.countrySName = "US";
+                }
+
+            }
+
+            parseCountryMobileMap();
+
+            //如果手机已经认证
+			if(mobile&&mobile.replace(/^\s+|\s+$/,"")){
+				data.mobileVeried = true;
+			}
+			//如果邮箱已经认证
+			if(email&&email.replace(/^\s+|\s+$/,"")){
+				data.emailVeried = true;
+			}
+            //如果账号已经认证
+            if(paypal&&paypal.replace(/^\s+|\s+$/,"")){
+                data.paypalVeried = true;
+            }
+
+
+		})()
+
+		</script>
+
+        <!--start mergeJs:base.pc.min-->
+        <script src="/pc/public/js/common/config.js"></script>
+        <script src="/pc/public/js/lib/zepto.dialog.js"></script>
+        <script src="/pc/public/js/common/prototype.js"></script>
+        <script src="/pc/public/js/common/ajax.js"></script>
+        <script src="/pc/public/js/common/base.js"></script>
+        <!--end mergeJs-->
+
+	</head>
+	
+	<body>
+
+		<div id="pageCss"></div>
+		<div id="page"></div>
+		<div id="pageJs"></div>
+        <div id="pageLoad">
+            <div class="loader">
+                <div class="loader-inner line-scale-pulse-out">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+        </div>
+	</body>
+		
+
+    <!--start mergeJs:main.m.min-->
+    <script src="/pc/public/js/common/main.js"></script>
+    <!--end mergeJs-->
+</html>

@@ -1,0 +1,47 @@
+.search-bar {
+    position:relative;
+    z-index:1;
+    width:85%;
+    margin:20px auto 0 auto;
+}
+.search-bar .input-txt {
+    padding-left:35px;
+    padding-right:35px;
+}
+.search-bar .add-on {
+    display:block;
+    position:absolute;
+    top:0;
+    width:35px;
+    height:35px;
+    text-align:center;
+}
+.search-bar .addOn-left {
+    left:0;
+}
+.search-bar .addOn-right {
+    right:0;
+}
+.country-list p {
+    padding-top:12px;
+    padding-left:25px;
+    font-size:14px;
+}
+.country-list ul {
+    line-height:40px;
+    -moz-background:rgba(255,255,255,0.1);
+    -webkit-background:rgba(255,255,255,0.1);
+    background:rgba(255,255,255,0.1);
+    padding-left:10px;
+    padding-right:10px;
+}
+.country-list li {
+    border-bottom:1px solid #5d5d5d;
+    padding-left:15px;
+    padding-right:15px;
+    color:#fff;
+    font-size:17px;
+}
+.matching-country {
+    margin-top:20px;
+}

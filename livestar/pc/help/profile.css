@@ -1,0 +1,28 @@
+@import url(/pc/public/css/module/mod_btn.css);
+@import url(/pc/public/css/module/mod_level.css);
+@import url(/pc/public/css/module/mod_profile.css);
+@import url(/pc/public/css/module/mod_popup_box.css);
+@import url(/pc/public/css/skin/main_color.css);
+.ls-formDefault {
+    padding-top:32px;
+}
+.ls-formDefault dt {
+    color:#a2a2a2;
+}
+.ls-formDefault dd {
+    margin-bottom:33px;
+}
+.ls-formDefault .input-default {
+    width:296px;
+}
+.ls-formDefault .select-birthday .input-txt {
+    width:112px;
+}
+.ls-formDefault .textarea-box textarea {
+    width:460px;
+    height:160px;
+}
+.ls-formDefault .form-ft-btn {
+    padding-top:54px;
+}
+

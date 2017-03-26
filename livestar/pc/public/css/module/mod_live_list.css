@@ -1,0 +1,151 @@
+.mod-live-list {
+    position:relative;
+    margin-left:-1.25%;
+    overflow:hidden;
+    zoom:1;
+}
+.mod-live-list li:hover .whole-bg{
+	display: block;
+}
+
+.mod-live-list li:hover .short-bg{
+	display: none;
+}
+
+.mod-live-list li {
+    position:relative;
+    float:left;
+    width:18.75%;
+    background:url(/pc/public/images/live_defaulteBg.jpg) no-repeat center 33%  #656565;
+    margin-left:1.25%;
+    margin-bottom:15px;
+    line-height:0;
+}
+.mod-live-list li a {
+    display:block;
+    position:relative;
+    padding-top:100%;
+    overflow:hidden;
+}
+.mod-live-list img {
+    position:absolute;
+    top:0;
+    z-index:1;
+    width:100%;
+    height:100%;
+}
+.mod-live-list li a:before {
+    display:block;
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:2;
+    content:"";
+    width:100%;
+    height:70px;
+    background:url(/pc/public/images/live_shadow.png) no-repeat;
+}
+.mod-live-list .mark-live,
+.mod-live-list .mark-record {
+    position:absolute;
+    top:10px;
+    left:10px;
+    z-index:2;
+    display:inline;
+    padding:0 10px;
+    line-height:22px;
+    border:1px solid #fff;
+-webkite-border-radius:3px;
+    -moz-border-radius:3px;
+         border-radius:3px; 
+}
+.mod-live-list .live-location {
+    position:absolute;
+    top:10px;
+    right:10px;
+    z-index:2;
+    line-height:1.5;
+}
+.mod-live-list .i-location {
+    margin-right:10px;
+}
+.mod-live-list .info-bg {
+    position:absolute;
+    bottom:0;
+    z-index:3;
+    width:100%;
+    line-height:1.2;
+    background:#000;
+    -webkit-background:rgba(0,0,0,.80);
+       -moz-background:rgba(0,0,0,.80);
+            background:rgba(0,0,0,.80);
+}
+.mod-live-list .tips-txt.tips-loading {
+    position:absolute;
+    z-index:0;
+    top:44%;
+}
+.mod-live-list .short-bg {
+    padding-top:8px;
+    padding-bottom:12px;
+}
+.mod-live-list .short-bg p {
+    padding:0 10px;
+    overflow:hidden;
+    text-overflow:ellipsis; 
+    white-space:nowrap;
+}
+.mod-live-list .move-on .short-bg {
+    display:none;
+}
+.mod-live-list .whole-bg {
+    display:none;
+    height:100%;
+    -webkit-background:rgba(0,0,0,.50);
+       -moz-background:rgba(0,0,0,.50);
+            background:rgba(0,0,0,.50);
+}
+.mod-live-list .move-on .whole-bg {
+    display:block;
+}
+.mod-live-list .whole-bg p {
+    position:absolute;
+    top:50%;
+    width:46%;
+    height:24px;
+    margin-top:-12px;
+    font-size:16px;
+}
+.mod-live-list .whole-bg i {
+    margin-right:10px;
+    font-size:20px;
+}
+.mod-live-list .live-fav {
+    left:0;
+    text-align:right;
+}
+.mod-live-list .live-viewers {
+    right:0;
+
+}
+.mod-live-list .live-tit {
+    font-weight:bold;
+    font-size:1.4285714285714286em;
+}
+.mod-live-list .live-intro {
+    font-size:0.8571428571428571em;
+}
+.mod-live-list.top-live .live-tit {
+    font-size:2.857142857142857em;
+}
+.mod-live-list.top-live .live-intro {
+    font-size:1em;
+}
+.mod-live-list.top-live {
+    margin-left:-2.5%;
+}
+.mod-live-list.top-live li {
+    width:30.8%;
+    margin-left:2.5%;
+    margin-bottom:15px;
+}

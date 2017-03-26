@@ -1,0 +1,88 @@
+
+    <article class="ls-wrap" id="resetPwdField">
+        <div class="ls-container">
+            <div class="ls-content">
+                <div class="ls-blockBg ls-setAccount">
+
+                    <!--S:reset pwd-->
+                    <div class="reset-pwd J-step1">
+                        <div class="ls-hd">
+                            <h2 class="ls-headTit"><b>Reset Password</b></h2>
+                        </div>
+                        <div class="ls-bd">
+                            <h3 class="align-c">Your account:<span class="ls-f-info" v-cloak>{{email}}</span></h3>
+                            <div class="form">
+                                <form autocomplete="off" id="resetPwdForm">
+                                    <dl>
+                                        <dt>Please enter the new password:</dt>
+                                        <dd>
+                                            <div class="input-box input-box-dark input-box-radius J-input-focus">
+                                            	<input type="hidden" name="sign" value='{{sign}}' v-cloak/>
+                                            	<input type="hidden" name="login_id" value='{{login_id}}' v-cloak/>
+                                                <input class="input-txt" type="password" id="resetPwdIpt"
+		                                            check-type="required,minlength,maxlength,password"
+		                                        	name="password"
+		                                        	data-minlength="8" 
+		                                        	data-maxlength="16"
+                                                     data-password-msg="i18n.reset.passwordError1"
+		                                        	data-focus="true" 
+		                                        	data-blur="true">
+                                                <div class="tips-txt tips-icon tipsPop">
+                                                    <div class="txt">
+                                                        <i class="i-icon i-tip-s i-tip-warning">warning</i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <p class="under-tips ls-f-tip">8-16 characters, including at least one numeric digit</p>
+                                            <p class="float-under-tips ls-f-primary J-tip-msg">xxxxxx</p>
+                                        </dd>
+
+                                        <dt>Please re-enter the new password:</dt>
+                                        <dd>
+                                            <div class="input-box input-box-dark input-box-radius J-input-focus">
+                                                <input class="input-txt" type="password"
+		                                            check-type="required,pswagain" 
+		                                            data-pswagain = "#resetPwdIpt"
+		                                        	name="password" 
+		                                        	data-focus="true" 
+		                                        	data-blur="true">
+                                                <div class="tips-txt tips-icon tipsPop">
+                                                    <div class="txt">
+                                                        <i class="i-icon i-tip-s i-tip-warning">warning</i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <p class="float-under-tips ls-f-primary J-tip-msg">xxxxxx</p>
+                                        </dd>
+
+                                        <dd class="form-ft-btn"><a class="btn btn-primary btn-mainSubmit J-submitBtn" >Save</a></dd>
+                                    </dl>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <!--E:reset pwd-->
+
+                    <!--S:reset pwd succeed-->
+                    <div class="reset-pwd J-step2" style="display: none;">
+                        <div class="ls-hd">
+                            <h2 class="ls-headTit"><b>Reset Password</b></h2>
+                        </div>
+                        <div class="ls-bd">
+                            <div class="tips-txt align-c">
+                                <i class="i-icon i-tip-l i-tip-ok"></i>
+                                <div class="txt">
+                                    <p class="ls-f-white"><span class="ls-f-info" v-cloak>{{email}}</span> reset password succeed!</p>
+                                    <p class="ls-f-white">please remember your new password.</p>
+                                </div>
+                            </div>
+                            <div class="ls-ft-btn"><a class="btn btn-primary btn-mainSubmit J-go-home" href="#">Access my account</a></div>
+                        </div>
+                    </div>
+                    <!--E:reset pwd succeed-->
+
+                </div>
+            </div>
+        </div>
+    </article>
+

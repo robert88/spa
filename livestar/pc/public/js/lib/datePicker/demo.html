@@ -1,0 +1,194 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<link href="/img/logo2.jpg" type="image/x-icon" rel="shortcut icon" />
+<link rel="stylesheet" href="/public/css/layout.css" />
+<link rel="stylesheet" href="/public/css/mainNav.css" />
+<link rel="stylesheet" href="/public/css/content.css" />
+<link rel="stylesheet" href="/public/css/table.css" />
+<link rel="stylesheet" href="/public/css/input.css" />
+
+<script src="/public/js/jquery-1.11.1.min.js"></script>
+
+<link rel="stylesheet" href="/public/js/datePicker/datePicker.css" />
+<script src="/public/js/datePicker/datePicker.js"></script>
+<body>
+
+<div class="wrap">
+    <h1 class="tc bd-bottom">
+        datepicker api 说明书
+    </h1>
+    <div>
+        <h3 class="mt10">
+            1、使用说明
+        </h3>
+    </div>
+    <div class="mlr30 lh32">
+        点击input标签选择日期：
+        <input type="text" class="datePickerInput">
+        <input type="text" class="ml10 datePickerInput">
+        <div class="t-success">
+            input class=“datePickerInput”$(".datePickerInput").datePicker();
+        </div>
+        <div>
+        </div>
+        <div>
+            直接显示
+        </div>
+        <div class="t-success">
+            <pre>
+				&lt;div class="datePicker"&gt;
+					&lt;table class="tableMini"&gt;
+						&lt;caption&gt;
+							&lt;a class="lastYear" href="#"&gt;&lt;&lt;&lt;/a&gt;
+							&lt;a class="lastMonth" href="#"&gt;&lt;&lt;/a&gt;
+							&lt;span class="showMonth" data="4"&gt;四月&lt;/span&gt;
+							&lt;span class="showYear"&gt;2015&lt;/span&gt;
+							&lt;a class="nextMonth" href="#"&gt;&gt;&lt;/a&gt;
+							&lt;a class="nextYear" href="#"&gt;&gt;&gt;&lt;/a&gt;
+						&lt;/caption&gt;
+		 				&lt;thead&gt;
+			 				&lt;tr&gt;
+			 				&lt;th class="t-danger"&gt;日&lt;/th&gt;
+			 				&lt;th&gt;一&lt;/th&gt;
+			 				&lt;th&gt;二&lt;/th&gt;
+			 				&lt;th&gt;三&lt;/th&gt;
+			 				&lt;th&gt;四&lt;/th&gt;
+			 				&lt;th&gt;五&lt;/th&gt;
+			 				&lt;th class="t-danger"&gt;六&lt;/th&gt;
+			 				&lt;/tr&gt;
+		 				&lt;/thead&gt;
+		 				&lt;tbody&gt;&lt;/tbody&gt;
+	 				&lt;/table&gt;
+ 				&lt;/div&gt;
+            </pre>
+
+        <div>
+            $("#datePicker").datePicker()最好不要用$(".datePicker") 名称防止重复引用
+            <p>$("#picker").datePicker({$input:$(".pickerInput"),$showDate:$(".showDate")});</p>
+        </div>
+    </div>
+            	<div class="datePicker" id="picker">
+					<table class="tableMini">
+						<caption>
+							<a class="lastYear" href="#"><<</a>
+							<a class="lastMonth" href="#"><</a>
+							<span class="showMonth" data="4">四月</span>
+							<span class="showYear">2015</span>
+							<a class="nextMonth" href="#">></a>
+							<a class="nextYear" href="#">>></a>
+						</caption>
+		 				<thead>
+			 				<tr>
+			 				<th class="t-danger">日</th>
+			 				<th>一</th>
+			 				<th>二</th>
+			 				<th>三</th>
+			 				<th>四</th>
+			 				<th>五</th>
+			 				<th class="t-danger">六</th>
+			 				</tr>
+		 				</thead>
+		 				<tbody></tbody>
+	 				</table>
+ 				</div>
+ 				<div>
+ 					<span class="showDate"></span><input type="text" class="pickerInput">
+ 				</div>
+ 				<div>
+ 					有限制的datePicker -》
+					.data("date",(new Date()).getTime()+60*60*24*1000)
+					.data("min",(new Date()).getTime())
+					.data("max",(new Date()).getTime()+60*60*24*7000)
+				</div>
+ 				<div class="datePicker" id="picker2">
+					<table class="tableMini">
+						<caption>
+							<a class="lastYear" href="#"><<</a>
+							<a class="lastMonth" href="#"><</a>
+							<span class="showMonth" data="4">四月</span>
+							<span class="showYear">2015</span>
+							<a class="nextMonth" href="#">></a>
+							<a class="nextYear" href="#">>></a>
+						</caption>
+		 				<thead>
+			 				<tr>
+			 				<th class="t-danger">日</th>
+			 				<th>一</th>
+			 				<th>二</th>
+			 				<th>三</th>
+			 				<th>四</th>
+			 				<th>五</th>
+			 				<th class="t-danger">六</th>
+			 				</tr>
+		 				</thead>
+		 				<tbody></tbody>
+	 				</table>
+ 				</div>
+ 				<div>
+ 					<span class="showDate1"></span><input type="text" class="pickerInput1">
+ 				</div>
+        </div>
+    <div>
+        <h3>
+            2、参数
+        </h3>
+    </div>
+    <div class="mlr30 lh32">
+        &nbsp;
+        <span style="color: rgb(71, 164, 71);">
+            $(".datePicker")：
+        </span>
+        1、主要设置data属性来设置参数。data-date='2015-01-02'   &nbsp;$(".datePicker").data("date",new
+        Date())设置初始化的时间 ，
+        <div>
+            &nbsp;
+            <span style="color: rgb(71, 164, 71);">
+                $(".datePicker")：
+            </span>
+            2、设置可选时间范围。data-min='10000'&nbsp;data-max='200000' &nbsp;$(".datePicker").data("min",(new
+            Date()).getTime()）&nbsp;&nbsp;$(".datePicker").data("max",(new Date()).getTime()+60*60*24*7）
+            <div>
+                1和2同样也适用于
+                <span style="color: rgb(71, 164, 71);">
+                    $(".datePickerInput")
+                </span>
+                <br>
+            </div>
+        </div>
+    </div>
+    <div class="mlr30 lh32">
+        <div>
+             
+            <span style="color: rgb(71, 164, 71);">
+                $(".datePicker")：&nbsp;
+            </span>
+            3、$input:显示时间的值的input
+        </div>
+        <div>
+             
+            <span style="color: rgb(71, 164, 71);">
+                $(".datePicker")：4、
+            </span>
+            $showDate:显示的时间的html标签&nbsp;
+        </div>
+    </div>
+    <div>
+        <h3>
+        </h3>
+    </div>
+</div>
+</body>
+</html>
+<script>
+$(".datePickerInput").datePicker();
+$("#picker").datePicker({$input:$(".pickerInput"),$showDate:$(".showDate")});
+$("#picker2")
+	.data("date",(new Date()).getTime()+60*60*24*1000)
+	.data("min",(new Date()).getTime())
+	.data("max",(new Date()).getTime()+60*60*24*7000)
+	.datePicker({$input:$(".pickerInput1"),$showDate:$(".showDate1"),});
+</script>

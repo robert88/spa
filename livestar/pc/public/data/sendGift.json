@@ -1,0 +1,49 @@
+{
+    "state": true,
+    "message": "",
+    "data": {
+        "user_id": "500001",      
+        "user_name": "500001",    
+        "user_image": "",        
+        "my_coin": 119956,       
+        "streamer_buck": 44,      
+        "lvl": 12,                
+        "inc_exp": 30,            
+        "inc_lvl": 0,             
+        "success_cnt": 3,         
+        "error_cnt": 0,          
+        "success": [
+            {
+                "gift_id": 1,                            
+                "gift_name": "Heart",                    
+                "quantity": 1,                           
+                "time": 1466653221553,                   
+                "combo": "COMBO-651b7d-1vdktd1p-fze"     
+            },
+            {
+                "gift_id": 2,
+                "gift_name": "Thumbs Up",
+                "quantity": 1,
+                "time": 1466653221978,
+                "combo": "COMBO-63b264-1vdktd26-40x"
+            },
+            {
+                "gift_id": 1,
+                "gift_name": "Heart",
+                "quantity": 1,
+                "time": 1466653222442,
+                "combo": "COMBO-651b7d-1vdktd1p-fze"
+            }
+        ],
+        "error": [
+            {
+                "gift_id": 1,                  
+                "gift_name": "Heart",         
+                "quantity": 1,                 
+                "time": 1466653221978,         
+                "code": 901,                   
+                "msg": "星币不足"             
+            }
+        ]
+    }
+}

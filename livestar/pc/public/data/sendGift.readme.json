@@ -1,0 +1,49 @@
+{
+    "state": true,
+    "message": "",
+    "data": {
+        "user_id": "500001",      // 用户ID
+        "user_name": "500001",    // 用户名
+        "user_image": "",         // 用户头像
+        "my_coin": 119956,        // 我的星币数
+        "streamer_buck": 44,      // 主播的珍珠数
+        "lvl": 12,                // 送礼请求总共增加的等级
+        "inc_exp": 30,            // 送礼请求总共增加的经验值
+        "inc_lvl": 0,             // 送礼请求总共增加的等级
+        "success_cnt": 3,         // 成功次数，详情查看success
+        "error_cnt": 0,           // 失败次数，详情查看error
+        "success": [
+            {
+                "gift_id": 1,                            // 礼物ID
+                "gift_name": "Heart",                    // 礼物名称
+                "quantity": 1,                           // 礼物数量
+                "time": 1466653221553,                   // 用户送礼的时间戳（同客户端上传，毫秒）
+                "combo": "COMBO-651b7d-1vdktd1p-fze"     // Combo Key
+            },
+            {
+                "gift_id": 2,
+                "gift_name": "Thumbs Up",
+                "quantity": 1,
+                "time": 1466653221978,
+                "combo": "COMBO-63b264-1vdktd26-40x"
+            },
+            {
+                "gift_id": 1,
+                "gift_name": "Heart",
+                "quantity": 1,
+                "time": 1466653222442,
+                "combo": "COMBO-651b7d-1vdktd1p-fze"
+            }
+        ],
+        "error": [
+            {
+                "gift_id": 1,                  // 礼物ID
+                "gift_name": "Heart",          // 礼物名称
+                "quantity": 1,                 // 礼物数量
+                "time": 1466653221978,         // 用户送礼的时间戳（同客户端上传，毫秒）
+                "code": 901,                   // 错误码
+                "msg": "星币不足"               // 错误提示
+            }
+        ]
+    }
+}

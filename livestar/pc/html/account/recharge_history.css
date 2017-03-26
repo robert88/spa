@@ -1,0 +1,66 @@
+@import url(/pc/public/css/module/mod_btn.css);
+@import url(/pc/public/css/module/mod_level.css);
+@import url(/pc/public/css/module/mod_profile.css);
+@import url(/pc/public/css/module/mod_pages.css);
+@import url(/pc/public/css/module/mod_popup_box.css);
+@import url(/pc/public/css/skin/main_color.css);
+/*total amount*/
+.ls-hdOptions:after {
+    clear:both;
+    display:block;
+    content:"";
+    visibility:visible;
+    font-size:0;
+    line-height:0;
+}
+.ls-hdOptions .btn,
+.ls-hdOptions span {
+    float:right;
+}
+.ls-hdOptions span {
+    line-height:28px;
+}
+.ls-hdOptions .select-dum {
+    float:right;
+    margin-left:10px;
+}
+.ls-hdOptions .select-dum .input-box {
+    background:none;
+    border:1px solid #808080;
+}
+.ls-hdOptions .select-dum .input-txt {
+    width:40px;
+    padding-top:7px;
+    padding-bottom:7px;
+}
+.ls-hdOptions .drop-list {
+    top:28px;
+    left:-1px;
+    width:72px;
+    height:190px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.ls-hdOptions .input-box.input-box-append {
+    padding-right:20px;
+}
+.ls-hdOptions .input-box .add-on {
+    width:20px;
+    height:28px;
+    line-height:28px;
+    color:#bfbfbf;
+}
+.ls-hdOptions .btn {
+    width:50px;
+}
+
+.ls-amount .ls-subHd .i-coin-l {
+    margin-left:10px;
+    vertical-align:-9px;
+}
+.ls-amount .ls-subHd .ls-f-white {
+    margin-left:5px;
+}
+.J-pageFooter .line-scale-pulse-out > div{
+    background-color:#999
+}

@@ -1,0 +1,47 @@
+
+    <article id="halloweenVue">
+        <section class="wrap">
+            <div class="container J-tab">
+                <div class="banner">
+                    <h1>Halloween leaderboard.Get ready to become a Halloween Star!24 oct-31 oct</h1>
+                    <img src="/mb/public/images/halloween/actH5Halloween20161012_bg01.jpg">
+                    <img src="/mb/public/images/halloween/actH5Halloween20161012_bg02.jpg">
+                    <ul class="tab J-tab-title">
+                        <li class="current" data-tab=".J-tab-streamer"><a class="btn btn-streamer" >top streamer</a></li>
+                        <li data-tab=".J-tab-viewer"><a class="btn btn-viewer">top viewer</a></li>
+                    </ul>
+                </div>
+                <!--S:top streamer and top viewer:top-streamer跟top-viewer类名切换-->
+                <div class="tab-bd top-streamer J-tab-streamer J-tab-body-item">
+                    <ul class="streamer-list">
+                        <li  v-for="item in streamers" class="{{$index|fill}}">
+                            <i class="i-no"><b></b></i>
+                            <img :src="item.userimg" v-show="item.name">
+                            <b class="no-user" v-show="!item.name">?</b>
+                            <span class="name" v-cloak v-show="item.name">{{{item.name}}}</span>
+                            <span class="amount" v-cloak v-show="item.name"><i class="i-pumpkin"></i>{{item.score | formatNum}}</span>
+                            <i :class="item.isfollow?'i-faved J-follow':'i-fav J-follow'" data-id="{{item.uid}}" v-show="item.name"></i>
+                        </li>
+                    </ul>
+                </div>
+                <!--E:top streamer-->
+                <!--S:top streamer and top viewer:top-streamer跟top-viewer类名切换-->
+                <div class="tab-bd top-viewer J-tab-viewer J-tab-body-item" style="display: none">
+                    <ul class="streamer-list">
+                        <li  v-for="item in viewers" class="{{$index|fill}}">
+                            <i class="i-no"><b></b></i>
+                            <img :src="item.userimg" v-show="item.name">
+                            <b class="no-user" v-show="!item.name">?</b>
+                            <span class="name" v-cloak v-show="item.name">{{{item.name}}}</span>
+                            <span class="amount" v-cloak v-show="item.name"><i class="i-pumpkin"></i>{{item.score| formatNum}}</span>
+                            <i :class="item.isfollow?'i-faved J-follow':'i-fav J-follow'" data-id="{{item.uid}}" v-show="item.name"></i>
+                        </li>
+                    </ul>
+                </div>
+                <!--E:top streamer-->
+            </div>
+        </section>
+        <div class="tipsHeader J-sys-Msg animate-ease" style="display:none;">
+            Invalid code
+        </div>
+</article>

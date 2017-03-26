@@ -1,0 +1,252 @@
+.level-info {
+    display:inline-block;
+    width:28px;
+    height:13px;
+    background: url(http://lscdn.livestar.com/res/mb/public/images/level.png) no-repeat;  
+    -webkit-background-size:148px auto;
+       -moz-background-size:148px auto;
+            background-size:148px auto;   
+    margin-right:.5rem;
+    vertical-align:-1px;
+    font-size:0; 
+}
+.level-info01 {
+    background-position:0 0; 
+}
+.level-info02 {
+    background-position:-30px 0; 
+}
+.level-info03 {
+    background-position:-60px 0; 
+}
+.level-info04 {
+    background-position:-90px 0; 
+}
+.level-info05 {
+    background-position:-120px 0; 
+}
+.level-info06 {
+    background-position:0 -18px; 
+}
+.level-info07 {
+    background-position:-30px -18px; 
+}
+.level-info08 {
+    background-position:-60px -18px; 
+}
+.level-info09 {
+    background-position:-90px -18px; 
+}
+.level-info10 {
+    background-position:-120px -18px; 
+}
+.level-info11 {
+    background-position:0 -36px; 
+}
+.level-info12 {
+    background-position:-30px -36px; 
+}
+.level-info13 {
+    background-position:-60px -36px; 
+}
+.level-info14 {
+    background-position:-90px -36px; 
+}
+.level-info15 {
+    background-position:-120px -36px; 
+}
+.level-info16 {
+    background-position:0 -53.5px; 
+}
+.level-info17 {
+    background-position:-30px -53.5px; 
+}
+.level-info18 {
+    background-position:-60px -53.5px; 
+}
+.level-info19 {
+    background-position:-90px -53.5px; 
+}
+.level-info20 {
+    background-position:-120px -53.5px; 
+}
+.level-info21 {
+    background-position:0 -72px; 
+}
+.level-info22 {
+    background-position:-30px -72px; 
+}
+.level-info23 {
+    background-position:-60px -72px; 
+}
+.level-info24 {
+    background-position:-90px -72px; 
+}
+.level-info25 {
+    background-position:-120px -72px; 
+}
+.level-info26 {
+    background-position:0 -89.5px; 
+}
+.level-info27 {
+    background-position:-30px -89.5px; 
+}
+.level-info28 {
+    background-position:-60px -89.5px; 
+}
+.level-info29 {
+    background-position:-90px -89.5px; 
+}
+.level-info30 {
+    background-position:-120px -89.5px; 
+}
+.level-info31 {
+    background-position:0 -107.5px; 
+}
+.level-info32 {
+    background-position:-30px -107.5px; 
+}
+.level-info33 {
+    background-position:-60px -107.5px; 
+}
+.level-info34 {
+    background-position:-90px -107.5px; 
+}
+.level-info35 {
+    background-position:-120px -107.5px; 
+}
+.level-info36 {
+    background-position:0 -125.5px; 
+}
+.level-info37 {
+    background-position:-30px -125.5px; 
+}
+.level-info38 {
+    background-position:-60px -125.5px; 
+}
+.level-info39 {
+    background-position:-90px -125.5px; 
+}
+.level-info40 {
+    background-position:-120px -125.5px; 
+}
+.level-info41 {
+    background-position:0 -143.5px; 
+}
+.level-info42 {
+    background-position:-30px -143.5px; 
+}
+.level-info43 {
+    background-position:-60px -143.5px; 
+}
+.level-info44 {
+    background-position:-90px -143.5px; 
+}
+.level-info45 {
+    background-position:-120px -143.5px; 
+}
+.level-info46 {
+    background-position:0 -161.5px; 
+}
+.level-info47 {
+    background-position:-30px -161.5px; 
+}
+.level-info48 {
+    background-position:-60px -161.5px; 
+}
+.level-info49 {
+    background-position:-90px -161.5px; 
+}
+.level-info50 {
+    background-position:-120px -161.5px; 
+}
+.level-info51 {
+    background-position:0 -179.5px; 
+}
+.level-info52 {
+    background-position:-30px -179.5px; 
+}
+.level-info53 {
+    background-position:-60px -179.5px; 
+}
+.level-info54 {
+    background-position:-90px -179.5px; 
+}
+.level-info55 {
+    background-position:-120px -179.5px; 
+}
+.level-info56 {
+    background-position:0 -197.5px; 
+}
+.level-info57 {
+    background-position:-30px -197.5px; 
+}
+.level-info58 {
+    background-position:-60px -197.5px; 
+}
+.level-info59 {
+    background-position:-90px -197.5px; 
+}
+.level-info60 {
+    background-position:-120px -197.5px; 
+}
+.level-info61 {
+    background-position:-0px -216px; 
+}
+.level-info62 {
+    background-position:-30px -216px; 
+}
+.level-info63 {
+    background-position:-60px -216px; 
+}
+.level-info64 {
+    background-position:-90px -216px; 
+}
+.level-info65 {
+    background-position:-120px -216px; 
+}
+.level-info66 {
+    background-position:0 -233px; 
+}
+.level-info67 {
+    background-position:-30px -233px; 
+}
+.level-info68 {
+    background-position:-60px -233px; 
+}
+.level-info69 {
+    background-position:-90px -233px; 
+}
+.level-info70 {
+    background-position:-120px -233px; 
+}
+.level-info71 {
+    background-position:0 -252px; 
+}
+.level-info72 {
+    background-position:-30px -252px; 
+}
+.level-info73 {
+    background-position:-60px -252px; 
+}
+.level-info74 {
+    background-position:-90px -252px; 
+}
+.level-info75 {
+    background-position:-120px -252px; 
+}
+.level-info76 {
+    background-position:0 -270px; 
+}
+.level-info77 {
+    background-position:-30px -270px; 
+}
+.level-info78 {
+    background-position:-60px -270px; 
+}
+.level-info79 {
+    background-position:-90px -270px; 
+}
+.level-info80 {
+    background-position:-120px -270px; 
+}

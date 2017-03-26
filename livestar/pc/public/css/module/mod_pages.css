@@ -1,0 +1,22 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors Your Name (you@example.org)
+ * @date    2015-01-19 16:19:57
+ * @version $Id$
+ */
+
+.pages {margin: 3em 0 0 0; padding-bottom:2px; color: #999; text-align: center; font-size:1.1428571428571428em;}
+.pages .i-left,
+.pages .i-right {display:inline-block; width:0; height:0; line-height:0;}
+.pages .i-left{border-width:.3em .5em .3em 0; border-color:transparent #999 transparent transparent; border-style:dashed solid dashed dashed; margin-right:3px;}
+.pages .i-right{border-width:.3em 0 .3em .5em; border-color:transparent transparent transparent #999; border-style:dashed dashed dashed solid; margin-left:3px;}
+.pages a {color: #999;}
+.pages a,
+.pages span {border:1px #898989 solid; -webkite-border-radius:5px; -moz-border-radius:5px; border-radius:5px; text-decoration: none;}
+.pages a:hover { color: #e31f64;}
+.pages a.current { border-color: #e31f64; color: #fff; background: #e31f64;}
+.pages span.disabled {border: #898989 1px solid;  color: #898989; cursor:default;}
+.pages a,
+.pages span {margin-right:.05em; padding:0.21428571428571427em 0.5714285714285714em;}
+.pages .pages-count {display:inline-block; padding:0;}

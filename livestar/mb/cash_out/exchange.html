@@ -1,0 +1,42 @@
+
+<!--S:cash out-->
+<article class="app-wrap co-wrap" id="exchangeVue">
+    <div class="co-topBar">
+        <a class="btn btn-return" href="#/mb/cash_out/income"><i class="i-return"></i></a>
+        <p class="tit">Exchange to Star Coins</p>
+    </div>
+    <div class="co-container">
+        <div class="exchange-upper">
+            <figure>
+                <figcaption>You Have:</figcaption>
+                <p class="total-starBucks f-special" v-cloak><i class="i-starBucks-l"></i>{{{totalMoney | toMenoy}}}</p>
+            </figure>
+            <figure>
+                <figcaption>Can Exchange:</figcaption>
+                <p class="total-starBucks f-special" v-cloak><i class="i-starBucks-l"></i>{{{exchangeMoney | toMenoy}}}</p>
+            </figure>
+        </div>
+        <ul class="exchange-list">
+            <li v-for="item in starBuckList" >
+                <span><i class="i-starBucks"></i><em>{{ item.starBuck | formatNum }}</em><i class="i-arrowRight"></i><i class="i-coins"></i><em>{{ item.coins }}</em></span>
+                <a :class="item.starBuck<=exchangeMoney?'btn btn-primary btn-m J-canItem':'btn btn-disable btn-active btn-m J-cannotItem'" data-starbuck="{{item.starBuck}}" data-coins="{{item.coins}}">Exchange</a>
+            </li>
+        </ul>
+    </div>
+    <div class="J-dialog" style="display: none">
+        <div class="popup-box popup-boxSys">
+            <div class="bd">
+                <div class="main-txt">Are you sure you want to exchange {{selectStarBuck| formatNum }} Star Bucks to {{selectCoins}} Star Coins?</div>
+            </div>
+            <div class="ft-btn">
+                <a class="btn btn-text btn-m dl-close">Cancel</a>
+                <a class="btn btn-text btn-m J-ok-btn">Yes</a>
+            </div>
+        </div>
+    </div>
+    <div class="tipsHeader J-sys-Msg animate-ease" style="display:none;">
+        Invalid code
+    </div>
+</article>
+<!--E:cash out-->
+

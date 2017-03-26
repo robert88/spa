@@ -1,0 +1,141 @@
+ <article class="ls-wrap">
+        <div class="ls-container" id="rechargeVue">
+            <div class="ls-content">
+                <div class="ls-autoBlock">
+                    <!--S:left bar-->
+                    <div class="ls-leftBar">
+                        <!--S:user information-->
+                        <div class="ls-userInfo ls-blockBg">
+                            <div class="userImg-circle upload-box J-upload">
+                                <img :src="uInfo.userimg | getDefImg">
+                                <div class="userImg-mask"></div>                                
+                                <!--<div class="select-area">
+                                    <a class="btn btn-upload J-upload-btn" >
+                                        <i class="i-font i-camera">N</i>
+                                    </a>
+                                    <input type="file">
+                                </div>-->
+                            </div>
+							 <p class="nick-name">
+                                <i :class="(uInfo.exp&&uInfo.exp.lvl) | getULevelClass"></i>
+                                <a class="name" v-cloak>{{{uInfo.name}}}</a>
+                            </p>
+                            
+                            <p class="money" v-cloak><i class="i-money-l"></i>{{uInfo.buck | formatNum}}</p>
+                            <p class="coins" v-cloak><i class="i-coin-l"></i>{{uInfo.coin | formatNum}}</p>
+                            <p class="LID" v-cloak>LID: {{uInfo.uid}}</p>
+                            <p class="location" v-cloak><i class="i-font i-location">K</i>{{uInfo.location}}</p>
+                            <p class="signs" v-cloak>{{{uInfo.signature}}}</p>
+                            <ul class="userInfo-option">
+                                <li>
+                                    <a>
+                                        <span class="option-value" v-cloak>{{uInfo.like | formatNum}}</span>
+                                        <span class="option-tit">Likes</span>
+                                    </a>
+                                </li>
+                                <li class="align-c">
+                                    <a>
+                                        <span class="option-value" v-cloak>{{uInfo.follower | formatNum}}</span>
+                                        <span class="option-tit">Followers</span>
+                                    </a>
+                                </li>
+                                <li class="align-c">
+                                    <a>
+                                        <span class="option-value" v-cloak>{{uInfo.favorites | formatNum}}</span>
+                                        <span class="option-tit">Following</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!--E:user information-->
+                        <!--S:navigation of user information-->
+                        <nav class="ls-sideNav ls-blockBg">
+                            <ul>
+                                <li ><a href="#/pc/html/account/profile" ><i class="i-font i-profile">E</i><span>Edit Profile</span></a></li>
+                                <li class="current"><a href="#/pc/html/account/recharge"><i class="i-font i-coins">F</i><span>Recharge</span></a></li>
+                                <!--<li><a href="#/pc/html/account/profile"><i class="i-font i-bucks">G</i><span>Star Bucks</span></a></li>-->
+                            </ul>
+                        </nav>
+                        <!--E:navigation of user information-->
+                    </div>
+                    <!--E:left bar-->
+                    <div class="ls-main">
+                        <div class="ls-blockBg">
+                            <div class="ls-hd">
+                                <h2 class="ls-headTit">
+                                    <b class="hd-l">Recharge</b>
+                                    <a class="hd-r ls-f-common" href="#/pc/html/account/recharge_history">History</a>
+                                </h2>
+                            </div>
+                            <div class="ls-bd ls-amount">
+                                <div class="ls-subHd">
+                                    <h3 class="ls-subTit">Payment Amount:</h3>
+                                </div>
+                                <ul class="choose-list choose-recharge" v-cloak>
+                                    <li  v-for="item in payList" class="el0{{$index+1}} J-select-recharge-item"
+                                    data-id="{{item.pid}}"
+                                    data-price="{{item.priceDescription}}"
+                                    data-title="{{item.title}}"
+                                    data-subtitle="{{item.subTitle}}">
+                                        <a class="li-inner">
+                                            <p class="coins-qty"><i class="i-coin"></i><span>{{item.title | convertCoins}}</span></p>
+                                            <p class="coins-img"></p>
+                                            <p class="coins-value">$<span>{{item.priceDescription | removeDollarText}}</span></p>
+                                            <span class="selectbox"><i class="i-font i-check">O</i></span>
+                                            <div class="mark-rechargeDiscount" v-show="convertFree(item.title,item.subTitle)>0">
+                                                <p>+{{ convertFree(item.title,item.subTitle) }}%</p>
+                                                <p>Free</p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <div class="payment-options">
+                                    <span class="field">Payment Options:</span>
+                                    <ul class="choose-list">
+                                        <li class="el01 J-select-recharge-item J-select-recharge-item01" data-channel="paypal"><a class="li-inner"></a></li>
+                                        <li class="el02 J-select-recharge-item" data-channel="xsolla" style="display: none"> <a class="li-inner"></a></li>
+                                    </ul>
+                                </div>
+                                <div class="payment-total">
+                                    <span class="field">Total:</span>
+                                    <span class="ls-f-primary" v-cloak>{{input.priceDescription}}</span><em v-cloak>({{removeCoinsText(input.title,input.subTitle) }}<i class="i-coins-s"></i>)</em>
+                                </div>
+                                <div class="ls-ft-btn">
+                                    <form target="_blank" action="/store/" id="rechargeForm">
+                                        <input type="hidden" name="ct" value="checkout"/>
+                                        <input type="hidden" name="ac" value="coin"/>
+                                        <input type="hidden" v-model="input.product_id" name="product_id"/>
+                                        <input type="hidden" v-model="input.channel" name="channel"/>
+                                        <a class="btn btn-disable btn-mainSubmit J-submitBtn">Recharge</a>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+
+
+ <div style="display: none" id="dialogPayment">
+     <div class="popup-box popup-achievePayment">
+         <div class="hd">
+             <h3 class="hd-tit">Note</h3>
+             <a class="close dl-close" title="close"><i class="i-font i-close">X</i></a>
+         </div>
+         <div class="bd">
+             <div class="tips-txt tips-icon">
+                 <div class="txt">
+                     <i class="i-font i-bulb"></i>
+                     <p>Please achieve payment in the new open page.</p>
+                 </div>
+                 <p>Before payment complete please do not close this window.</p>
+             </div>
+         </div>
+         <div class="ft-btn align-c">
+             <a href="#/pc/html/account/recharge_history" class="btn btn-primary btn-m">Yes</a>
+             <a class="btn btn-primaryLink btn-m" href="https://livestar.zendesk.com/hc/en-us/articles/228226108-Cash-Out-Introduction-and-FAQ" target="_blank">Payment issue</a>
+         </div>
+     </div>
+ </div>

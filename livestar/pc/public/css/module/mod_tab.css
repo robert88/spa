@@ -1,0 +1,38 @@
+.ls-tab ul:after {
+    clear:both;
+    display:block;
+    content:"";
+    visibility:visible;
+    line-height:0;
+    font-size:0;
+}
+.ls-tab li {
+    float:left;
+}
+.ls-tab li a {
+    display:block;
+}
+.ls-tab .current a,
+.ls-tab li a:hover {
+    color:#e31f64;
+    text-decoration:none;
+    font-weight:bold;
+}
+/*tab font*/
+.tab-f-light li a {
+    color:#fff;
+}
+.tab-f-dark li a {
+    color:#000;
+    text-align:center;
+}
+/*underline tab*/
+.tab-underline {
+    border-bottom:2px solid #dbdbdb;
+}
+.tab-underline li {
+    margin-bottom:-2px;
+}
+.tab-underline .current a {
+    border-bottom:4px solid #e31f64;
+}

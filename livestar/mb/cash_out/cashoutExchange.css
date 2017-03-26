@@ -1,0 +1,47 @@
+.exchange-upper {
+    text-align:center;
+}
+.exchange-upper figcaption {
+    font-size:14px;
+    color:#fff;
+}
+.exchange-upper figure:first-child {
+    display:inline-block;
+    padding-top:20px;
+    padding-left:12px;
+    padding-right:12px;
+    padding-bottom:2px;
+    border-bottom:1px solid #3b3b3b;
+}
+.exchange-upper figure:last-child {
+    padding-top:6px;
+    padding-bottom:28px;
+}
+.exchange-list {
+    -moz-background:rgba(255,255,255,0.1);
+    -webkit-background:rgba(255,255,255,0.1);
+    background:rgba(255,255,255,0.1);
+}
+.exchange-list li {
+    display:box; 
+    display:-webkit-box; 
+    display:-moz-box; 
+    -webkit-box-align:center; 
+    -moz-box-align:center; 
+    border-bottom:1px solid #5d5d5d;
+    line-height:64px;
+    padding-left:15px;
+    padding-right:10px;
+}
+.exchange-list li:last-child {
+    border-bottom:none;
+}
+.exchange-list span {
+    display:-webkit-box;
+    -webkit-box-flex:1;
+    color:#fff;
+    font-size:15px;
+}
+.exchange-list span em {
+    font-style:normal;
+}

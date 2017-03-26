@@ -1,0 +1,331 @@
+body {
+    background-image:url(/pc/public/images/room/skin/dark/wrap_bg.jpg);
+    background-position:center top;
+    background-repeat:no-repeat;
+}
+.room-blockBg {
+    background:rgba(49,49,49,0.9);
+}
+/*
+.scroll-bar {
+    background:#424242;
+}*/
+/*qty*/
+.gift-qty .drop-list li a {
+    -moz-background:rgba(227,31,100,0.9);
+    -webkit-background:rgba(227,31,100,0.9);
+    background:rgba(227,31,100,0.9);
+}
+.gift-qty .drop-list li.current, 
+.gift-qty .drop-list li a:hover {
+    -moz-background:rgba(254,0,90,0.9);
+    -webkit-background:rgba(254,0,90,0.9);
+    background:rgba(254,0,90,0.9);
+}
+.msg-controlBar {
+    background:#424242;
+}
+.enter-msg {
+    background:#3e3e3e;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*font*/
+.cz-f-primary {
+    color:#e31f64;
+}
+.cz-bg {
+    background:url(/pc/public/images/chat_zone/skin/male/chat_zone_bg.jpg) no-repeat #050e15;
+}
+.i-cz-arrow,
+.send-stars .ss-l-bg,
+.send-stars .ss-r-bg,
+.send-stars li a,
+.i-cz-edit,
+.i-cz-logout,
+.i-cz-heart,
+.i-cz-star,
+.cz-guards-bd .no-guard p i {
+    display:inline-block;
+    background:url(/pc/public/images/chat_zone/skin/male/skin_spr.png) no-repeat;
+}
+
+
+/*font*/
+.cz-pop-see-userInfo .number-of-fans,
+.cz-pop-see-userInfo .live-star,
+.cz-pop-notKickedOut .btn-link,
+.cz-pop-panel .nick-name .name {
+    color:#fff;
+}
+.cz-pop-bodyguard h6,
+.cz-pop-panel .cz-pop-inner,
+.cz-pop-emotion .cz-tab li a,
+.cz-pop-emotion .cz-tab li a:hover,
+.cz-pop-user-card .info-bt .btn {
+    color:#8296ac;
+}
+/*btn*/
+.btn-add-faved,
+.btn-add-faved:hover,
+.btn-chat,
+.btn-chat:hover {
+    background:#395577;
+}
+.cz-pop-see-userInfo .btn-see-live:hover {
+    background:#b400ff;
+}
+.cz-pop-see-userInfo .info-bt .ac-send .btn {
+    color:#e31f64;
+}
+/*nav*/
+.cz-nav {
+    background:#1d2c3d;
+}
+.cz-nav .user-img-circle-xs {
+    border:1px solid #bcbabc;
+}
+.cz-nav .money {
+    background:#283a51;
+    color:#fff;
+}
+.cz-menu li a {
+    background:#253343;
+}
+.cz-menu .current a,
+.cz-menu li a:hover {
+    background:#283a51;
+}
+.nav-sub-show {
+    background:#25384f;
+}
+.nav-sub-show .nav-sub-hd {
+    color:#fff;
+}
+.nav-sub-show .nav-sub-hd .link-more {
+    color:#999;
+}
+.square-list .name {
+    color:#fff;
+}
+.online-list li {
+    color:#fff;
+}
+.cz-header-tit {
+    color:#fff;
+}
+.cz-header-tit .name {
+    color:#e19903;
+}
+/*------box bg------*/
+/*box bg01*/
+.cz-gift-kind-list .btn {
+    background-color:#354c66;
+}
+.cz-chat-info,
+.cz-gifts,
+.cz-body-guards,
+.cz-video,
+.cz-right-bar {
+    background:url(/pc/public/images/chat_zone/skin/male/chat_box_bg01.png) repeat;
+}
+/*box bg02*/
+.cz-guards-hd {
+    background:url(/pc/public/images/chat_zone/skin/male/chat_box_bg02.png) repeat;
+}
+/*box bg03*/
+
+/*box bg04*/
+.enter-msg .speaker {
+    background:url(/pc/public/images/chat_zone/skin/male/chat_box_bg04.png) repeat;
+}
+
+
+
+/*nav*/
+.rec-item-list .item-img {
+    background:#152230;
+}
+.rec-item-list .item-original {
+    color:#687fa3;
+}
+.ft-nav-link li a i {
+    background:url(/pc/public/images/chat_zone/skin/male/skin_spr.png) no-repeat;
+}
+/*chat info*/
+.cz-chat-info .name {
+    color:#fff;
+}
+.chat-info-progress .whole-bar {
+    background:#a00038;
+}
+.chat-info-progress .complete {
+    background:#e31f64;
+}
+
+.chat-info-option .btn-add-faved {
+    background:#e31f64;
+}
+.chat-info-option .btn-add-faved:hover {
+    background:#fe005a;
+}
+.chat-info-option .btn-add-faved .i-add {
+    border-color:#d6175a;
+}
+.cz-chat-info .signs {
+    color:#4f719a;
+}
+.cz-chat-info .edit-signs textarea {
+    border-color:#4f719a;
+}
+.cz-chat-info .edit-signs .btn-chat cite {
+    background:#da0b0b;
+}
+
+.cz-gifts-tab ul {
+    border-color:#354c66;
+}
+.cz-gifts-list li {
+    background:#354c66;
+}
+.gift-qty .input-txt {
+    border-color:#7f304e;
+}
+/*video*/
+/*body guards*/
+.cz-guards-bd .name {
+    color:#fff;
+}
+.cz-guards-bd .validity {
+    color:#fff;
+}
+.cz-guards-bd .no-guard p {
+    border:1px dashed #354c66;
+}
+.cz-guards-bd .no-guard p i {
+    background-position:-30px 0;
+}
+/*----------right bar--------*/
+.cz-tab li {
+    background:#2c4462;
+}
+.cz-tab li a {
+    color:#fff;
+}
+.cz-tab li a:hover {
+    color:#fff;
+    background:url(/pc/public/images/chat_zone/rank_hover_bg.png) repeat;
+}
+.cz-tab li.current a {
+    color:#fff;
+    background:#1d334f;
+}
+.cz-rank .cz-tab cite {
+    background:#ff7714;
+}
+.cz-rank {
+    color:#fff;
+}
+.cz-rank .bd-con {
+    background:#221d20;
+}
+.cz-rank .bd-billboard .ls-tab .current a,
+.cz-rank .bd-billboard .ls-tab li a:hover {
+    color:#fff;
+}
+.msg-window li .time {
+    color:#3d618d;
+}
+.msg-gifts-list .name,
+.cz-msg-box .name {
+    color:#1b95e0;
+}
+.msg-window .msg-con {
+    color:#fff;
+}
+.msg-window .name-vip {
+    color:#00f6ff;
+}
+.cz-msg-box .btn-lock-screen {
+    background:#2e4682;
+}
+.cz-msg-box .btn-mes-remind {
+    background:#3d527e;
+}
+.cz-msg-box .btn-mes-remind:hover {
+    background:#496299;
+}
+/*msg list*/
+.msg-gifts-list {
+    color:#999;
+}
+.msg-gifts-list li .gty {
+    color:#fff;
+    text-shadow: 1px 0 0 #f2000f, 0 1px 0 #f2000f, 
+    0 -1px 0 #f2000f, -1px 0 0 #f2000f, 
+    1px 0 1px #f2000f, 0 1px 1px #f2000f, 
+    0 -1px 1px #f2000f, -1px 0 1px #f2000f;  
+    *filter: Glow(Color=#f2000f, Strength=1);  
+}
+.msg-gifts-list li .gift-name {
+    color:#fff;
+}
+/*control bar*/
+.control-bar {
+    background:#2e4682;
+}
+.control-bar .i-control {
+    background-color:#2e4682;
+}
+.enter-msg cite {
+    color:#999;
+}
+
+
+/*pop box*/
+.cz-pop-panel .cz-pop-inner {
+    background:#213041;
+}
+.cz-pop-bodyguard .choose-list li {
+    background:#221d20;
+}
+.cz-pop-user-card .info-bt {
+    background:#152030;
+}
+.cz-pop-user-card .name-edit.no-value .btn {
+    background:#3b4c5e;
+    color:#a7a7a7;
+}
+.cz-pop-emotion {
+    background:#152230;
+}
+.cz-pop-emotion .emotion-list li {
+    border-color:#293b4f;
+}
+.cz-pop-emotion .cz-tab ul {
+    margin-right:-1px;
+}
+.cz-pop-emotion .cz-tab .current a {
+    background:#152230;
+}
+.cz-pop-bodyguard .section01 {
+    border-bottom:1px solid #39495b;
+}
+.cz-pop-see-userInfo .btn-see-live {
+    background:#821aad;
+}
+.cz-pop-see-
+.cz-pop-sys {
+    color:#687fa3;
+}

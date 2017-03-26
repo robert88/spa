@@ -1,0 +1,251 @@
+.i-userLevel {
+    display:inline-block;
+    width:38px;
+    height:18px;
+    background: url(/pc/public/images/level.png) no-repeat;
+    /*margin-right:.5rem;*/
+    text-indent:-999px;
+    vertical-align:middle;
+    overflow:hidden;
+    zoom:1;
+}
+.i-userLevel01 {
+    background-position:0 0;
+}
+.i-userLevel02 {
+    background-position:-39px 0;
+}
+.i-userLevel03 {
+    background-position:-78px 0;
+}
+.i-userLevel04 {
+    background-position:-117px 0;
+}
+.i-userLevel05 {
+    background-position:-156px 0;
+}
+.i-userLevel06 {
+    background-position:0 -23px;
+}
+.i-userLevel07 {
+    background-position:-39px -23px;
+}
+.i-userLevel08 {
+    background-position:-78px -23px;
+}
+.i-userLevel09 {
+    background-position:-117px -23px;
+}
+.i-userLevel10 {
+    background-position:-156px -23px;
+}
+.i-userLevel11 {
+    background-position:0 -46px;
+}
+.i-userLevel12 {
+    background-position:-39px -46px;
+}
+.i-userLevel13 {
+    background-position:-78px -46px;
+}
+.i-userLevel14 {
+    background-position:-117px -46px;
+}
+.i-userLevel15 {
+    background-position:-156px -46px;
+}
+.i-userLevel16 {
+    background-position:0 -70px;
+}
+.i-userLevel17 {
+    background-position:-39px -70px;
+}
+.i-userLevel18 {
+    background-position:-78px -70px;
+}
+.i-userLevel19 {
+    background-position:-117px -70px;
+}
+.i-userLevel20 {
+    background-position:-156px -70px;
+}
+.i-userLevel21 {
+    background-position:0 -93px;
+}
+.i-userLevel22 {
+    background-position:-39px -93px;
+}
+.i-userLevel23 {
+    background-position:-78px -93px;
+}
+.i-userLevel24 {
+    background-position:-117px -93px;
+}
+.i-userLevel25 {
+    background-position:-156px -93px;
+}
+.i-userLevel26 {
+    background-position:0 -117px;
+}
+.i-userLevel27 {
+    background-position:-39px -117px;
+}
+.i-userLevel28 {
+    background-position:-78px -117px;
+}
+.i-userLevel29 {
+    background-position:-117px -117px;
+}
+.i-userLevel30 {
+    background-position:-156px -117px;
+}
+.i-userLevel31 {
+    background-position:0 -140px;
+}
+.i-userLevel32 {
+    background-position:-39px -140px;
+}
+.i-userLevel33 {
+    background-position:-78px -140px;
+}
+.i-userLevel34 {
+    background-position:-117px -140px;
+}
+.i-userLevel35 {
+    background-position:-156px -140px;
+}
+.i-userLevel36 {
+    background-position:0 -164px;
+}
+.i-userLevel37 {
+    background-position:-39px -164px;
+}
+.i-userLevel38 {
+    background-position:-78px -164px;
+}
+.i-userLevel39 {
+    background-position:-117px -164px;
+}
+.i-userLevel40 {
+    background-position:-156px -164px;
+}
+.i-userLevel41 {
+    background-position:0 -188px;
+}
+.i-userLevel42 {
+    background-position:-39px -188px;
+}
+.i-userLevel43 {
+    background-position:-78px -188px;
+}
+.i-userLevel44 {
+    background-position:-117px -188px;
+}
+.i-userLevel45 {
+    background-position:-156px -188px;
+}
+.i-userLevel46 {
+    background-position:0 -211px;
+}
+.i-userLevel47 {
+    background-position:-39px -211px;
+}
+.i-userLevel48 {
+    background-position:-78px -211px;
+}
+.i-userLevel49 {
+    background-position:-117px -211px;
+}
+.i-userLevel50 {
+    background-position:-156px -211px;
+}
+.i-userLevel51 {
+    background-position:0 -235px;
+}
+.i-userLevel52 {
+    background-position:-39px -235px;
+}
+.i-userLevel53 {
+    background-position:-78px -235px;
+}
+.i-userLevel54 {
+    background-position:-117px -235px;
+}
+.i-userLevel55 {
+    background-position:-156px -235px;
+}
+.i-userLevel56 {
+    background-position:0 -258px;
+}
+.i-userLevel57 {
+    background-position:-39px -258px;
+}
+.i-userLevel58 {
+    background-position:-78px -258px;
+}
+.i-userLevel59 {
+    background-position:-117px -258px;
+}
+.i-userLevel60 {
+    background-position:-156px -258px;
+}
+.i-userLevel61 {
+    background-position:0 -282px;
+}
+.i-userLevel62 {
+    background-position:-39px -282px;
+}
+.i-userLevel63 {
+    background-position:-78px -282px;
+}
+.i-userLevel64 {
+    background-position:-117px -282px;
+}
+.i-userLevel65 {
+    background-position:-156px -282px;
+}
+.i-userLevel66 {
+    background-position:0 -305px;
+}
+.i-userLevel67 {
+    background-position:-39px -305px;
+}
+.i-userLevel68 {
+    background-position:-78px -305px;
+}
+.i-userLevel69 {
+    background-position:-117px -305px;
+}
+.i-userLevel70 {
+    background-position:-156px -305px;
+}
+.i-userLevel71 {
+    background-position:0 -329px;
+}
+.i-userLevel72 {
+    background-position:-39px -329px;
+}
+.i-userLevel73 {
+    background-position:-78px -329px;
+}
+.i-userLevel74 {
+    background-position:-117px -329px;
+}
+.i-userLevel75 {
+    background-position:-156px -329px;
+}
+.i-userLevel76 {
+    background-position:0 -352px;
+}
+.i-userLevel77 {
+    background-position:-39px -352px;
+}
+.i-userLevel78 {
+    background-position:-78px -352px;
+}
+.i-userLevel79 {
+    background-position:-117px -352px;
+}
+.i-userLevel80 {
+    background-position:-156px -352px;
+}

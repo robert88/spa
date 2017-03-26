@@ -1,0 +1,209 @@
+
+    <article class="ls-wrap">
+        <div class="ls-container" id="profileVue">
+            <div class="ls-content">
+                <div class="ls-autoBlock">
+                    <!--S:left bar-->
+                    <div class="ls-leftBar">
+                        <!--S:user information-->
+                        <div class="ls-userInfo ls-blockBg">
+                            <div class="userImg-circle upload-box J-upload">
+                                <img :src="uInfo.userimg | getDefImg">
+                                <div class="userImg-mask"></div>                                
+                                <div class="select-area">
+                                    <a class="btn btn-upload J-upload-btn" >
+                                        <i class="i-font i-camera">N</i>
+                                    </a>
+                                    <!--<input type="file">-->
+                                </div>
+                            </div>
+							 <p class="nick-name">
+                                <i :class="(uInfo.exp&&uInfo.exp.lvl) | getULevelClass"></i>
+                                <a class="name" v-cloak>{{{uInfo.name}}}</a>
+                            </p>
+                            
+                            <p class="money" v-cloak><i class="i-money-l"></i>{{uInfo.buck |formatNum }}</p>
+                            <p class="coins" v-cloak><i class="i-coin-l"></i>{{uInfo.coin|formatNum }}</p>
+                            <p class="LID" v-cloak>LID: {{uInfo.uid}}</p>
+                            <p class="location" v-cloak v-show="uInfo.location"><i class="i-font i-location">K</i>{{uInfo.location}}</p>
+                            <p class="signs" v-cloak>{{{uInfo.signature}}}</p>
+                            <ul class="userInfo-option">
+                                <li>
+                                    <a>
+                                        <span class="option-value" v-cloak>{{uInfo.like|formatNum }}</span>
+                                        <span class="option-tit">Likes</span>
+                                    </a>
+                                </li>
+                                <li class="align-c">
+                                    <a>
+                                        <span class="option-value" v-cloak>{{uInfo.follower|formatNum }}</span>
+                                        <span class="option-tit">Followers</span>
+                                    </a>
+                                </li>
+                                <li class="align-c">
+                                    <a>
+                                        <span class="option-value" v-cloak>{{uInfo.favorites|formatNum }}</span>
+                                        <span class="option-tit">Following</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!--E:user information-->
+                        <!--S:navigation of user information-->
+                        <nav class="ls-sideNav ls-blockBg">
+                            <ul>
+                                <li class="current"><a href="#/pc/html/account/profile"><i class="i-font i-profile">E</i><span>Edit Profile</span></a></li>
+                                <li ><a href="#/pc/html/account/recharge"><i class="i-font i-coins">F</i><span>Recharge</span></a></li>
+                                <!--<li><a href="#/pc/html/account/profile"><i class="i-font i-bucks">G</i><span>Star Bucks</span></a></li>-->
+                            </ul>
+                        </nav>
+                        <!--E:navigation of user information-->
+                    </div>
+                    <!--E:left bar-->
+                    <div class="ls-main">
+                        <div class="ls-blockBg ls-profileForm">
+                            <div class="ls-hd">
+                                <h2 class="ls-headTit"><b>Edit Profile</b></h2>
+                            </div>
+                            <div class="ls-bd">
+                                <div class="form form-horizontal dt-align-r ls-formDefault">
+                                    <form id="profileForm">
+                                        <dl>
+                                            <dt>Nickname:</dt>
+                                            <dd class="J-tip-contain">
+                                                <div class="input-box input-box-dark input-box-radius J-input-focus">
+                                                    <input class="input-txt input-default" v-model="input.base_name" name="name"
+                                                           check-type="required,minlength,maxlength"
+                                                           data-minlength="2"
+                                                           data-required-msg="i18n.profile.nicknameError02"
+                                                           data-minlength-msg="i18n.profile.nicknameError02"
+                                                           data-maxlength="18"
+                                                           data-maxlength-msg="i18n.profile.nicknameError02"
+                                                           data-focus="true"
+                                                            data-blur="true">
+                                                    <div class="tips-txt tips-icon tipsPop">
+                                                        <div class="txt">
+                                                            <i class="i-icon i-tip-s i-tip-warning">warning</i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <p class="under-tips ls-f-red J-tip-msg">This nickname is already taken!</p>
+                                            </dd>
+
+                                            <dt class="row-gender">Gender:</dt>
+                                            <dd class="row-gender">
+                                                <ul class="icheck-list icheck-list-m icheck-list-dark J-label-radio-group needCheck" type="radio">
+                                                    <li class="label-box checked J-label-box">
+                                                        <div class="checkbox">
+                                                            <input type="radio"  name="sex" value="1" checked="checked"  class="J-radio-sex">
+                                                            <i class="i-font i-check">O</i>
+                                                        </div>
+                                                        <label>Male</label>
+                                                    </li>
+                                                    <li class="label-box J-label-box">
+                                                        <div class="checkbox">
+                                                            <input type="radio" name="sex" value="2"  class="J-radio-sex">
+                                                            <i class="i-font i-check">O</i>
+                                                        </div>
+                                                        <label>Female</label>
+                                                    </li>
+                                                    <li class="label-box J-label-box">
+                                                        <div class="checkbox">
+                                                            <input type="radio" name="sex" value="0"  class="J-radio-sex">
+                                                            <i class="i-font i-check">O</i>
+                                                        </div>
+                                                        <label>Secret</label>
+                                                    </li>
+                                                </ul>
+                                            </dd>
+
+                                            <dt>Birthday:</dt>
+                                            <dd class="J-tip-contain">
+                                                <div class="select-dum select-birthday J-select-birthday">
+                                                    <input type="hidden" name="birthday"  class="J-birthdayIpt"/>
+                                                    <div class="input-box  J-input-focus input-box-append input-box-radius input-box-dark input-box-selected J-year J-select-item">
+                                                        <input class="input-txt J-date-item" type="txt"  name="year" readonly="readonly"
+                                                               check-type="required,maxvalue"
+                                                               data-maxvalue-msg="i18n.profile.birthdayError"
+                                                               data-maxvalue="2016"
+                                                               data-focus="true"
+                                                               data-blur="true">
+                                                        <span class="add-on J-drop-down"><i class="i-font i-drop">C</i></span>
+
+                                                        <ul class="drop-list drop-list-gray J-option" style="display:none;">
+                                                            <li class="current"><a >&nbsp;</a></li>
+                                                        </ul>
+                                                    </div>
+
+                                                    <div class="J-input-focus input-box input-box-append input-box-radius input-box-dark J-month J-select-item">
+                                                        <input class="input-txt J-month J-date-item" type="txt" readonly="readonly" name="month"
+                                                               check-type="required,maxvalue"
+                                                               data-maxvalue-msg="i18n.profile.birthdayError"
+                                                               data-maxvalue="12"
+                                                               data-focus="true"
+                                                               data-blur="true">
+                                                        <span class="add-on J-drop-down"><i class="i-font i-drop">C</i></span>
+
+                                                        <ul class="drop-list drop-list-gray J-option" style="display:none;">
+                                                            <li class="current"><a >&nbsp;</a></li>
+                                                        </ul>
+                                                    </div>  
+
+                                                    <div class="J-input-focus input-box input-box-append input-box-dark  input-box-radius J-date J-select-item">
+                                                        <input class="input-txt select-date J-date-item" type="txt" readonly="readonly"  name="date"
+                                                        check-type="required,maxvalue"
+                                                        data-maxvalue-msg="i18n.profile.birthdayError"
+                                                        data-maxvalue="31"
+                                                        data-focus="true"
+                                                        data-blur="true">
+                                                        <span class="add-on J-drop-down"><i class="i-font i-drop">C</i></span>
+                                                        <ul class="drop-list drop-list-gray J-option" style="display:none;">
+                                                            <li class="current"><a >&nbsp;</a></li>
+                                                        </ul>
+                                                    </div>           
+                                                </div>
+                                                <p class="under-tips ls-f-red J-tip-msg">This nickname is already taken!</p>
+                                            </dd>
+
+                                            <dt>Signature:</dt>
+                                            <dd  class="J-tip-contain">
+                                                <div class="textarea-box textarea-box-dark textarea-box-radius">
+                                                    <textarea name="signature" v-model="input.base_signature" class="J-signature-base-input"></textarea>
+                                                    <p class="word-limit"><span v-cloak>{{input.signatureLength}}</span>/32 characters left</p>
+                                                </div>
+                                                <p class="under-tips ls-f-red J-tip-msg">This nickname is already taken!</p>
+                                            </dd>
+
+                                            <dd class="form-ft-btn">
+                                                <a class="btn btn-disable btn-mainSubmit J-submitBtn">Save</a>
+                                            </dd>
+                                        </dl>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <!--S:normal system popup box-->
+    <div id="profileDialog" style="display: none;">
+        <!--S:report-->
+        <div class="popup-box popup-sys">
+            <div class="hd">
+                <div class="hd-tit">Notification</div>
+                <a  class="close  dl-close" title="close"><i class="i-font i-close">X</i></a>
+            </div>
+            <div class="bd">
+                <div class="align-c">
+                    <p class="J-dialog-msg">Saving failed.</p>
+                </div>
+            </div>
+            <div class="ft-btn align-c">
+                <a  class="btn btn-primary btn-m dl-close">OK</a>
+            </div>
+        </div>
+        <!--S:report-->
+    </div>

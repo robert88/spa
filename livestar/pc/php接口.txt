@@ -1,0 +1,31 @@
+首页
+注册
+登陆
+上传图片
+重设密码
+
+直播间接口
+
+
+1、  关注接口 -> follow
+2、  上传图片接口 -> preview
+3、  主播信息接口 -> getAnchorInfo
+4、  礼物列表 -> dictGift
+5、  送礼物接口 -> sendGift
+6、  举报接口 -> report
+7、  礼物数 -> watch(进入房间就调用该接口)
+8、  观众列表 -> getRoomOnline
+9、  贡献数排名 -> getRank
+10、  Im消息（和分享的数据一样）
+
+充值接口
+
+1、  个人信息 -> getUserInfo
+2、  充值接口 -> 
+3、  充值查询接口（可按日期查询，page页） -> orderList
+
+
+个人中心
+
+只更新用户头像
+更新用户信息

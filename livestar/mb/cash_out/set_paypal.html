@@ -1,0 +1,29 @@
+
+<article class="app-wrap co-wrap" id="setpaypalVue">
+    <div class="co-topBar">
+        <a class="btn btn-return" href="#/mb/cash_out/verify_phone"><i class="i-return"></i></a>
+        <p class="tit">Cash Out</p>
+    </div>
+    <div class="co-container set-paypal">
+        <div class="cashOut-upper">
+            <figure>
+                <div class="logo-paypal">paypal</div>
+                <figcaption>Link Your PayPal<br/>Account</figcaption>
+            </figure>
+        </div>
+        <div class="cashOut-bottom">
+            <div class="form">
+                <dl>
+                    <dd><input :class="!paypal?'input-txt J-paypal-ipt':'input-txt input-disable J-paypal-ipt'" :value="paypal" readonly="isReadOnly"  type="text" placeholder="PayPal Account">
+                        <p class="popTips tips-error J-data-Msg" style="display:none;">Sorry, you have reached the verification limit. Please try again tomorrow.</p>
+                    </dd>
+                    <dd class="form-ft-btn"><a :class="!paypal?'btn btn-primary btn-main J-continue btn-disable':'btn btn-primary btn-main J-continue'">Link Now</a></dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+    <div class="verify-contact">For any account issues, please contact <a class="link" href="mailto:accounts@livestar.com">accounts@livestar.com</a></div>
+    <div class="tipsHeader J-sys-Msg animate-ease" style="display:none;">
+        Invalid code
+    </div>
+</article>

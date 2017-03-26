@@ -1,0 +1,33 @@
+<article class="app-wrap co-wrap" id="countryVue">
+    <div class="co-topBar">
+        <a class="btn btn-return" href="#/mb/cash_out/verify_phone"><i class="i-return"></i></a>
+        <p class="tit">Select country code</p>
+    </div>
+    <div class="co-container">
+        <div class="search-bar">
+            <input class="input-txt" type="text" placeholder="Search"   v-model="keyword">
+            <span class="add-on addOn-left"><i class="i-search"></i></span>
+            <span class="add-on addOn-right"><i class="i-delete"></i></span>
+        </div>
+        <div class="select-country" v-show="!keyword" >
+            <div class="country-list"  v-for="itemList in countryList" v-if="itemList" v-cloak track-by="$index"> 
+
+                    <p>{{letterList[$index]}}</p>
+                    <ul>
+                        <li v-for="item in itemList" data-code="{{item.code}}" data-sname="{{item.sname}}" data-name="{{item.name}}" class="J-item">{{item.name}}</li>
+                    </ul>
+            </div>
+        </div>
+        <!--matching-->
+        <div class="matching-country" v-show="keyword" v-cloak>
+            <div class="country-list">
+                <ul>
+                    <li v-for="item in matchList" data-code="{{item.code}}" data-sname="{{item.sname}}" data-name="{{item.name}}" class="J-item">{{{item.name | lightKeyword }}}
+                    <!-- <span class="f-primary">A</span>ngola -->
+                    </li>
+                    <li v-show="matchList.length==0">NO resulte found!</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    </article>

@@ -1,0 +1,44 @@
+.datePicker{
+    background-color: #fff;
+    border: 1px solid #ccc;
+    width: 250px;
+	z-index: 1;
+}
+.datePicker thead, .datePicker caption {
+    background-color: #fff;
+    height: 28px;
+    line-height: 28px;
+    border-bottom: 1px solid #e1e1e1;
+    text-align: center
+}
+ .datePicker td,  .datePicker tr,  .datePicker th {
+    border-spacing: 1;
+    border: 0;
+    padding: 0
+}
+ .datePicker td {
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    margin: 1px;
+    cursor: pointer
+}
+ .datePicker td:hover {
+    background-color: #ffa200;
+    color: #fff
+}
+ .datePicker td.hover {
+    background-color: #ffa200;
+    color: #fff
+}
+ .datePicker a,  .datePicker span {
+    margin: 0 10px
+}
+ .datePicker td.muted {
+    color: #d1d1d1 !important
+}
+ .datePicker td.muted:hover {
+    background-color: #fff !important;
+    cursor: auto
+}

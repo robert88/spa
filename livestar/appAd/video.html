@@ -1,0 +1,189 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Livestar 101</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="format-detection" content="telephone=no" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+<meta property="og:type" content="website"> 
+<meta property="og:title" content="Livestar 101">
+<meta property="og:description" content="Take a look at Jake’n’Bake’s Live Streaming 101 video below! It’s your first step to becoming the next Livestar!">
+<meta property="og:image" content="http://www.livestar.com/mobile/images/2.jpg">
+<meta property="og:image:width" content="225">
+<meta property="og:image:height" content="400">
+<meta name="twitter:title" content="Livestar 101" />
+<meta name="twitter:description" content="Take a look at Jake’n’Bake’s Live Streaming 101 video below! It’s your first step to becoming the next Livestar!" />
+<meta name="twitter:image" content="http://www.livestar.com/mobile/images/2.jpg" />
+	<script src="/static/js/lib/jquery.js"></script>
+	<link type="text/css" rel="stylesheet" href="mod_sharingTools.css">
+<style type="text/css">
+html,body {height:100%;}
+body,div,p,ul,li,table,tbody,tr,td,textarea,form,input,h1,h2,h3,h4,h5,dl,dt,dd,img,iframe,header,nav,section,article,footer,figure,figcaption,menu,button,a{margin:0;padding:0;list-style:none; color:#fff;}
+body{font-family:Arial,'Lucida Grande',verdana,\5FAE\8F6F\96C5\9ED1,Helvetica;-webkit-user-select:none;-webkit-text-size-adjust:none;line-height:1.5;font-size:15px; background:#d91f64;}
+header,nav,section,article,footer,figure{display:block;}
+ol,ul{margin:0;padding:0;}
+fieldset{border:none;margin:0;padding:0;}
+a,li,ul,[onclick]{
+    -webkit-tap-highlight-color:none;
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
+    }
+a{ text-decoration:none; }
+article {
+    height:100%;
+    background:url(images/videoAd_bg.jpg) no-repeat;
+    -webkit-background-size:100% 100%;
+    -moz-background-size:100% 100%;
+    background-size:100% 100%;
+}
+h1 {
+    padding-top:11%;
+    font-size:38px;
+}
+h1,
+.tit,
+.txt {
+    margin:0 50px;
+}
+.tit {
+    margin-bottom:12%;
+}
+.wrap {
+    text-align:center;
+}
+.wrap .container {
+    max-width:354px;
+    margin:0 auto;
+}
+.video {
+    width:300px;
+    height:160px;
+    margin:3.7% auto 0 auto;
+    padding:5px;
+    background:#fff;
+}
+.mejs-controls {
+	display: none !important;
+}
+.animate-ease{
+	-webkit-transition-delay: .1s;
+	-o-transition-delay: .1s;
+	transition-delay: .1s;
+	-moz-transition: all .2s ease-in-out;
+	-o-transition: all .2s ease-in-out;
+	-webkit-transition: all .2s ease-in-out;
+	transition: all .2s ease-in-out;
+}
+</style>
+<link rel="stylesheet" href="./player/mediaelementplayer.css" />
+
+</head>
+<body>
+    <article>
+        <section class="wrap">
+            <div class="container">
+                <h1>Livestar 101</h1>
+                <p class="tit">Are you new to Livestar? Not sure how to get started streaming?</p>
+                <p class="txt">Take a look at Jake’n’Bake’s
+Live Streaming 101 video below!
+It’s your first step to becoming the 
+next Livestar!
+</p>
+                <div class="video">
+					<video width="300" height="160" id="player1">
+						<source type="video/x-youtube" src="https://youtu.be/JiDy8EFghwg">
+					</video>
+                </div>
+            </div>
+        </section>
+      
+
+            <a class="h5-btn-sharing" href="#"><i class="i-sharing"></i></a>
+            <!--S:tool-->
+            <div class="sharing-tools">
+                <p class="sharing-tit">Share with friends</p>
+                <ul>
+                    <li>
+                        <a id="shareBtn">
+                            <i class="i-facebook"></i> 
+                            <p>Facebook</p>   
+                        </a>
+                    </li>
+                    <li>
+                         <a id="shareBtn">
+                            <i class="i-twitter"></i> 
+                            <p>Twitter</p>   
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!--E:tool-->
+    </article>
+</body>
+
+<script src="./player/mediaelement-and-player.js"></script>
+<script>
+var player = new MediaElementPlayer('#player1', {
+	loop: true,
+	clickToPlayPause: false,
+	success: function (media, ele, player) {
+		var overPlay = document.getElementsByClassName("mejs-overlay-play")[0];
+		overPlay&&overPlay.remove();
+	}
+});
+</script>
+
+<script src="../../static/js/lib/facebook_sdk.js"></script>
+<script src="popup_box.js"></script>
+<!--<script src="http://platform.twitter.com/widgets.js"></script>-->
+<script>
+
+FB.init({
+	version:"v2.5",
+	xfbml:1,
+//	frictionlessRequests:false,//
+	appId: 1025937600807114
+});
+
+document.getElementById('shareBtn').onclick = function() {
+  FB.ui({
+    method: 'share',
+    display: 'popup',
+    href: window.location.href,
+  }, function(response){
+	if (response && !response.error_message) {
+		layer.open({
+			content: "share success!",
+			time:3
+		});
+    } else {
+      layer.open({
+			content: "Share Failed!",
+			time:4
+		});
+    }
+  });
+}
+
+$(".h5-btn-sharing").click(function(){
+	$(".sharing-tools").toggleClass("slide-up");
+});
+var text = encodeURIComponent(document.title+" "+location.href);
+
+$("#twitterBtn").attr("href","https://twitter.com/intent/tweet?text="+text+"&source=webclient");
+//twttr.widgets.createShareButton(
+//'https://dev.twitter.com/',
+//document.getElementById('container'),
+//{
+//  text: 'Hello World'
+//}
+//).then( function( el ) {
+//	      layer.open({
+//			content: "Tweet button added",
+//			time:4
+//		});
+//});
+
+</script>
+</html>

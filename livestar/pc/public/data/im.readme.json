@@ -1,0 +1,60 @@
+//主播退出
+{
+    "state": true,
+    "code":200,
+    "message": "OK",
+    "data": {
+        "text": "test",
+        "custom": {
+                "streamerId": 2324234,
+                "userTagInfo": {
+                    "uid":5657576,
+                    "uname":77656,
+                    "ulevel":767886,
+                    "userimg":56565
+                },
+                "endLiveInfo":76768,
+                "imMessageType":1//消息类型 1 表示 普通文本消息 2表示进入房间 3 离开房间 4 发送礼物 5 点赞  6 机器人进入房间  7 机器人离开房间 8 弹幕 9关注主播
+
+        }
+    }
+}
+
+//发送礼物
+
+//{
+//"state": true,
+//"code":200,
+//"message": "OK",
+//"data": {
+//"text": "test",
+//"custom": {
+//"imMessageType":3,
+//"giftMessages":[
+//{
+//"quantity":1,
+//"gift_id":1
+//},
+//{
+//"quantity":2,
+//"gift_id":1
+//},
+//{
+//"quantity":2,
+//"gift_id":2
+//},
+//{
+//"quantity":2,
+//"gift_id":3
+//}
+//
+//],
+//"userTagInfo": {
+//"uid":5657576,
+//"uname":77656,
+//"ulevel":767886,
+//"userimg":"http://cdn.livestar.com/uploads/1604/291524585158.png"
+//}
+//}
+//}
+//}

@@ -1,0 +1,71 @@
+{
+    "code": 200,
+    "state": true,
+    "data": {
+        "list": [
+            {
+                "uid": "278",
+                "userimg": "http://cdn.livestar.com/uploads/1604/291524585158.png",
+                "name": "zuoxiping",
+                "level": {
+                    "lvl": "1",
+                    "exp": "0",
+                    "level_exp": "2000",
+                    "next_exp": 2000,
+                    "next_coin": 2000
+                }
+            },
+            {
+                "uid": "272",
+                "userimg": "http://cdn.livestar.com/uploads/1604/291138268820.jpg",
+                "name": "qq1231111",
+                "level": {
+                    "lvl": "10",
+                    "exp": "0",
+                    "level_exp": "2000",
+                    "next_exp": 2000,
+                    "next_coin": 2000
+                }
+            },
+            {
+                "uid": "272",
+                "userimg": "http://cdn.livestar.com/uploads/1604/291138268820.jpg",
+                "name": "qq1231111",
+                "level": {
+                    "lvl": "10",
+                    "exp": "0",
+                    "level_exp": "2000",
+                    "next_exp": 2000,
+                    "next_coin": 2000
+                }
+            },
+            {
+                "uid": "272",
+                "userimg": "http://cdn.livestar.com/uploads/1604/291138268820.jpg",
+                "name": "qq1231111",
+                "level": {
+                    "lvl": "10",
+                    "exp": "0",
+                    "level_exp": "2000",
+                    "next_exp": 2000,
+                    "next_coin": 2000
+                }
+            },
+            {
+                "uid": "272",
+                "userimg": "http://cdn.livestar.com/uploads/1604/291138268820.jpg",
+                "name": "qq1231111",
+                "level": {
+                    "lvl": "10",
+                    "exp": "0",
+                    "level_exp": "2000",
+                    "next_exp": 2000,
+                    "next_coin": 2000
+                }
+            }
+        ],
+        "total": 2,
+        "totalpage": 2,
+        "page": 1
+    }
+}

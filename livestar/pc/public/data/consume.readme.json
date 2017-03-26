@@ -1,0 +1,30 @@
+//通用消费接口编辑
+//
+//接口描述:
+//
+//POST传入数据：
+//
+//字段	类型	必须	值	说明
+//method	string	是	consume	接口类型(不参与加密)
+//actionid
+//int	是
+//相关动作ID（后端提供）
+//suid	int	否
+//主播的UID（需要时传入）
+//params	string	否	{ "message" : "abcdefg" }	其余参数（actionid=1001时，message参数为弹幕消息内容）
+//sign	string	是		请求加密串
+//当前启用ActionID
+
+//ActionID	描述	是否需要主播ID
+//10001	弹幕消费	否
+//返回数据json
+
+//{
+//code: 200,
+//state: true,
+//message: "OK",
+//data: {
+//coin: 9976
+//}
+//}
+//

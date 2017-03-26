@@ -1,0 +1,23 @@
+
+
+//字段	类型	必须	值	说明
+//method	string	是	login	接口类型
+//login_id	string	是		用户登录邮箱
+//login_pwd	string	是		用户密码
+//keep_login	int	是		下次自动登录[0:否,1:是(有效期14天)]
+//code	string	是		验证码(第一次登录不需要验证码,登录失败后返回数据showCode=1表示需要用户输入验证码)
+//login
+//'/api/?ct=api&ac=web&platform=livestar&method=login&login_id=841354162&login_pwd=111111&keep_login=0&code'.tpl("login",stype,keyword,pageNo),
+{
+   "code": 200,
+   "state": true,
+   "message": "succ",
+   "data": {
+       "uid": 56,
+       "name": "livestar",
+       "user_img": "/pc/public/images/df.jpg",//用户头像URL，没有时为空
+       "email": "123@qq.com",//用户的邮箱
+       "level": 1,
+       "showCode": "1"//是否需要输入验证码
+   }
+}

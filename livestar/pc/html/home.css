@@ -1,0 +1,27 @@
+@import url(/pc/public/css/module/mod_btn.css);
+@import url(/pc/public/css/module/mod_live_list.css);
+@import url(/pc/public/css/module/mod_popup_box.css);
+@import url(/pc/public/css/skin/main_color.css);
+.ls-hm-live {
+    padding-bottom:50px;
+}
+.pages-more {
+    display:block;
+    width:126px;
+    height:126px;
+    margin:50px auto 0 auto;
+    color:#e31f64;
+    font-size:1.2857142857142858em;
+    text-align:center;
+    border:2px solid #e31f64;
+-webkite-border-radius:50%;
+    -moz-border-radius:50%;
+         border-radius:50%; 
+}
+.pages-more i {
+    display:block;
+    margin-top:32px;
+}
+.pages-more:hover {
+    text-decoration:none;
+}

@@ -1,0 +1,38 @@
+//观众进入房间编辑
+//
+//POST传入数据：
+//
+//字段	类型	必须	值	说明
+//method	string	是	watch	接口类型(不参与加密)
+//rid	string	是		主播房间id
+//cdn_ip	string	否		云帆服务节点IP
+//client_dns	string	否		客户端手机的 dns
+//sign	string	是		请求加密串
+//返回数据JSON：
+
+{  
+    "code": 200, 
+    "state": true,
+    "message": "ok",
+    "data": {
+        "allow_watch": 0,//是否能观看当前直播 0：不能（被加入了黑名单） ，1：能观看。如果返回数据是0，那么提示黑名单相关，然后退出房间
+        "rid": 1111,
+        "buck":111, //主播星票
+        "is_new": true, // 是否是新观众
+        "status": 1, // 主播目前状态  1：正常，2：暂时离开
+        "broadcast": [
+            {
+                "title": "System Message",  //标题
+                "title_color": "#e9ad1d",   //标题颜色
+                "content": "Support your streamers by sending them a gift from the Gift Shop below!", //内容
+                "content_color": "#ae31f1"  //内容颜色
+            },
+            {
+                "title": "Suggestion",
+                "title_color": "#e9ad1d",
+                "content": "Please remember to be respectful to your streamers and viewers.",
+                "content_color": "#10bf62"
+            }
+        ]
+    }
+}

@@ -1,0 +1,46 @@
+//房间内在线列表编辑
+//
+//POST传入数据：
+//
+//字段	类型	必须	值	说明
+//method	string	是	getRoomOnline	接口类型(不参与加密)
+//rid	string	是		主播房间id
+//page	string	是	1	页码
+//sign	string	是		请求加密串
+//返回数据JSON：
+
+{
+"code": 200,
+"state": true,
+"data": {
+"list": [  //列表
+{
+"uid": "278", //用户id
+"userimg": "http://cdn.livestar.com/uploads/1604/291524585158.png", //头像地址
+"name": "zuoxiping", //昵称
+"level": { //等级信息
+"lvl": "10", //等级
+"exp": "0", //经验
+"level_exp": "2000",
+"next_exp": 2000,
+"next_coin": 2000
+}
+},
+{
+"uid": "272",
+"userimg": "http://cdn.livestar.com/uploads/1604/291138268820.jpg",
+"name": "qq1231111",
+"level": {
+"lvl": "1",
+"exp": "0",
+"level_exp": "2000",
+"next_exp": 2000,
+"next_coin": 2000
+}
+}
+],
+"total": 2, //总共数
+"totalpage": 2, //总分页数
+"page": 1 //当前页码
+}
+}

@@ -1,0 +1,425 @@
+/*reset*/
+body,div,p,ul,li,table,tbody,tr,td,textarea,form,input,h1,h2,h3,h4,h5,dl,dt,dd,img,iframe,header,nav,section,article,footer,figure,figcaption,menu,button,a{margin:0;padding:0;list-style:none;}
+body{font-family:Arial,'Lucida Grande',verdana,\5FAE\8F6F\96C5\9ED1,Helvetica;-webkit-user-select:none;-webkit-text-size-adjust:none;line-height:1.8;font-size:12px; color:#a3a3a3;}
+header,nav,section,article,footer,figure{display:block;}
+ol,ul{margin:0;padding:0;}
+fieldset{border:none;margin:0;padding:0;}
+a,li,ul,[onclick]{
+    -webkit-tap-highlight-color:none;
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
+    }
+a{ text-decoration:none; }
+body {
+    background:url(/mb/public/images/cash_out/cashOut_bg.jpg) no-repeat top center fixed #252525;
+    -moz-background-size:100% 100%;
+    -webkit-background-size:100% 100%;
+    background-size:100% 100%;
+}
+body {
+
+}
+/*btn*/
+.btn {
+    display:inline-block; 
+    line-height:1.8;
+    text-align:center;
+    white-space:nowrap;
+    vertical-align:middle;
+    touch-action:manipulation;
+    cursor:hand;
+    cursor:pointer;
+    -webkite-border-radius:4px;
+        -moz-border-radius:4px;
+             border-radius:4px;
+}
+.btn-m {
+    padding:0 5px;
+    line-height:35px;
+}
+.btn-main {
+    display:block;
+    line-height:44px;
+    font-size:17px;
+}
+.btn-primary {
+    background:#e32064;
+    color:#fff;
+}
+.btn-borderPrimary {
+    border:1px solid #e32064;
+    color:#e32064;
+}
+.btn-disable {
+    background:#4c4c4c;
+    color:#696969;
+}
+.btn-active:active {
+    background:#6d6d6d;
+}
+/*form*/
+.input-txt {
+    -wekit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    box-sizing:border-box;
+    width:99.8%;
+    line-height:33px;
+    padding:0 10px;
+    background:#383838;
+    border:1px solid #383838;
+    -webkite-border-radius:3px;
+    -moz-border-radius:3px;
+    border-radius:3px;
+    color:#fff;
+    font-size:13px;
+    vertical-align:middle;
+}
+.input-txt:focus {
+    background:#383838;
+    border:1px solid #a3a3a3;
+    outline:none;
+}
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder { 
+color: #696969; 
+} 
+input:-moz-placeholder, textarea:-moz-placeholder { 
+color: #696969; 
+} 
+input::-moz-placeholder, textarea::-moz-placeholder { 
+color: #696969; 
+} 
+input:-ms-input-placeholder, textarea:-ms-input-placeholder { 
+color: #696969; 
+} 
+.input-disable,
+.input-disable:focus {
+    background:#4c4c4c;
+    border-color:#4c4c4c;
+    color:#696969;
+}
+.input-error {
+    border-color:#e32064;
+}
+.input-checkbox { 
+    display: none; 
+} 
+.label-checkbox label {
+    display:inline-block;
+    position:relative;
+    padding-left:25px;
+    line-height:17px;
+} 
+.label-checkbox label:before { 
+    display:block;
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width:15px;
+    height:15px;
+    border: 1px solid #C1CACA; 
+    -webkite-border-radius:3px;
+    -moz-border-radius:3px;
+    border-radius:3px;
+} 
+.label-checkbox.checked label:before {
+    border-color:#e32064;
+}
+.label-checkbox.checked label:after { 
+    position: absolute; 
+    content: '';
+    top:0; 
+    left:0; 
+    color:#e32064!important; 
+    width:10px;
+    height:7px; 
+    font-size: 12px; 
+    margin-top:4px;
+    margin-left:3px;
+    padding: 1px 0 0 0; 
+    vertical-align: text-top; 
+    text-align:center;
+    background:url(/mb/public/images/cash_out/cashOut_sprite.png) no-repeat -69.5px -75.5px;
+    -moz-background-size:83px 200px;
+    -webkit-background-size:83px 200px;
+    background-size:83px 200px;
+} 
+.form dd {
+    position:relative;
+    margin-bottom:20px;
+}
+.form .btn-main {
+    margin:0 auto;
+}
+/*font*/
+.link {
+    color:#1e9eff;
+}
+.f-primary {
+    color:#e32064;
+}
+.i-f-special {
+    display:inline-block;
+    width:12.5px;
+    height:19px;
+    background:url(/mb/public/images/cash_out/cashOut_number.png) no-repeat;
+    -moz-background-size:12.5px 210px;
+    -webkit-background-size:12.5px 210px;
+    background-size:12.5px 210px;
+    overflow:hidden;
+    text-indent:-999px;
+}
+.i-f-no00 {
+    background-position:0 0;
+}
+.i-f-no01 {
+    background-position:0 -19px;
+}
+.i-f-no02 {
+    background-position:0 -38px;
+}
+.i-f-no03 {
+    background-position:0 -57px;
+}
+.i-f-no04 {
+    background-position:0 -76px;
+}
+.i-f-no05 {
+    background-position:0 -95px;
+}
+.i-f-no06 {
+    background-position:0 -114px;
+}
+.i-f-no07 {
+    background-position:0 -133px;
+}
+.i-f-no08 {
+    background-position:0 -152px;
+}
+.i-f-no09 {
+    background-position:0 -171px;
+}
+.i-f-noComma {
+    width:6px;
+    background-position:0 -192px;
+}
+.f-special i {
+    margin-left:-3px;
+}
+/*icon*/
+.i-return,
+.i-message-l,
+.i-starBucks,
+.i-starBucks-l,
+.i-coins,
+.i-arrowRight,
+.i-phone-l,
+.i-goMore,
+.i-search,
+.i-delete {
+    display:inline-block;
+    background:url(/mb/public/images/cash_out/cashOut_sprite.png) no-repeat;
+    -moz-background-size:83px 200px;
+    -webkit-background-size:83px 200px;
+    background-size:83px 200px;
+}
+.i-return {
+    width:10px;
+    height:17px;
+    background-position:0 -65px;
+    vertical-align:middle;
+}
+.i-message-l {
+    width:83px;
+    height:63px;
+    margin-top:42px;
+    background-position:0 0;
+}
+.i-starBucks {
+    width:24px;
+    height:15px;
+    background-position:-44px -63px;
+    margin-right:5px;
+    vertical-align:-1px;
+}
+.i-starBucks-l {
+    width:32px;
+    height:19.5px;
+    margin-right:5px;
+    background-position:-12.5px -64px;
+}
+.i-coins {
+    width:21px;
+    height:21px;
+    background-position:0 -84px; 
+    vertical-align:-4px;
+}
+.i-arrowRight {
+    width:13px;
+    height:9px;
+    background-position:-68px -64.5px;
+    margin:0 5px;
+}
+.i-phone-l {
+    width:54px;
+    height:88px;
+    background-position:0 -106.5px;
+    margin-top:23px;
+}
+.i-goMore {
+    width:8px;
+    height:13px;
+    background-position:-21px -85.5px;
+    margin-top:10px;
+}
+.i-search {
+    width:19px;
+    height:19px;
+    background-position:-30.5px -85px;
+    margin-top:8px;
+}
+.i-delete {
+    width:12px;
+    height:12px;
+    background-position:-50px -85px;
+    margin-top:12px;
+}
+/*tips*/
+.popTips {
+    position:absolute;
+    top:40px;
+}
+.tips-error {
+    color:#e32064;
+    line-height:1.2;
+}
+.tipsHeader {
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:99;
+    width:100%;
+    background:#e32064;
+    color:#fff;
+    text-align:center;
+    font-size:15px;
+}
+.co-container {
+    padding-top:42px;
+}
+/*top bar*/
+.co-topBar {
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:10;
+    width:100%;
+    line-height:42px;
+    background:#1b1b1b;
+    text-align:center;
+}
+.co-topBar .tit {
+    font-size:18px;
+    color:#fff;
+}
+.co-topBar .btn-return {
+    position:absolute;
+    top:0;
+    left:0;
+    width:45px;
+    height:42px;
+    line-height:42px;
+}
+.cashOut-upper {
+    padding-bottom:15px;
+    border-bottom:1px solid #525252;
+    text-align:center;
+}
+.cashOut-upper figcaption {
+    line-height:1.5;
+    font-size:17px;
+    color:#fff;
+}
+.cashOut-bottom {
+    width:76%;
+    margin-top:30px;
+    margin-left:auto;
+    margin-right:auto;
+}
+.cashOut-bottom .form-ft-btn {
+    margin-top:50px;
+}
+.row-getCode {
+    display:-webkit-box;
+}
+.row-getCode .input-txt {    
+    display:-webkit-box;
+    -webkit-box-flex:1;
+    margin-right:5px;
+}
+.verify-description {
+    margin-top:-15px;
+    margin-bottom:15px;
+}
+.verify-contact {
+    width:100%;
+    margin-top:20%;
+    padding-bottom:5%;
+    text-align:center;
+}
+/*popup box*/
+.popup-box {
+    width:270px;
+    background:#fff;
+    margin:0 auto;
+    -webkite-border-radius:10px;
+    -moz-border-radius:10px;
+    border-radius:10px;
+    color:#000;
+}
+.popup-boxSys .bd {
+    padding-left:15px;
+    padding-right:15px;
+    min-height:95px;
+}
+.popup-boxSys .bd .main-txt {
+    display:box; 
+    display:-webkit-box; 
+    display:-moz-box; 
+    -webkit-box-align:center; 
+    -moz-box-align:center; 
+    min-height:95px;
+    text-align:center;
+    line-height:1.5;
+    font-size:15px;
+}
+.popup-boxSys .ft-btn {
+    border-top:1px solid #afafbc;
+    text-align: center;
+}
+.popup-boxSys .ft-btn .btn:nth-child(2) {
+    border-left:1px solid #afafbc;
+}
+.popup-boxSys .ft-btn .btn {
+    width:49%;
+    padding:0;
+    color:#007aff;
+    font-size:17px;
+    -webkite-border-radius:0px;
+    -moz-border-radius:0px;
+    border-radius:0px;
+    line-height:44px;
+}
+
+[v-cloak]{
+	display: none;
+}
+
+.animate-ease{
+	-webkit-transition-delay: .1s;
+	-o-transition-delay: .1s;
+	transition-delay: .1s;
+	-moz-transition: all .2s ease-in-out;
+	-o-transition: all .2s ease-in-out;
+	-webkit-transition: all .2s ease-in-out;
+	transition: all .2s ease-in-out;
+}

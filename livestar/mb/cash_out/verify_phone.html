@@ -1,0 +1,50 @@
+<article class="app-wrap co-wrap" id="verifyPhoneVue">
+    <div class="co-topBar">
+        <a class="btn btn-return" href="#/mb/cash_out/verify_email"><i class="i-return"></i></a>
+        <p class="tit">Cash Out</p>
+    </div>
+    <div class="co-container verify-phone">
+        <div class="cashOut-upper">
+            <figure>
+                <i class="i-phone-l"></i>
+                <figcaption>Mobile Verification</figcaption>
+            </figure>
+        </div>
+        <div class="cashOut-bottom">
+            <div class="verify-description">
+                <p>Your mobile number will be used to protect your Livestar account. Once verified, this cannot be changed to ensure security. (For questions, contact Customer Service).</p>
+            </div>
+            <div class="form">
+                <form>
+                    <dl>
+                        <dd class="row-phone J-country">
+                                <input class="input-txt input-account" type="text" :value="countryStr" readonly="isReadOnly">
+                                <a class="btn btn-goMore" >
+                                    <i class="i-goMore"></i>
+                                </a>
+                        </dd>
+
+                        <dd class="row-getCode">
+                            <input :class="!mobile?'input-txt J-mobile-ipt':'input-txt input-disable J-mobile-ipt'" readonly="isReadOnly" type="text" :value="mobile" placeholder="Mobile Number">
+                            <a class="btn btn-primary btn-m J-send-code btn-disable" v-show="countdownTime>0&&countdownTime<=60">{{countdownTime}}s</a>
+                            <!--<a class="btn btn-primary btn-m J-send-code btn-disable" v-show="countdownTime>60">1 hour</a>-->
+                            <a class="btn btn-primary btn-m J-send-code" v-show="(!countdownTime||countdownTime<=0) && sendmobileTime<10">Get Code</a>
+                            <a class="btn btn-primary btn-m J-send-code btn-disable" v-show="(!countdownTime||countdownTime<=0) && (sendmobileTime>=10)">Get Code</a>
+                        </dd>
+
+                        <dd>
+                            <input class="input-txt J-mobile-code-ipt" type="text" placeholder="Enter Code">
+                              <p class="popTips tips-error J-data-Msg" style="display:none;">Sorry, you have reached the verification limit. Please try again tomorrow.</p>
+                        </dd>
+
+                        <dd class="form-ft-btn"><a class="btn btn-primary btn-main J-continue btn-disable">Continue</a></dd>
+                    </dl>
+                </form>
+            </div>
+        </div>
+        <div class="verify-contact">For any account issues, please contact <a class="link" href="mailto:accounts@livestar.com">accounts@livestar.com</a></div>
+    </div>
+     <div class="tipsHeader J-sys-Msg animate-ease " style="display:none;">
+        Invalid code
+    </div>
+</article>

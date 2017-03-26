@@ -1,0 +1,62 @@
+//房间排行榜数据 (radar的贡献榜type=total)编辑
+//
+//POST传入数据：
+//
+//字段	类型	必须	值	说明
+//method	string	是	getRank	接口类型(不参与加密)
+//anchorId	string	是		主播ID
+//type	string	是	today / weekly / total	排行榜类型；today ：返回最近一场直播的排行榜；weekly：最近一周（周日~周六）排行榜；total：历史总榜
+//page	string	否	1	默认取第1页 每页20条
+//sign	string	是		请求加密串
+//返回数据JSON：
+
+{
+    "state": true,
+    "message": "OK",
+    "data": [
+        {
+            "uid": "469",
+            "score": "25700",  //消费星币数
+            "name": "live22",   //昵称
+            "userimg": "http://cdn.livestar.com/uploads/1604/291524585158.png",  //用户头像
+            "anchor_level": "1",
+            "consume_level": "3",  //用户等级
+            "sex": "0",
+            "is_follow": 1,// 0未关注，1关注 注意判断当前uid是不是自己
+            "is_live": 0
+        },
+        {
+            "uid": "146",
+            "score": "15000",
+            "name": "window",
+            "userimg": "http://cdn.livestar.com/uploads/1605/191115594331.jpg",
+            "anchor_level": "1",
+            "consume_level": "6",
+            "sex": "0",
+            "is_follow": 1,// 0未关注，1关注 注意判断当前uid是不是自己
+            "is_live": 1
+        },
+        {
+            "uid": "479",
+            "score": "10500",
+            "name": "live32",
+            "userimg": "http://cdn.livestar.com/uploads/1604/291524585158.png",
+            "anchor_level": "1",
+            "consume_level": "2",
+            "sex": "0",
+            "is_follow": 1,// 0未关注，1关注 注意判断当前uid是不是自己
+            "is_live": 0
+        },
+        {
+            "uid": "284",
+            "score": "1500",
+            "name": "s1",
+            "userimg": "http://cdn.livestar.com/uploads/1605/101153311615.jpg",
+            "anchor_level": "1",
+            "consume_level": "7",
+            "sex": "0",
+            "is_follow": 1,// 0未关注，1关注 注意判断当前uid是不是自己
+            "is_live": 0
+        }
+    ]
+}

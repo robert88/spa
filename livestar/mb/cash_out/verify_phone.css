@@ -1,0 +1,21 @@
+body {
+    padding-bottom:70px;
+}
+.verify-phone .cashOut-bottom {
+    width:86%;
+}
+.verify-phone .row-phone .input-txt {
+    padding-right:33px;
+    text-align:center;
+}
+.verify-phone .btn-main {
+    width:87%;
+}
+.btn-goMore {
+    position:absolute;
+    top:0;
+    right:0;
+    width:33px;
+    height:33px;
+    text-align:center;
+}

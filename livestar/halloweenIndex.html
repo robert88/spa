@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="zh-en">
+	<head>
+		<meta charset="utf-8">
+		<title> </title>
+		 <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=IE8">
+		<meta property="og:type" content="website">
+		<meta property="og:title" content="It's happening on Livestar now!">
+		<meta property="og:description" content="Live streaming made easy. Get Livestar today!">
+		<meta property="og:image" content="http://m.livestar.com/static/images/mobile/fb480.jpg">
+		<meta property="og:image:width" content="480">
+		<meta property="og:image:height" content="253">
+		<meta name="twitter:title" content="It's happening on Livestar now!">
+		<meta name="twitter:description" content="Get @LivestarHQ right now and never miss a thing! Check who is #live #streaming now!">
+		<meta name="twitter:image" content="http://m.livestar.com/static/images/mobile/tw880.jpg">
+		<meta name="apple-mobile-web-app-capable" content="no">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+		<meta content="telephone=no" name="format-detection">
+
+		<!--start mergeCss:halloween.m.min-->
+		<link rel="stylesheet" type="text/css" href="/pc/public/css/common/dialog.css"/>
+		<link rel="stylesheet" type="text/css" href="/pc/public/css/common/animate.css"/>
+		<!--end mergeCss-->
+
+		<!--start mergeJs:lib.pc.min-->
+		<script src="/pc/public/js/lib/zepto.js"></script>
+		<script src="/pc/public/js/lib/zepto.animate.js"></script>
+		<script src="/pc/public/js/lib/zepto.cookie.js"></script>
+		<script src="/pc/public/js/lib/vue.js"></script>
+		<!--end mergeJs-->
+		
+		<script type="text/javascript">
+		;(function(){
+
+            var trim = function(str) {
+                str = "" + str;
+                return str.replace(/^\s+|\s+$/, "");
+            }
+            var toInt = function(str,def){
+                def = def||0;
+                str = trim(str);
+                return isNaN(str*1)?def:(str*1);
+            }
+
+			window.PAGE = {};
+            window.PAGE.HOME = "#/mb/ad/halloween";
+			window.PAGE.ERROR404 = "#/mb/ad/404";
+			window.PAGE.destroy = [];
+            window.PAGE.loading = null;
+            window.PAGE.closeLoading = null;
+			window.PAGE.load = null;//相对于widow.onload
+            window.PAGE.STATICDEBUG = true;//JSdebug
+			window.PAGE.DEBUG = true;
+			window.PAGE.language = {en:{
+                "activity.miss_params" :"miss params.",
+                "activity.same_people":"Silly! You can't follow yourself!",
+                "activity.succ":"Follow success.",
+                "activity.fail":"Follow fail.",
+                "payout.phone_num_exists":"This mobile number is already verified with another account. Please provide another mobile number.",
+                "payout.processing":"The last request is in process. We are trying to complete the request asap. Thank you for your patient. ",
+                "payout.paypal_exists":"This PayPal account is already verified with another account. Please provide another PayPal account.",
+                "payout.login_fail":"Login Fail",
+                "payout.miss_params":"Error! The request parameter is missing.",
+                "payout.email_not_verified":"Please verify your email.",
+                "payout.sms_not_verified":"Please verify your mobile number.",
+                'payout.paypal_nolegal':"The account information provided is incorrect. Please revise.",
+                "payout.lack_balance":"Insufficient available balance",
+                "payout.submit_timeout":"Your request has timed out. Please try again.",
+                "payout.send_limit":"Sorry you have reached today’s upper limited. Please try again tomorrow",
+                "payout.send_fail":"Failed to send the code.",//还没确认
+                "payout.unknown_error":"Unknow error.",
+                "payout.request_busy":"Sorry, request is too frequent. Please try again later.",
+                "payout.verification_failed":"Invalid code",//"Your request has failed. Please try again."
+                'i18n.sys.ajax.limit':"Operation Frequent!",
+                'i18n.sys.ajax.no.action':"Can not find action!",
+                'payout.month.limit': "Dear valued streamer you have reached the monthly limit of cashing out {0} times. Please try again when your limit has reset. Thank you for understanding."
+			}};
+			window.PAGE.curLanguage = "en";
+            window.PAGE.reload = null;
+			window.PAGE.data = {
+				viewers :'<{$viewers|@json_encode nofilter}>',
+				streamers :'<{$streamers|@json_encode nofilter}>',
+                activeStartTime :toInt('<{$activeStartTime}>')*1000,
+                activeEndTime :toInt('<{$activeEndTime}>')*1000
+			};
+
+            var data = window.PAGE.data;
+
+            /*开发调试代码*/
+            if( window.PAGE.DEBUG){
+                window.PAGE.data = {
+                    viewers :[{name:"robert1",score:10000,userimg:"",isfollow:false},{name:"robert2",score:10000,userimg:"",isfollow:true}],//view list
+                    streamers :[{name:"robertstreamer1",score:10000,userimg:"",isfollow:false},{name:"robertstreamer2",score:10000,userimg:"",isfollow:true}],//view list
+                    activeStartTime :new Date().getTime(),//开始时间
+                    activeEndTime :new Date().getTime()+60*60*24*14*1000//结束时间
+                }
+                data = window.PAGE.data;
+                for(var i=data.viewers.length;i<10;i++){
+                    data.viewers.push($.extend({},data.viewers[0]))
+                    data.streamers.push($.extend({},data.streamers[0]))
+                }
+            }
+            try{
+                if(typeof  data.viewers !="object"){
+                    data.viewers = JSON.parse(data.viewers);
+                }
+            }catch (e){
+                console.error("parse viewers")
+                data.viewers = [];
+            }
+
+            try{
+                if(typeof  data.streamers !="object"){
+                    data.streamers = JSON.parse(data.streamers);
+                }
+            }catch (e){
+                console.error("parse streamers")
+                data.streamers = [];
+            }
+
+            var viewersLen = data.viewers.length;
+            var streamersLen = data.streamers.length;
+            for(var i=viewersLen;i<3;i++){
+                data.viewers.push({})
+            }
+            for(i=streamersLen;i<3;i++){
+                data.streamers.push({})
+            }
+            /*窃取*/
+            if(streamersLen>10){
+                data.streamers.length =10;
+            }
+            if(viewersLen>10){
+                data.viewers.length =10;
+            }
+		})()
+
+		</script>
+
+        <!--start mergeJs:base.pc.min-->
+        <script src="/pc/public/js/common/config.js"></script>
+        <script src="/pc/public/js/lib/zepto.dialog.js"></script>
+        <script src="/pc/public/js/common/prototype.js"></script>
+        <script src="/pc/public/js/common/ajax.js"></script>
+        <script src="/pc/public/js/common/base.js"></script>
+        <!--end mergeJs-->
+
+	</head>
+	
+	<body>
+
+		<div id="pageCss"></div>
+		<div id="page"></div>
+		<div id="pageJs"></div>
+        <div id="pageLoad">
+            <div class="loader">
+                <div class="loader-inner line-scale-pulse-out">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+        </div>
+	</body>
+		
+
+    <!--start mergeJs:main.m.min-->
+    <script src="/pc/public/js/common/main.js"></script>
+    <!--end mergeJs-->
+</html>

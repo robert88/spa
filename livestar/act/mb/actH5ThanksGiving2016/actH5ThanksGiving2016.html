@@ -1,0 +1,572 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Livestar</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="format-detection" content="telephone=no" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link type="text/css" rel="stylesheet" href="http://lscdn.livestar.com/res/mb/public/css/min/mod.m.min.css">
+<style type="text/css">
+body,div,p,ul,li,table,tbody,tr,td,textarea,form,input,h1,h2,h3,h4,h5,dl,dt,dd,img,iframe,header,nav,section,article,footer,figure,figcaption,menu,button,a{margin:0;padding:0;list-style:none; color:#52241f;}
+body{font-family:Arial,'Lucida Grande',verdana,\5FAE\8F6F\96C5\9ED1,Helvetica;-webkit-user-select:none;-webkit-text-size-adjust:none;line-height:1.5;font-size:11px;}
+header,nav,section,article,footer,figure{display:block;}
+ol,ul{margin:0;padding:0;}
+fieldset{border:none;margin:0;padding:0;}
+a,li,ul,[onclick]{
+    -webkit-tap-highlight-color:none;
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
+    }
+a{ text-decoration:none; }
+body {
+    min-width:320px;
+    max-width:1000px;
+    margin:0 auto;
+    background:url(http://lscdn.livestar.com/res/ad/images/actH5ThanksGiving2016/bg.jpg) repeat #feb20f;
+}
+h2,
+.others-info h3 p,
+.top01 .i-no,
+.top02 .i-no,
+.top03 .i-no,
+.top04 .i-no,
+.top05 .i-no,
+.i-fav,
+.i-faved,
+.no-pic s,
+.highLightStreamer s,
+.highLightStreamer:after {
+    overflow:hidden;
+    text-indent:-999px;
+    background-image:url(http://lscdn.livestar.com/res/ad/images/actH5ThanksGiving2016/sprite.png?v=1);
+    background-repeat:no-repeat;
+    -webkit-background-size:375px 151px;
+       -moz-background-size:375px 151px;
+            background-size:375px 151px;
+}
+.banner {
+    position:relative;
+    text-align:center;
+    font-size:0;
+    line-height:0;
+    vertical-align:top;
+}
+.banner img {
+    display:block;
+    width:100%;
+    max-width:100%;
+    height:auto;
+}
+h2 {
+    width:293px;
+    height:32px;
+    margin-left:12%;
+    margin-bottom:18px;
+    background-position:0 -38px;
+    overflow:hidden;
+    text-indent:-999px;
+}
+
+.rank-list {
+    margin-bottom:20px;
+}
+.rank-list li {
+    display:box;
+    display:-webkit-box;
+    position:relative;
+    -webkit-box-align: center;
+    margin-bottom:1px;
+}
+.rank-list figure {
+    display:block;
+    position:relative;
+    width:54px;
+    height:54px;
+    background-color:#352011;
+    border:3px solid #843c0a;
+    margin-right:8px;
+    -webkit-border-radius:5px;
+       -moz-border-radius:5px;
+            border-radius:5px;
+}
+.rank-list figure img {
+    width:100%;
+    height:100%;
+}
+.others-info .rank-list figure,
+.others-info .rank-list .sign {
+    display:none;
+}
+.others-info .highLightStreamer figure,
+.others-info .highLightStreamer .sign {
+    display:block;
+}
+.rank-list p {
+    height:21px;
+    line-height:21px;
+    font-weight:bold;
+    max-width:150px;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    font-weight:bolder;
+}
+.rank-list .ID {
+    font-size:16px;
+}
+.rank-list .name {
+    display:block;
+    font-size:18px;
+}
+.rank-list .highLightStreamer {
+    border:1.5px solid #fe6b09;
+    background-color: rgba(255,240,0,.4);
+}
+.others-info .rank-list li:before {
+    display:block;
+    content:"";
+    position:absolute;
+    top:-2px;
+    left:0;
+    width:100%;
+    height:1px;
+    border-top:1px dotted #c97909;
+}
+.rank-list .i-no {
+   display:inline-block;
+   width:50px;
+   line-height:23px;
+   margin-right:5px;
+   font-style:normal;
+   font-weight:bolder;
+   font-size:16px; 
+   text-align:center;
+   color:#843c0a;
+}
+.rank-list .topOfStreamer .i-no {
+    margin-left:-1px;
+    color:#fff;
+    -webkit-border-radius:0 10px 10px 0;
+       -moz-border-radius:0 10px 10px 0;
+            border-radius:0 10px 10px 0;
+}
+.rank-list .topOfStreamer figure {
+    width:64px;
+    height:64px;
+    margin-right:13px;
+}
+.rank-list .i-fav,
+.rank-list .i-faved {
+    position:absolute;
+    z-index:2;
+    display:block;
+    width:29px;
+    height:29px;
+    right:-10px;
+    bottom:-10px;
+    -webkit-border-radius:50%;
+       -moz-border-radius:50%;
+            border-radius:50%;
+}
+.rank-list .i-fav {
+    background-position:-298px -43px;
+}
+.rank-list .i-faved {
+    background-position:-298px -76px;
+}
+.top01 .i-no {
+    background-color:#ff3c00;
+}
+.top02 .i-no {
+    background-color:#658ca0;
+}
+.top03 .i-no {
+    background-color:#aa5921;    
+}
+.top04 .i-no,
+.top05 .i-no {
+    background-color:#c27108;
+}
+.top01 .i-no {
+    background-position:-329px -40px;
+}
+.top02 .i-no {
+    background-position:-329px -61px;
+}
+.top03 .i-no {
+    background-position:-329px -83px;
+}
+.top04 .i-no {
+    background-position:-329px -107px;
+}
+.top05 .i-no {
+    background-position:-329px -130px;
+}
+.others-info .rank-list li {
+    padding:12px 0;
+}
+.my-info {
+    margin:0 8%;
+}
+.my-info .rank-list figure {
+    width:71px;
+    height:71px;
+    margin-right:10px;
+}
+.my-info .rank-list figcaption {
+    -webkit-box-flex:1;
+}
+.others-info h3 p {
+    height:36px;
+    margin:0 auto;
+    background-position:center 0;
+}
+.rank-list s {
+    display:block;
+    width:64px;
+    height:64px;    
+    position:absolute;
+    z-index:1;
+    display:block;
+    top:-6px;
+    left:-5px;
+}
+.rank-list .topOfStreamer.highLightStreamer s {
+    width:75px;
+    height:75px;
+    background-position:-149px -71px;
+    -webkit-background-size:375px 151px;
+       -moz-background-size:375px 151px;
+            background-size:375px 151px;
+}
+.rank-list .highLightStreamer s {
+    background-position:-125px -60px;
+    -webkit-background-size:317px 128px;
+       -moz-background-size:317px 128px;
+            background-size:317px 128px;
+}
+.rank-list .highLightStreamer:after {
+    content:"";
+    display:block;
+    width:147px;
+    height:76px;
+    position:absolute;
+    right:10px;
+    bottom:0px;
+    background-position:-0 -72px;
+
+}
+.others-info .rank-list .no-pic s {
+    background-position:-234px -82px;
+}
+.others-info .rank-list .no-pic figcaption {
+    display:none;
+}
+.others-info .rank-list .no-pic figure {
+    display:block;
+}
+.timer {
+    position:absolute;
+    top:55%;
+    left:50%;
+    width:234px;
+    margin-left:-117px;
+}
+.timer li {
+    display:inline-block;
+    height:30px;
+    color:#fff;
+}
+.number em,
+.timer li b {
+    background:url(http://lscdn.livestar.com/res/ad/images/actH5ThanksGiving2016/timer.png) no-repeat;
+    background-size:12px 310px;
+}
+.timer li .number {
+    display:inline-block;
+    width:51px;
+    height:100%;
+    background:#52241f;
+    -webkit-border-radius:5px;
+       -moz-border-radius:5px;
+            border-radius:5px;
+ -webkit-box-shadow:3px 3px 3px #b1a28b;
+    -moz-box-shadow:3px 3px 3px #b1a28b;
+         box-shadow:3px 3px 3px #b1a28b;
+}
+.number em {
+    display:inline-block;
+    width:12px;
+    height:100%;
+}
+.timer .no00 {
+    background-position:0 6px;
+}
+.timer .no01 {
+    background-position:0 -26px;
+}
+.timer .no02 {
+    background-position:0 -56px;
+}
+.timer .no03 {
+    background-position:0 -84px;
+}
+.timer .no04 {
+    background-position:0 -113px;
+}
+.timer .no05 {
+    background-position:0 -145px;
+}
+.timer .no06 {
+    background-position:0 -172px;
+}
+.timer .no07 {
+    background-position:0 -199px;
+}
+.timer .no08 {
+    background-position:0 -231px;
+}
+.timer .no09 {
+    background-position:0 -263px;
+}
+.timer li b {
+    display:inline-block;
+    width:10px;
+    height:100%;
+    background-position:0 -288px;
+}
+</style>
+</head>
+<body>
+    <article>
+        <section class="wrap">
+            <div class="banner">
+                <h1>Thanks Giving</h1>
+                <img src="http://lscdn.livestar.com/res/ad/images/actH5ThanksGiving2016/banner.png">
+                <ul class="timer">
+                    <li><span class="number"><em class="no00">0</em><em class="no01">1</em></span></li>
+                    <li><b>:</b></li>
+                    <li><span class="number"><em class="no02">2</em><em class="no03">3</em></span></li>
+                    <li><b>:</b></li>
+                    <li><span class="number"><em class="no04">4</em><em class="no05">5</em></span></li>
+                </ul>
+            </div>
+
+            <div class="container">
+                <div class="my-info">
+                    <ul class="rank-list">
+                        <li>
+                            <figure><img></figure>
+                            <figcaption>
+                                <p class="name">Diana.du</p>
+                                <p class="eventPts">Event Pts:0</p>
+                                <p class="sign">XXXXXXX</p>
+                            </figcaption>
+                            <p class="ID">#1250</p>
+                        </li>
+                    </ul>
+                </div>
+                <h2>Receive thanks livestar's top streamers with signed livestar gear and other cool prizes.</h2>
+                <div class="others-info">
+                    <h3><p>Top 100 Contributors</p></h3>
+                    <ul class="rank-list">
+                        <li class="topOfStreamer highLightStreamer top01">
+                            <i class="i-no">NO:1</i>
+                            <figure><img><i class="i-fav" style="display:none"></i><i class="i-faved"></i><s></s></figure>
+                            <figcaption>
+                                <p class="name"><i class="level-info level-info21"></i>Diana.du</p>
+                                <p class="eventPts">Event Pts:0</p>
+                                <p class="sign">XXXXXXX</p>
+                            </figcaption>
+                        </li>
+                        <li class="topOfStreamer highLightStreamer top02">
+                            <i class="i-no">NO:2</i>
+                            <figure><img><i class="i-fav"></i><s></s></figure>
+                            <figcaption>
+                                <p class="name"><i class="level-info level-info32"></i>Diana.du</p>
+                                <p class="eventPts">Event Pts:0</p>
+                                <p class="sign">XXXXXXX</p>
+                            </figcaption>
+                        </li>
+                        <li class="topOfStreamer highLightStreamer top03">
+                            <i class="i-no">NO:3</i>
+                            <figure><img><i class="i-fav"></i><s></s></figure>
+                            <figcaption>
+                                <p class="name"><i class="level-info level-info53"></i>Diana.du</p>
+                                <p class="eventPts">Event Pts:0</p>
+                                <p class="sign">XXXXXXX</p>
+                            </figcaption>
+                        </li>
+                        <li class="topOfStreamer highLightStreamer top04">
+                            <i class="i-no">NO:4</i>
+                            <figure><img><i class="i-fav"></i><s></s></figure>
+                            <figcaption>
+                                <p class="name"><i class="level-info level-info04"></i>中国重杨紫看能是否走揍</p>
+                                <p class="eventPts">Event Pts:0</p>
+                                <p class="sign">XXXXXXX</p>
+                            </figcaption>
+                        </li>
+                        <li class="topOfStreamer highLightStreamer top05">
+                            <i class="i-no">NO:5</i>
+                            <figure><img><i class="i-fav"></i><s></s></figure>
+                            <figcaption>
+                                <p class="name"><i class="level-info level-info05"></i>Diana.du</p>
+                                <p class="eventPts">Event Pts:0</p>
+                                <p class="sign">XXXXXXX</p>
+                            </figcaption>
+                        </li>
+                        <li class="no-pic">
+                            <i class="i-no">#6</i>
+                            <figure><img><s></s></figure>
+                            <figcaption>
+                                <p class="name"><i class="level-info level-info19"></i>Diana.du</p>
+                                <p class="eventPts">Event Pts:0</p>
+                                <p class="sign">XXXXXXX</p>
+                            </figcaption>
+                        </li>
+                        <li>
+                            <i class="i-no">#7</i>
+                            <figure><img><s></s></figure>
+                            <figcaption>
+                                <p class="name"><i class="level-info level-info47"></i>Diana.du</p>
+                                <p class="eventPts">Event Pts:0</p>
+                                <p class="sign">XXXXXXX</p>
+                            </figcaption>
+                        </li>            
+                        <li>
+                            <i class="i-no">#8</i>
+                            <figure><img><s></s></figure>
+                            <figcaption>
+                                <p class="name"><i class="level-info level-info78"></i>Diana.du</p>
+                                <p class="eventPts">Event Pts:0</p>
+                                <p class="sign">XXXXXXX</p>
+                            </figcaption>
+                        </li>  
+                        <li>
+                            <i class="i-no">#9</i>
+                            <figure><img><s></s></figure>
+                            <figcaption>
+                                <p class="name"><i class="level-info level-info29"></i>Diana.du</p>
+                                <p class="eventPts">Event Pts:0</p>
+                                <p class="sign">XXXXXXX</p>
+                            </figcaption>
+                        </li>     
+                        <li>
+                            <i class="i-no">#10</i>
+                            <figure><img><s></s></figure>
+                            <figcaption>
+                                <p class="name"><i class="level-info level-info40"></i>Diana.du</p>
+                                <p class="eventPts">Event Pts:0</p>
+                                <p class="sign">XXXXXXX</p>
+                            </figcaption>
+                        </li>           
+                        <li>
+                            <i class="i-no">#11</i>
+                            <figure><img><s></s></figure>
+                            <figcaption>
+                                <p class="name"><i class="level-info level-info31"></i>Diana.du</p>
+                                <p class="eventPts">Event Pts:0</p>
+                                <p class="sign">XXXXXXX</p>
+                            </figcaption>
+                        </li>   
+                        <li>
+                            <i class="i-no">#12</i>
+                            <figure><img><s></s></figure>
+                            <figcaption>
+                                <p class="name"><i class="level-info level-info51"></i>Diana.du</p>
+                                <p class="eventPts">Event Pts:0</p>
+                                <p class="sign">XXXXXXX</p>
+                            </figcaption>
+                        </li>   
+                        <li>
+                            <i class="i-no">#13</i>
+                            <figure><img><s></s></figure>
+                            <figcaption>
+                                <p class="name"><i class="level-info level-info11"></i>Diana.du</p>
+                                <p class="eventPts">Event Pts:0</p>
+                                <p class="sign">XXXXXXX</p>
+                            </figcaption>
+                        </li>           
+                        <li>
+                            <i class="i-no">#14</i>
+                            <figure><img><s></s></figure>
+                            <figcaption>
+                                <p class="name"><i class="level-info level-info38"></i>Diana.du</p>
+                                <p class="eventPts">Event Pts:0</p>
+                                <p class="sign">XXXXXXX</p>
+                            </figcaption>
+                        </li>  
+                        <li>
+                            <i class="i-no">#15</i>
+                            <figure><img><s></s></figure>
+                            <figcaption>
+                                <p class="name"><i class="level-info level-info46"></i>Diana.du</p>
+                                <p class="eventPts">Event Pts:0</p>
+                                <p class="sign">XXXXXXX</p>
+                            </figcaption>
+                        </li>     
+                        <li>
+                            <i class="i-no">#16</i>
+                            <figure><img><s></s></figure>
+                            <figcaption>
+                                <p class="name"><i class="level-info level-info23"></i>Diana.du</p>
+                                <p class="eventPts">Event Pts:0</p>
+                                <p class="sign">XXXXXXX</p>
+                            </figcaption>
+                        </li>            
+                        <li>
+                            <i class="i-no">#17</i>
+                            <figure><img><s></s></figure>
+                            <figcaption>
+                                <p class="name"><i class="level-info level-info29"></i>Diana.du</p>
+                                <p class="eventPts">Event Pts:0</p>
+                                <p class="sign">XXXXXXX</p>
+                            </figcaption>
+                        </li>  
+                        <li>
+                            <i class="i-no">#18</i>
+                            <figure><img><s></s></figure>
+                            <figcaption>
+                                <p class="name"><i class="level-info level-info49"></i>Diana.du</p>
+                                <p class="eventPts">Event Pts:0</p>
+                                <p class="sign">XXXXXXX</p>
+                            </figcaption>
+                        </li>     
+                        <li>
+                            <i class="i-no">#19</i>
+                            <figure><img><s></s></figure>
+                            <figcaption>
+                                <p class="name"><i class="level-info level-info58"></i>Diana.du</p>
+                                <p class="eventPts">Event Pts:0</p>
+                                <p class="sign">XXXXXXX</p>
+                            </figcaption>
+                        </li>           
+                        <li class="highLightStreamer">
+                            <i class="i-no">#20</i>
+                            <figure><img><s></s></figure>
+                            <figcaption>
+                                <p class="name"><i class="level-info level-info60"></i>Diana.du</p>
+                                <p class="eventPts">Event Pts:0</p>
+                                <p class="sign">XXXXXXX</p>
+                            </figcaption>
+                        </li>  
+                        <li>
+                            <i class="i-no">#21</i>
+                            <figcaption>
+                                <p class="name"><i class="level-info level-info34"></i>Diana.du</p>
+                                <p class="eventPts">Event Pts:0</p>
+                            </figcaption>
+                        </li>       
+                        <li>
+                            <i class="i-no">#22</i>
+                            <figcaption>
+                                <p class="name"><i class="level-info level-info14"></i>Diana.du</p>
+                                <p class="eventPts">Event Pts:0</p>
+                            </figcaption>
+                        </li>  
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </article>
+</body>
