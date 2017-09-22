@@ -39,7 +39,7 @@
 
 	if($.cookie("lv_uid")){
 		getUserInfo( $.cookie("lv_uid") );
-		loginVue.loginStatus = "logined"
+		loginVue.loginStatus = "logined";
 	}
 
 
